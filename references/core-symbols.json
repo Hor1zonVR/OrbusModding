@@ -1,0 +1,3584 @@
+{
+  "schema_version": 1,
+  "source": "dump(2).cs",
+  "sha256": "a20ae0b773fa2c37a736432e3227fb8f7fe934699879006e9c9f5873b75d54b0",
+  "build": "unverified",
+  "notes": "Metadata only; selected members, not behavioral validation. RVA build-specific.",
+  "types": [
+    {
+      "type_id": 9656,
+      "name": "PlayerCharacter",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerCharacter : MonoBehaviour",
+      "dump_line": 401420,
+      "field_count": 199,
+      "method_count": 272,
+      "properties_count": 12,
+      "selected_fields": [
+        "public OrbusTrackedController leftController; // 0x18",
+        "public OrbusTrackedController rightController; // 0x20",
+        "private PlayerCompass <myCompass>k__BackingField; // 0x28",
+        "public Rigidbody rightControllerAttachPoint; // 0x30",
+        "public GameObject trackingTarget; // 0x38",
+        "public GameObject torsoTarget; // 0x40",
+        "public GameObject torsoTarget2; // 0x48",
+        "public PlayerWand playerWand; // 0x50",
+        "public GameObject playSpace; // 0x58",
+        "private Quaternion defaultRotation; // 0x60",
+        "public Monster myMonster; // 0x70",
+        "public PlayerAvatar myPlayerAvatar; // 0x78",
+        "public GameObject terrainGrid; // 0x80",
+        "public TerrainGrid myGrid; // 0x88",
+        "private GameObject dynamicEventBeacon; // 0x90",
+        "private GameObject markerObject; // 0x98",
+        "private Text questTitle; // 0xA0",
+        "private GameObject questsUI; // 0xA8"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void OnSceneUnload(Scene scene)",
+          "rva": "0x380430"
+        },
+        {
+          "signature": "private void ResetAllMenus()",
+          "rva": "0x381880"
+        },
+        {
+          "signature": "public void SetNewExternalCamera(GameObject thisCamera)",
+          "rva": "0x382680"
+        },
+        {
+          "signature": "public bool GetTutorialToggle()",
+          "rva": "0x37C2D0"
+        },
+        {
+          "signature": "public bool GetMapToggle()",
+          "rva": "0x37C0F0"
+        },
+        {
+          "signature": "public float GetVibrationStrength()",
+          "rva": "0x37C310"
+        },
+        {
+          "signature": "public float GetSmoothTurnStrength()",
+          "rva": "0x37C290"
+        },
+        {
+          "signature": "private void HandleFirstTimeUserExperience()",
+          "rva": "0x37C750"
+        },
+        {
+          "signature": "public void ResetClimableWall()",
+          "rva": "0x381B60"
+        },
+        {
+          "signature": "private void handleGripped(object sender, ClickedEventArgs e)",
+          "rva": "0x38B7B0"
+        },
+        {
+          "signature": "private void handleUnGripped(object sender, ClickedEventArgs e)",
+          "rva": "0x38C3A0"
+        },
+        {
+          "signature": "public void SummonMount()",
+          "rva": "0x384FD0"
+        },
+        {
+          "signature": "public void Dismount()",
+          "rva": "0x378590"
+        },
+        {
+          "signature": "public int updateHandServerState(MonoBehaviour sender, int newState)",
+          "rva": "0x390010"
+        },
+        {
+          "signature": "public void setHandActive(int handIdx, bool newState)",
+          "rva": "0x38E7C0"
+        },
+        {
+          "signature": "private void updateServerHandState(int handIdx, int newState)",
+          "rva": "0x390200"
+        },
+        {
+          "signature": "public void setHandTeleporting(MonoBehaviour sender)",
+          "rva": "0x38E9E0"
+        },
+        {
+          "signature": "public void setHandNotTeleporting(MonoBehaviour sender)",
+          "rva": "0x38E830"
+        },
+        {
+          "signature": "private void handleRightMenuClick(object sender, ClickedEventArgs e)",
+          "rva": "0x38C180"
+        },
+        {
+          "signature": "private void handleRightMenuUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x38C2A0"
+        },
+        {
+          "signature": "private void handleLeftMenuClick(object sender, ClickedEventArgs e)",
+          "rva": "0x38BFC0"
+        },
+        {
+          "signature": "private void handleLeftMenuUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x38C0E0"
+        },
+        {
+          "signature": "public void ReleaseInteractionMenu(WorldMenu thisMenu, MonoBehaviour fromBehaviour)",
+          "rva": "0x380F90"
+        },
+        {
+          "signature": "public WorldMenu GetWorldMenu(string menuType)",
+          "rva": "0x37C350"
+        },
+        {
+          "signature": "public void ShowNotification(string type, string message)",
+          "rva": "0x383210"
+        },
+        {
+          "signature": "public void ShowKeyboard(string defaultText, bool showCommonPhrases, bool numericOnly, bool bugPhrases = False)",
+          "rva": "0x383060"
+        }
+      ]
+    },
+    {
+      "type_id": 9643,
+      "name": "PlayerAvatar",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerAvatar : MonoBehaviour, IPooling",
+      "dump_line": 399501,
+      "field_count": 239,
+      "method_count": 262,
+      "properties_count": 79,
+      "selected_fields": [
+        "public bool isDummyAvatar; // 0x18",
+        "public GameObject leftController; // 0x20",
+        "public GameObject rightController; // 0x28",
+        "public GameObject playerBase; // 0x30",
+        "public GameObject playerHead; // 0x38",
+        "public Transform playerMountPosition; // 0x40",
+        "public Transform startSummonMountPosition; // 0x48",
+        "private GameObject quickSlot1; // 0x50",
+        "private GameObject quickSlot2; // 0x58",
+        "private PlayerTool[] equippedTools; // 0x60",
+        "private PlayerTool[] previousTools; // 0x68",
+        "private InventoryItemInstance mountSlot; // 0x70",
+        "public string OrbusNetComponent; // 0x78",
+        "public float timeWhenPingSent; // 0x80",
+        "public bool localControl; // 0x84",
+        "public TopHud topHud; // 0x88",
+        "public GameObject vfxLeveled; // 0x90",
+        "public SuperTextMesh resurrectCooldownTimer; // 0x98"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void PoolingReset()",
+          "rva": "0x33F550"
+        },
+        {
+          "signature": "public void ResetForLogout()",
+          "rva": "0x33FFF0"
+        },
+        {
+          "signature": "public AvatarAppearance getMyAppearance()",
+          "rva": "0x34D140"
+        },
+        {
+          "signature": "private void Update()",
+          "rva": "0x3480E0"
+        },
+        {
+          "signature": "private void LateUpdate()",
+          "rva": "0x33E410"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x33CB80"
+        },
+        {
+          "signature": "public void SetToLodLevel(int newLevel)",
+          "rva": "0x3408C0"
+        },
+        {
+          "signature": "private void UpdateHairStyle()",
+          "rva": "0x344980"
+        },
+        {
+          "signature": "private void UpdateSkinMaterials()",
+          "rva": "0x347450"
+        },
+        {
+          "signature": "public void UpdateSkinTone()",
+          "rva": "0x347B50"
+        },
+        {
+          "signature": "private void UpdateEyeSet()",
+          "rva": "0x344090"
+        },
+        {
+          "signature": "private void UpdateMouthSet()",
+          "rva": "0x346420"
+        },
+        {
+          "signature": "private void UpdateNoseStyle()",
+          "rva": "0x3464D0"
+        },
+        {
+          "signature": "private void UpdateEarStyle()",
+          "rva": "0x343F40"
+        },
+        {
+          "signature": "public void ForceEyeSet(byte newSet)",
+          "rva": "0x33D510"
+        },
+        {
+          "signature": "public void ForceShowHelm(bool _showHelm)",
+          "rva": "0x33D600"
+        },
+        {
+          "signature": "public void ForceMouthSet(byte newSet)",
+          "rva": "0x33D5A0"
+        },
+        {
+          "signature": "public void StartClass(PlayerClass newclass)",
+          "rva": "0x3422C0"
+        },
+        {
+          "signature": "public void UpdateLeftHandWeaponActive()",
+          "rva": "0x3461B0"
+        },
+        {
+          "signature": "public void UpdateRightHandWeaponActive()",
+          "rva": "0x346F20"
+        },
+        {
+          "signature": "public void UpdateBlocked()",
+          "rva": "0x343970"
+        },
+        {
+          "signature": "private void updateCurrentClass()",
+          "rva": "0x350200"
+        },
+        {
+          "signature": "private void SetMount(bool mounted)",
+          "rva": "0x340310"
+        },
+        {
+          "signature": "public GameObject getGrabberByIndex(int index)",
+          "rva": "0x34D050"
+        },
+        {
+          "signature": "public int getGrabberIndex(GameObject grabber)",
+          "rva": "0x34D070"
+        },
+        {
+          "signature": "public void DisableToolbelt()",
+          "rva": "0x33CAB0"
+        }
+      ]
+    },
+    {
+      "type_id": 10062,
+      "name": "PlayerRig",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerRig : MonoBehaviour",
+      "dump_line": 415396,
+      "field_count": 9,
+      "method_count": 9,
+      "properties_count": 1,
+      "selected_fields": [
+        "private bool rigLoaded; // 0x18",
+        "public GameObject eyeCamera; // 0x20",
+        "private bool <isOculus>k__BackingField; // 0x28",
+        "private ControllerButtonHints leftHints; // 0x30",
+        "private ControllerButtonHints rightHints; // 0x38",
+        "private bool showingLeftOculusHint; // 0x40",
+        "private bool showingRightOculusHint; // 0x41",
+        "private float timeSinceHintVibration; // 0x44",
+        "private float vibrateHintEvery; // 0x48"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void MakeRigBasedAdjustments()",
+          "rva": "0x3A4D10"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x3A4B10"
+        },
+        {
+          "signature": "public void ShowHint(int handIdx, string button, string hintText)",
+          "rva": "0x3A5430"
+        },
+        {
+          "signature": "public void HideHints(int handIdx)",
+          "rva": "0x3A4BB0"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x3A45C0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    {
+      "type_id": 10059,
+      "name": "PlayerMount",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerMount : MonoBehaviour",
+      "dump_line": 415320,
+      "field_count": 17,
+      "method_count": 7,
+      "properties_count": 0,
+      "selected_fields": [
+        "public bool adjustToGround; // 0x18",
+        "public UnityEvent StartMountSummon; // 0x20",
+        "public SummonMountEvent MountSummonProgress; // 0x28",
+        "public UnityEvent MountSummoned; // 0x30",
+        "private float rotationSpeed; // 0x38",
+        "private float lowLimit; // 0x3C",
+        "public bool isGrabbed; // 0x40",
+        "public bool doSummonAnimation; // 0x41",
+        "public PlayerCharacter player; // 0x48",
+        "public PlayerAvatar avatar; // 0x50",
+        "private Transform leftControllerTrans; // 0x58",
+        "private Transform rightControllerTrans; // 0x60",
+        "private Transform feetTransform; // 0x68",
+        "private Transform headTransform; // 0x70",
+        "private Transform myTransform; // 0x78",
+        "private bool isAnimating; // 0x80",
+        "public float groundOffset; // 0x84"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void LateUpdate()",
+          "rva": "0x3A1290"
+        },
+        {
+          "signature": "public void SetSplinePositionAndRotation(BezierSpline spline)",
+          "rva": "0x3A1C30"
+        },
+        {
+          "signature": "public void SetPlayerFeetAsTargetEndPoint(BezierSpline spline)",
+          "rva": "0x3A1C10"
+        },
+        {
+          "signature": "public void LevelOutMount(float t)",
+          "rva": "0x3A1AB0"
+        },
+        {
+          "signature": "public void SetIsAnimating(bool val)",
+          "rva": "0x3A1C00"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x3A1E10"
+        }
+      ]
+    },
+    {
+      "type_id": 10066,
+      "name": "PlayerWand",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerWand : MonoBehaviour",
+      "dump_line": 415569,
+      "field_count": 36,
+      "method_count": 31,
+      "properties_count": 0,
+      "selected_fields": [
+        "public PlayerCharacter myPlayer; // 0x18",
+        "public SteamVR_TrackedController myController; // 0x20",
+        "public Camera headCamera; // 0x28",
+        "public Transform wandTip; // 0x30",
+        "public TextMesh resultText; // 0x38",
+        "private VectorLine[] spellPathLines; // 0x40",
+        "private int currentSpellPathStroke; // 0x48",
+        "private float timeSinceLastSpellSample; // 0x4C",
+        "private float spellSampleEvery; // 0x50",
+        "private bool spellCastStrokeActive; // 0x54",
+        "private List<Gesture> trainingSet; // 0x58",
+        "private List<Point> recognizerPoints; // 0x60",
+        "public GameObject emptyGO; // 0x68",
+        "public GameObject[] vfxMissiles; // 0x70",
+        "public GameObject[] vfxBeams; // 0x78",
+        "public GameObject[] vfxEnchants; // 0x80",
+        "public GameObject[] vfxDomes; // 0x88",
+        "public GameObject[] vfxBlasts; // 0x90"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void Update()",
+          "rva": "0x3A7A60"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x3A69B0"
+        },
+        {
+          "signature": "private void doRightTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x3A8540"
+        },
+        {
+          "signature": "private void doRightTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x3A8820"
+        },
+        {
+          "signature": "private void doRightPadClick(object sender, ClickedEventArgs e)",
+          "rva": "0x3A8520"
+        },
+        {
+          "signature": "private void finishSpellCast()",
+          "rva": "0x3A8830"
+        },
+        {
+          "signature": "private void doRightPadUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "private void teleportMeToEnemy()",
+          "rva": "0x3A97C0"
+        },
+        {
+          "signature": "private void teleportEnemyToMe()",
+          "rva": "0x3A9230"
+        },
+        {
+          "signature": "private void actionAfterDelay(Action callback, float delay)",
+          "rva": "0x3A7CC0"
+        },
+        {
+          "signature": "private IEnumerator actionAfterDelayCoroutine(Action callback, float delay)",
+          "rva": "0x3A7C50"
+        },
+        {
+          "signature": "private void castRay(GameObject vfxRay, GameObject vfxRay_Wait, GameObject vfxHit)",
+          "rva": "0x3A7FA0"
+        },
+        {
+          "signature": "public Vector3 getRelativePosition(Transform origin, Vector3 position)",
+          "rva": "0x3A8F50"
+        },
+        {
+          "signature": "private void doGripped(object sender, ClickedEventArgs e)",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "private void doUnGripped(object sender, ClickedEventArgs e)",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "private void placeSpawnedObject(GameObject prefab)",
+          "rva": "0x3A9190"
+        },
+        {
+          "signature": "private void castAoe(Vector3 position, string spellName)",
+          "rva": "0x3A7D90"
+        },
+        {
+          "signature": "private void castResistBuff(PlayerCharacter target, DamageAffinity damageaff, GameObject vfxEnchant)",
+          "rva": "0x3A8080"
+        },
+        {
+          "signature": "private void dealDamage(DamageParams options)",
+          "rva": "0x3A8490"
+        },
+        {
+          "signature": "private void updateHealthBar()",
+          "rva": "0x3A9830"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x3A7380"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "private Vector3 SampleParabola(Vector3 start, Vector3 end, float height, float t)",
+          "rva": "0x3A69E0"
+        },
+        {
+          "signature": "private void activateSword()",
+          "rva": "0x3A7D50"
+        },
+        {
+          "signature": "private void deactivateSword()",
+          "rva": "0x3A8450"
+        },
+        {
+          "signature": "private void SamplePoints()",
+          "rva": "0x3A6D50"
+        }
+      ]
+    },
+    {
+      "type_id": 10064,
+      "name": "PlayerTool",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerTool : MonoBehaviour",
+      "dump_line": 415474,
+      "field_count": 20,
+      "method_count": 13,
+      "properties_count": 1,
+      "selected_fields": [
+        "public int itemId; // 0x18",
+        "public string slotName; // 0x20",
+        "public InventoryItemInstance inventoryItem; // 0x28",
+        "public bool autoSnapBack; // 0x30",
+        "public bool isHidden; // 0x31",
+        "public float snapBackDelay; // 0x34",
+        "public Vector3 toolBeltOffset; // 0x38",
+        "public Vector3 toolBeltOrientation; // 0x44",
+        "private Transform origParent; // 0x50",
+        "private Vector3 orignLocalPositon; // 0x58",
+        "private Quaternion origLocalRotation; // 0x64",
+        "private Vector3 origLocalScale; // 0x74",
+        "private Rigidbody myRigidBody; // 0x80",
+        "public bool isGrabbed; // 0x88",
+        "public bool inAir; // 0x89",
+        "public Grabber currentGrabber; // 0x90",
+        "private GameObject scaler; // 0x98",
+        "public PlayerAvatar myAvatar; // 0xA0"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void CaptureStartingPosition()",
+          "rva": "0x3A5D50"
+        },
+        {
+          "signature": "private void PhysicsInteractableGrip(Grabber sender)",
+          "rva": "0x3A5EA0"
+        },
+        {
+          "signature": "private void PhysicsInteractableUngrip(Grabber sender)",
+          "rva": "0x3A5F80"
+        },
+        {
+          "signature": "public void SendToolSignal(ushort signalId)",
+          "rva": "0x3A60B0"
+        },
+        {
+          "signature": "public void Hide()",
+          "rva": "0x3A5E10"
+        },
+        {
+          "signature": "public void Show()",
+          "rva": "0x3A6170"
+        },
+        {
+          "signature": "public void ReceiveSignal(byte signalid)",
+          "rva": "0x3A6040"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x3A5C90"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x3A63F0"
+        },
+        {
+          "signature": "public void SnapBack()",
+          "rva": "0x3A6200"
+        }
+      ]
+    },
+    {
+      "type_id": 9732,
+      "name": "PlayerClass",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerClass : MonoBehaviour",
+      "dump_line": 404058,
+      "field_count": 7,
+      "method_count": 9,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string className; // 0x18",
+        "public GameObject hudSlot; // 0x20",
+        "public GameObject[] objectsToEnable; // 0x28",
+        "public bool isEnabled; // 0x30",
+        "private PlayerAvatar myAvatar; // 0x38",
+        "public IPlayerClass myClass; // 0x40",
+        "public string dummyEquipment; // 0x48"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x39A980"
+        },
+        {
+          "signature": "public void Start()",
+          "rva": "0x39AA40"
+        },
+        {
+          "signature": "public void TurnOff()",
+          "rva": "0x39ABB0"
+        },
+        {
+          "signature": "public void TurnOn()",
+          "rva": "0x39AC30"
+        },
+        {
+          "signature": "public void Pause()",
+          "rva": "0x39AA30"
+        },
+        {
+          "signature": "public void UnPause()",
+          "rva": "0x39ACD0"
+        },
+        {
+          "signature": "public void ToggleAdjustWeapon()",
+          "rva": "0x39AB60"
+        },
+        {
+          "signature": "public void WeaponAdjusted()",
+          "rva": "0x39ACE0"
+        }
+      ]
+    },
+    {
+      "type_id": 10055,
+      "name": "PlayerCompass",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerCompass : MonoBehaviour",
+      "dump_line": 415135,
+      "field_count": 31,
+      "method_count": 18,
+      "properties_count": 0,
+      "selected_fields": [
+        "public GameObject interestIconPrefab; // 0x18",
+        "public PointOfInterest[] interestPoints; // 0x20",
+        "private GameObject[] interestIcons; // 0x28",
+        "private GameObject[] partyMemberIcons; // 0x30",
+        "private GameObject[] permanentIcons; // 0x38",
+        "private Vector3[] permanentIconPositions; // 0x40",
+        "private string poiTag; // 0x48",
+        "public Text headingText; // 0x50",
+        "public Canvas headingCanvas; // 0x58",
+        "private RaycastHit hitInfo; // 0x60",
+        "private string blankString; // 0x90",
+        "private GameObject previousInterestIcon; // 0x98",
+        "private bool isGripped; // 0xA0",
+        "public GameObject journalNotification; // 0xA8",
+        "public GameObject journalNotificationOnBody; // 0xB0",
+        "public bool showJournalNotification; // 0xB8",
+        "private Transform origParent; // 0xC0",
+        "private Vector3 orignLocalPositon; // 0xC8"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void UpdateJournalNotifications()",
+          "rva": "0x39DFD0"
+        },
+        {
+          "signature": "public void UpdatePartyMemberPoints()",
+          "rva": "0x39E060"
+        },
+        {
+          "signature": "public void UpdatePermanentIcons()",
+          "rva": "0x39E6B0"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x39B720"
+        },
+        {
+          "signature": "private void PhysicsInteractableGrip(Grabber grabber)",
+          "rva": "0x39CE50"
+        },
+        {
+          "signature": "private void FinishUngrip()",
+          "rva": "0x39B2C0"
+        },
+        {
+          "signature": "private void PhysicsInteractableUngrip(Grabber grabber)",
+          "rva": "0x39D4E0"
+        },
+        {
+          "signature": "private void PlayerFacing()",
+          "rva": "0x39D5A0"
+        },
+        {
+          "signature": "private void PlayerStoppedFacing()",
+          "rva": "0x39D5C0"
+        },
+        {
+          "signature": "private void PhysicsInteractableTrigger()",
+          "rva": "0x39D4D0"
+        },
+        {
+          "signature": "public void updateOriginalPosition(Vector3 newPos)",
+          "rva": "0x39F0B0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x39DD60"
+        },
+        {
+          "signature": "public void ScanForInterestPoints()",
+          "rva": "0x39D6F0"
+        },
+        {
+          "signature": "private void CreateIconsForDiscoveredPoints()",
+          "rva": "0x39AE70"
+        },
+        {
+          "signature": "private void ActivateVoiceMode()",
+          "rva": "0x39AD70"
+        },
+        {
+          "signature": "private void StopVoiceMode()",
+          "rva": "0x39DEB0"
+        },
+        {
+          "signature": "private void PhysicsInteractableShake()",
+          "rva": "0x39D240"
+        }
+      ]
+    },
+    {
+      "type_id": 10056,
+      "name": "PlayerJournal",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerJournal : MonoBehaviour",
+      "dump_line": 415228,
+      "field_count": 11,
+      "method_count": 12,
+      "properties_count": 1,
+      "selected_fields": [
+        "private ReadableBook <myBook>k__BackingField; // 0x18",
+        "private bool hasAwoken; // 0x20",
+        "private string journalString; // 0x28",
+        "private string prevJournalString; // 0x30",
+        "public bool isOpen; // 0x38",
+        "private bool needsUpdateOnNextOpen; // 0x39",
+        "private Collider[] latestCols; // 0x40",
+        "private GameObject lastRubbingSpotCollision; // 0x48",
+        "private List<JournalButton> bookmarkButtons; // 0x50",
+        "private int[] bookmarkIndexes; // 0x58",
+        "public bool intitialLogin; // 0x60"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x3A0720"
+        },
+        {
+          "signature": "public void UpdateFromString(string newValues)",
+          "rva": "0x3A0E30"
+        },
+        {
+          "signature": "private void UpdatePages()",
+          "rva": "0x3A0EA0"
+        },
+        {
+          "signature": "private void SetupBookMarks(JournalPages pages)",
+          "rva": "0x3A0AB0"
+        },
+        {
+          "signature": "private void PhysicsInteractableUngrip(Grabber thisGrabber)",
+          "rva": "0x3A0950"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x3A06E0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x3A0BD0"
+        },
+        {
+          "signature": "public void OpenJournal()",
+          "rva": "0x3A0910"
+        },
+        {
+          "signature": "public void TurnToNoteId(string noteid)",
+          "rva": "0x3A0C40"
+        }
+      ]
+    },
+    {
+      "type_id": 9734,
+      "name": "PlayerPet",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerPet : MonoBehaviour",
+      "dump_line": 404181,
+      "field_count": 34,
+      "method_count": 32,
+      "properties_count": 2,
+      "selected_fields": [
+        "private static readonly int[] legacyPets; // 0x0",
+        "private static readonly int[] uniquePets; // 0x8",
+        "public string OrbusNetComponent; // 0x18",
+        "private NetEntity myEntity; // 0x20",
+        "private Collider[] latestCols; // 0x28",
+        "private BoxCollider myCollider; // 0x30",
+        "private Renderer PetRenderer; // 0x38",
+        "private AudioSource <myAudioSource>k__BackingField; // 0x40",
+        "private Animator <myAnimator>k__BackingField; // 0x48",
+        "private Vector3 originalScale; // 0x50",
+        "private float timeSincePettingSent; // 0x5C",
+        "private float sendPettingEvery; // 0x60",
+        "private float checkForTreatEvery; // 0x64",
+        "private float timeSinceCheckForTreat; // 0x68",
+        "public GameObject vfxEat; // 0x70",
+        "public AudioClip sfxEat; // 0x78",
+        "private TrailRenderer leftWingTrail; // 0x80",
+        "private TrailRenderer rightWingTrail; // 0x88"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void UpdateAnimator()",
+          "rva": "0x3A4160"
+        },
+        {
+          "signature": "public void SetLocalSpeed(float newValue)",
+          "rva": "0x3A36E0"
+        },
+        {
+          "signature": "public float GetLocalSpeed()",
+          "rva": "0x3A2CF0"
+        },
+        {
+          "signature": "private void LateUpdate()",
+          "rva": "0x3A3230"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x3A2330"
+        },
+        {
+          "signature": "public void Fmod(string eventName)",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x3A4320"
+        },
+        {
+          "signature": "private void SetPetProperties(int primary, int secondary, int spot, int size)",
+          "rva": "0x3A36F0"
+        },
+        {
+          "signature": "public static GameObject InstantiatePet(InventoryItemInstance itemInstance)",
+          "rva": "0x3A2D50"
+        },
+        {
+          "signature": "private Color GetColorFromTrait(int traits)",
+          "rva": "0x3A2C90"
+        },
+        {
+          "signature": "public void TakeLocalControl(GameObject followTarget)",
+          "rva": "0x3A3C60"
+        },
+        {
+          "signature": "public void ReleaseLocalControl()",
+          "rva": "0x3A3630"
+        },
+        {
+          "signature": "public void ShowWingTrails()",
+          "rva": "0x3A3A70"
+        },
+        {
+          "signature": "public void HideWingTrails()",
+          "rva": "0x3A2D00"
+        },
+        {
+          "signature": "public void SetWingTrailLength(float length)",
+          "rva": "0x3A3A10"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x3A2130"
+        },
+        {
+          "signature": "public void FootL()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void FootR()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void StopUpdatingFromServer()",
+          "rva": "0x3A3B60"
+        },
+        {
+          "signature": "public void StartUpdatingFromServer()",
+          "rva": "0x3A3AC0"
+        }
+      ]
+    },
+    {
+      "type_id": 10063,
+      "name": "PlayerTombstone",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerTombstone : MonoBehaviour",
+      "dump_line": 415446,
+      "field_count": 4,
+      "method_count": 5,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string OrbusNetComponent; // 0x18",
+        "public GameObject vfxResurrect; // 0x20",
+        "private bool wasTriggered; // 0x28",
+        "private NetEntity myEntity; // 0x30"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x3A57D0"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x3A5BC0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    {
+      "type_id": 9513,
+      "name": "Bard",
+      "namespace": "MagicalActual",
+      "declaration": "public class Bard : MonoBehaviour, IPlayerClass",
+      "dump_line": 394626,
+      "field_count": 106,
+      "method_count": 48,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string OrbusNetComponent; // 0x18",
+        "private NetEntity myEntity; // 0x20",
+        "private bool isLocallyControlled; // 0x28",
+        "private PlayerClass myPlayerClass; // 0x30",
+        "private PlayerAvatar myAvatar; // 0x38",
+        "private PlayerCharacter myPlayer; // 0x40",
+        "private GameObject primaryController; // 0x48",
+        "private GameObject secondaryController; // 0x50",
+        "private int primaryWeaponHandIdx; // 0x58",
+        "private int secondaryWeaponHandIdx; // 0x5C",
+        "public GameObject primaryDrumstick; // 0x60",
+        "public BoxCollider primaryHitpoint; // 0x68",
+        "public GameObject secondaryDrumstick; // 0x70",
+        "public BoxCollider secondaryHitpoint; // 0x78",
+        "public GameObject superVfx; // 0x80",
+        "public GameObject drumstickHitVfx; // 0x88",
+        "private bool leftTriggerDown; // 0x90",
+        "private bool rightTriggerDown; // 0x91"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void HitEnemyWithDrumstick(GameObject anobj)",
+          "rva": "0x41E4C0"
+        },
+        {
+          "signature": "public void AvatarEquipmentChanged()",
+          "rva": "0x41C1D0"
+        },
+        {
+          "signature": "private void UpdateBeltOrbs()",
+          "rva": "0x420EC0"
+        },
+        {
+          "signature": "private void UpdateNotchedOrbs()",
+          "rva": "0x421670"
+        },
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void ClassEnabled()",
+          "rva": "0x41C900"
+        },
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x31D090"
+        },
+        {
+          "signature": "public GameObject GetWeaponSkin()",
+          "rva": "0x41E3C0"
+        },
+        {
+          "signature": "public void UpdateClassBar()",
+          "rva": "0x4214F0"
+        },
+        {
+          "signature": "private void doDoubleTriggerClick()",
+          "rva": "0x427260"
+        },
+        {
+          "signature": "private bool checkForDoubleTriggerClick()",
+          "rva": "0x427110"
+        },
+        {
+          "signature": "private void doUngripped(object sender, ClickedEventArgs e)",
+          "rva": "0x4277E0"
+        },
+        {
+          "signature": "private void doTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x427370"
+        },
+        {
+          "signature": "private void doTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x427690"
+        },
+        {
+          "signature": "private void HitInstrumentWithBaton(BardInstrument thisInstrument)",
+          "rva": "0x41E5E0"
+        },
+        {
+          "signature": "private void AddNoteToHiddenSong(int noteIdx)",
+          "rva": "0x41BFC0"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x41CC20"
+        },
+        {
+          "signature": "public void RegisterNoteHit(int noteIndex, GameObject thisGameobject)",
+          "rva": "0x41EFC0"
+        },
+        {
+          "signature": "private void Update()",
+          "rva": "0x421DB0"
+        },
+        {
+          "signature": "private BardUpcomingNote GenerateUpcomingNote(int targetNoteIdx, int songIdx)",
+          "rva": "0x41DF30"
+        },
+        {
+          "signature": "public void orbusNetCleanup(NetEntity entity)",
+          "rva": "0x3386F0"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x427930"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x41C520"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x41F200"
+        },
+        {
+          "signature": "private void SyncedPlay()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "private void SwitchWeaponHand(byte handIdx)",
+          "rva": "0x41F710"
+        }
+      ]
+    },
+    {
+      "type_id": 9750,
+      "name": "Runemage",
+      "namespace": "MagicalActual",
+      "declaration": "public class Runemage : MonoBehaviour, IPlayerClass",
+      "dump_line": 404786,
+      "field_count": 62,
+      "method_count": 62,
+      "properties_count": 2,
+      "selected_fields": [
+        "public string OrbusNetComponent; // 0x18",
+        "private NetEntity myEntity; // 0x20",
+        "private OrbusNetManager netManager; // 0x28",
+        "private bool isLocallyControlled; // 0x30",
+        "private bool primaryActive; // 0x31",
+        "private VectorLine[] spellPathLines; // 0x38",
+        "private List<Point> recognizerPoints; // 0x40",
+        "private List<Gesture> trainingSet; // 0x48",
+        "private int currentSpellPathStroke; // 0x50",
+        "private float timeSinceLastSpellSample; // 0x54",
+        "private float spellSampleEvery; // 0x58",
+        "private bool spellCastStrokeActive; // 0x5C",
+        "public GameObject emptyGO; // 0x60",
+        "public GameObject wand; // 0x68",
+        "public GameObject mageSpark; // 0x70",
+        "public GameObject duplicationPoint1; // 0x78",
+        "public GameObject duplicationPoint2; // 0x80",
+        "private GameObject <wandTip>k__BackingField; // 0x88"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void DLSDFPASFD(ushort targetGuid, Vector3 targetPosition, int arrowId)",
+          "rva": "0x479530"
+        },
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void ClassEnabled()",
+          "rva": "0x479400"
+        },
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x31D080"
+        },
+        {
+          "signature": "public GameObject GetWeaponSkin()",
+          "rva": "0x47A050"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x479C20"
+        },
+        {
+          "signature": "private void ShowClassBar(bool show)",
+          "rva": "0x47ABB0"
+        },
+        {
+          "signature": "public void UpdateClassBar()",
+          "rva": "0x47C000"
+        },
+        {
+          "signature": "private void doDoubleTriggerClick()",
+          "rva": "0x47CB30"
+        },
+        {
+          "signature": "private bool checkForDoubleTriggerClick()",
+          "rva": "0x47C9E0"
+        },
+        {
+          "signature": "private void doTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x47D130"
+        },
+        {
+          "signature": "private void doTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x47D5C0"
+        },
+        {
+          "signature": "private void doPadClick(object sender, ClickedEventArgs e)",
+          "rva": "0x47CC60"
+        },
+        {
+          "signature": "private void resetSpellLines()",
+          "rva": "0x47EB80"
+        },
+        {
+          "signature": "private void doPrimaryTriggerClick()",
+          "rva": "0x47CE60"
+        },
+        {
+          "signature": "private void doPrimaryTriggerUnClick()",
+          "rva": "0x47CFF0"
+        },
+        {
+          "signature": "private void finishSpellCast()",
+          "rva": "0x47D830"
+        },
+        {
+          "signature": "public Vector3 getRelativePosition(Transform origin, Vector3 position)",
+          "rva": "0x47DE60"
+        },
+        {
+          "signature": "private void UpdateTriplicity()",
+          "rva": "0x47C2D0"
+        },
+        {
+          "signature": "private void UpdateStaticCharge()",
+          "rva": "0x47C1A0"
+        },
+        {
+          "signature": "public void CastSpark()",
+          "rva": "0x479150"
+        },
+        {
+          "signature": "public void orbusNetCleanup(NetEntity entity)",
+          "rva": "0x3386F0"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x47E410"
+        },
+        {
+          "signature": "private void handleRayUpdate(byte prevCastingRay)",
+          "rva": "0x47E160"
+        },
+        {
+          "signature": "private void handleIsDrawingUpdate()",
+          "rva": "0x47E0B0"
+        },
+        {
+          "signature": "private void prepareSpellCast(int spellId)",
+          "rva": "0x47E8A0"
+        }
+      ]
+    },
+    {
+      "type_id": 9621,
+      "name": "Paladin",
+      "namespace": "MagicalActual",
+      "declaration": "public class Paladin : MonoBehaviour, IPlayerClass",
+      "dump_line": 398697,
+      "field_count": 109,
+      "method_count": 50,
+      "properties_count": 1,
+      "selected_fields": [
+        "public string OrbusNetComponent; // 0x18",
+        "private NetEntity myEntity; // 0x20",
+        "private bool isLocallyControlled; // 0x28",
+        "private PlayerClass myPlayerClass; // 0x30",
+        "private PlayerAvatar myAvatar; // 0x38",
+        "private PlayerCharacter myPlayer; // 0x40",
+        "private GameObject primaryController; // 0x48",
+        "private GameObject secondaryController; // 0x50",
+        "private int primaryWeaponHandIdx; // 0x58",
+        "private int secondaryWeaponHandIdx; // 0x5C",
+        "public GameObject hammer; // 0x60",
+        "private Rigidbody hammerRigidbody; // 0x68",
+        "public GameObject[] hitVfx; // 0x70",
+        "public GameObject hemanVfx; // 0x78",
+        "private GameObject weaponAdjust; // 0x80",
+        "private GameObject activeSuperVfx; // 0x88",
+        "public GameObject superVfx; // 0x90",
+        "public GameObject chargeVfx; // 0x98"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x331B40"
+        },
+        {
+          "signature": "public void ClassEnabled()",
+          "rva": "0x331C00"
+        },
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x31D090"
+        },
+        {
+          "signature": "public GameObject GetWeaponSkin()",
+          "rva": "0x334560"
+        },
+        {
+          "signature": "public void AvatarEquipmentChanged()",
+          "rva": "0x330A50"
+        },
+        {
+          "signature": "public void UpdateClassBar()",
+          "rva": "0x336EC0"
+        },
+        {
+          "signature": "private void doDoubleTriggerClick()",
+          "rva": "0x337800"
+        },
+        {
+          "signature": "private bool checkForDoubleTriggerClick()",
+          "rva": "0x3377C0"
+        },
+        {
+          "signature": "private void doGrip(object sender, ClickedEventArgs e)",
+          "rva": "0x3379F0"
+        },
+        {
+          "signature": "private void doUngrip(object sender, ClickedEventArgs e)",
+          "rva": "0x337FD0"
+        },
+        {
+          "signature": "private void doTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x337BA0"
+        },
+        {
+          "signature": "private void doTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x337E80"
+        },
+        {
+          "signature": "private void DetachOrAttachHammer()",
+          "rva": "0x331D20"
+        },
+        {
+          "signature": "public void TriggerLibram(int libramIndex)",
+          "rva": "0x3357F0"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x3320F0"
+        },
+        {
+          "signature": "private int CheckChargePosition(Vector3 swordHandleVector)",
+          "rva": "0x331740"
+        },
+        {
+          "signature": "public void CastSuper()",
+          "rva": "0x3311D0"
+        },
+        {
+          "signature": "public void CastPleaOfDivinity()",
+          "rva": "0x330D50"
+        },
+        {
+          "signature": "public void orbusNetCleanup(NetEntity entity)",
+          "rva": "0x3386F0"
+        },
+        {
+          "signature": "private void UpdateWeaponCharge()",
+          "rva": "0x337260"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x338720"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x330C40"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x334B50"
+        },
+        {
+          "signature": "private void SwitchWeaponHand(byte handIdx)",
+          "rva": "0x335180"
+        },
+        {
+          "signature": "private void EnablePrimaryWeapon()",
+          "rva": "0x332000"
+        },
+        {
+          "signature": "private void DisablePrimaryWeapon()",
+          "rva": "0x331FA0"
+        }
+      ]
+    },
+    {
+      "type_id": 9500,
+      "name": "Archer",
+      "namespace": "MagicalActual",
+      "declaration": "public class Archer : MonoBehaviour, IPlayerClass",
+      "dump_line": 394029,
+      "field_count": 127,
+      "method_count": 71,
+      "properties_count": 0,
+      "selected_fields": [
+        "private bool isLocallyControlled; // 0x18",
+        "private bool classIsActive; // 0x19",
+        "private PlayerCharacter myPlayer; // 0x20",
+        "private PlayerClass myPlayerClass; // 0x28",
+        "private PlayerAvatar myAvatar; // 0x30",
+        "public GameObject controllerArrow; // 0x38",
+        "private GameObject controllerArrowVfxPoint; // 0x40",
+        "private GameObject arrowNotch; // 0x48",
+        "public GameObject bow; // 0x50",
+        "private GameObject bowNotch; // 0x58",
+        "private GameObject thisBow; // 0x60",
+        "public GameObject handlePoint; // 0x68",
+        "public GameObject flyingArrowPrefab; // 0x70",
+        "public GameObject flyingArrowLongTailPrefab; // 0x78",
+        "public GameObject vfxBlood; // 0x80",
+        "public GameObject vfxCritHit; // 0x88",
+        "public GameObject vfxRain; // 0x90",
+        "public GameObject vfxTrapExplosion; // 0x98"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void AvatarEquipmentChanged()",
+          "rva": "0x525090"
+        },
+        {
+          "signature": "private void EquipNewBow()",
+          "rva": "0x525B90"
+        },
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void ClassEnabled()",
+          "rva": "0x5257A0"
+        },
+        {
+          "signature": "private void UpdateGlobes()",
+          "rva": "0x52B5A0"
+        },
+        {
+          "signature": "private void resetArrowHand()",
+          "rva": "0x52F510"
+        },
+        {
+          "signature": "private void UpdateControllerArrowVfx(Archer.arrowAbilities currentAbility)",
+          "rva": "0x52B200"
+        },
+        {
+          "signature": "private void ShowClassBar()",
+          "rva": "0x528260"
+        },
+        {
+          "signature": "private void UpdateClassBar()",
+          "rva": "0x52B0E0"
+        },
+        {
+          "signature": "private void doDoubleTriggerClick()",
+          "rva": "0x52CC30"
+        },
+        {
+          "signature": "private bool checkForDoubleTriggerClick()",
+          "rva": "0x52C580"
+        },
+        {
+          "signature": "private void doTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x52E2F0"
+        },
+        {
+          "signature": "private void doTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x52E5E0"
+        },
+        {
+          "signature": "private void doGrip(object sender, ClickedEventArgs e)",
+          "rva": "0x52CD00"
+        },
+        {
+          "signature": "private void doUnGrip(object sender, ClickedEventArgs e)",
+          "rva": "0x52E740"
+        },
+        {
+          "signature": "private void doSecondaryGrip()",
+          "rva": "0x52CE40"
+        },
+        {
+          "signature": "private void doSecondaryUnGrip()",
+          "rva": "0x52DE30"
+        },
+        {
+          "signature": "private void doSecondaryTriggerClick()",
+          "rva": "0x52D540"
+        },
+        {
+          "signature": "public void DKDOSPFDDA(ushort targetGuid, Vector3 targetPosition, int arrowId, byte critHit)",
+          "rva": "0x5258E0"
+        },
+        {
+          "signature": "private void shootArrow(Vector3 position, Vector3 direction, float firePower, bool powerShotActive, byte activeAbility, int arrowId = 0)",
+          "rva": "0x52F550"
+        },
+        {
+          "signature": "private void doSecondaryTriggerUnClick()",
+          "rva": "0x52D750"
+        },
+        {
+          "signature": "private void UpdateSlot1Arrow()",
+          "rva": "0x52B7A0"
+        },
+        {
+          "signature": "private void UpdateSlot2Arrow()",
+          "rva": "0x52BBF0"
+        },
+        {
+          "signature": "private void LateUpdate()",
+          "rva": "0x527360"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x525EA0"
+        },
+        {
+          "signature": "private void useAbility(int abilityId)",
+          "rva": "0x52F9F0"
+        }
+      ]
+    },
+    {
+      "type_id": 9612,
+      "name": "Orbhealer",
+      "namespace": "MagicalActual",
+      "declaration": "public class Orbhealer : MonoBehaviour, IPlayerClass",
+      "dump_line": 398262,
+      "field_count": 78,
+      "method_count": 55,
+      "properties_count": 1,
+      "selected_fields": [
+        "private bool isLocallyControlled; // 0x18",
+        "private PlayerCharacter myPlayer; // 0x20",
+        "private PlayerClass myPlayerClass; // 0x28",
+        "private OrbhealerArrow firingArrow; // 0x30",
+        "public GameObject flyingArrowPrefab; // 0x38",
+        "public GameObject vfxBlood; // 0x40",
+        "public GameObject[] vfxExplosions; // 0x48",
+        "public GameObject leftBow; // 0x50",
+        "public GameObject superVfx; // 0x58",
+        "public GameObject gunFireVfx; // 0x60",
+        "public Material defaultTurretMaterial; // 0x68",
+        "public Material redeployMaterial; // 0x70",
+        "private Animator leftBowAnimator; // 0x78",
+        "private GameObject weaponAdjust; // 0x80",
+        "private bool primaryActive; // 0x88",
+        "private Image leftAbil1; // 0x90",
+        "private Image leftAbil2; // 0x98",
+        "private Image leftAbil3; // 0xA0"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void resetLeftAbils()",
+          "rva": "0x302590"
+        },
+        {
+          "signature": "private void doDoubleTriggerClick()",
+          "rva": "0x301670"
+        },
+        {
+          "signature": "private bool checkForDoubleTriggerClick()",
+          "rva": "0x301520"
+        },
+        {
+          "signature": "private void doTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x301AD0"
+        },
+        {
+          "signature": "private void doTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x301E20"
+        },
+        {
+          "signature": "private void doPrimaryTriggerClick()",
+          "rva": "0x301790"
+        },
+        {
+          "signature": "private void doPrimaryTriggerUnClick()",
+          "rva": "0x3017D0"
+        },
+        {
+          "signature": "private void UpdateLifewellOrbRez()",
+          "rva": "0x300E80"
+        },
+        {
+          "signature": "private void UpdateLifewellOrb()",
+          "rva": "0x300F60"
+        },
+        {
+          "signature": "private void SpawnOrb(int slotNum, byte spellid)",
+          "rva": "0x2FECC0"
+        },
+        {
+          "signature": "private void LateUpdate()",
+          "rva": "0x2FE010"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x2FD620"
+        },
+        {
+          "signature": "private void updateArrowNotched()",
+          "rva": "0x302650"
+        },
+        {
+          "signature": "public void DLSPERSDFA(ushort targetGuid, Vector3 targetPosition, int arrowId)",
+          "rva": "0x2FC920"
+        },
+        {
+          "signature": "private void FireArrow(Vector3 position, Vector3 direction, byte side, byte spellid, int arrowId = 0)",
+          "rva": "0x2FD0C0"
+        },
+        {
+          "signature": "public void TurretFinishedSpawning(GameObject turret)",
+          "rva": "0x2FFB10"
+        },
+        {
+          "signature": "public void orbusNetCleanup(NetEntity entity)",
+          "rva": "0x301F90"
+        },
+        {
+          "signature": "public void AvatarEquipmentChanged()",
+          "rva": "0x2FC0E0"
+        },
+        {
+          "signature": "public void ShowHitEffect(Vector3 position)",
+          "rva": "0x2FEBF0"
+        },
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void ClassEnabled()",
+          "rva": "0x2FC8C0"
+        },
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x2FDF00"
+        },
+        {
+          "signature": "public GameObject GetWeaponSkin()",
+          "rva": "0x2FDF10"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x3020A0"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x2FC2F0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x2FF030"
+        }
+      ]
+    },
+    {
+      "type_id": 9767,
+      "name": "Shaman",
+      "namespace": "MagicalActual",
+      "declaration": "public class Shaman : MonoBehaviour, IPlayerClass",
+      "dump_line": 405413,
+      "field_count": 41,
+      "method_count": 38,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string OrbusNetComponent; // 0x18",
+        "private NetEntity myEntity; // 0x20",
+        "private bool isLocallyControlled; // 0x28",
+        "private PlayerClass myPlayerClass; // 0x30",
+        "private PlayerAvatar myAvatar; // 0x38",
+        "private PlayerCharacter myPlayer; // 0x40",
+        "private GameObject playerHead; // 0x48",
+        "private GameObject primaryController; // 0x50",
+        "private GameObject secondaryController; // 0x58",
+        "private int primaryWeaponHandIdx; // 0x60",
+        "private int secondaryWeaponHandIdx; // 0x64",
+        "private GameObject activeSuperVfx; // 0x68",
+        "public GameObject superVfx; // 0x70",
+        "private bool leftTriggerDown; // 0x78",
+        "private bool rightTriggerDown; // 0x79",
+        "private bool primaryActive; // 0x7A",
+        "private bool secondaryActive; // 0x7B",
+        "private float gripTimeToSummon; // 0x7C"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void Update()",
+          "rva": "0x487240"
+        },
+        {
+          "signature": "private void findTotemToSummon(GameObject controller)",
+          "rva": "0x488340"
+        },
+        {
+          "signature": "public void AvatarEquipmentChanged()",
+          "rva": "0x484CC0"
+        },
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x484FB0"
+        },
+        {
+          "signature": "public void ClassEnabled()",
+          "rva": "0x485030"
+        },
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x357ED0"
+        },
+        {
+          "signature": "public GameObject GetWeaponSkin()",
+          "rva": "0x357ED0"
+        },
+        {
+          "signature": "public void UpdateClassBar()",
+          "rva": "0x487130"
+        },
+        {
+          "signature": "private void doDoubleTriggerClick()",
+          "rva": "0x4878E0"
+        },
+        {
+          "signature": "private bool checkForDoubleTriggerClick()",
+          "rva": "0x487780"
+        },
+        {
+          "signature": "private void doTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x487BA0"
+        },
+        {
+          "signature": "private void doTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x487ED0"
+        },
+        {
+          "signature": "private void doGrip(object sender, ClickedEventArgs e)",
+          "rva": "0x487A20"
+        },
+        {
+          "signature": "private void doUnGrip(object sender, ClickedEventArgs e)",
+          "rva": "0x488180"
+        },
+        {
+          "signature": "private void SpawnOrb(int slotNum, byte spellid)",
+          "rva": "0x485830"
+        },
+        {
+          "signature": "public static InventoryItem itemForSpellId(byte spellId)",
+          "rva": "0x488A20"
+        },
+        {
+          "signature": "public void orbusNetCleanup(NetEntity entity)",
+          "rva": "0x3386F0"
+        },
+        {
+          "signature": "public void ResetTotem(GameObject thisTotem)",
+          "rva": "0x485650"
+        },
+        {
+          "signature": "public void SpawnTotem(byte spellId, Vector3 position)",
+          "rva": "0x485CA0"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x488A80"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x484EC0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x485D80"
+        },
+        {
+          "signature": "private void SwitchWeaponHand(byte handIdx)",
+          "rva": "0x486440"
+        },
+        {
+          "signature": "private void EnablePrimaryWeapon()",
+          "rva": "0x485290"
+        },
+        {
+          "signature": "private void DisablePrimaryWeapon()",
+          "rva": "0x485090"
+        },
+        {
+          "signature": "private void EnableSecondaryWeapon()",
+          "rva": "0x4854B0"
+        }
+      ]
+    },
+    {
+      "type_id": 9430,
+      "name": "Barbarian",
+      "namespace": "MagicalActual",
+      "declaration": "internal class Barbarian : MonoBehaviour",
+      "dump_line": 391920,
+      "field_count": 31,
+      "method_count": 13,
+      "properties_count": 0,
+      "selected_fields": [
+        "public BarbarianAxe axeLeft; // 0x18",
+        "public BarbarianAxe axeRight; // 0x20",
+        "private float lastLeftHit; // 0x28",
+        "private float lastRightHit; // 0x2C",
+        "private float allowHitEvery; // 0x30",
+        "public GameObject barbarianBeatPrefab; // 0x38",
+        "public GameObject vfxHit; // 0x40",
+        "public GameObject vfxBlood; // 0x48",
+        "public GameObject vfxTaunt; // 0x50",
+        "private bool rightIsColliding; // 0x58",
+        "private bool leftIsColliding; // 0x59",
+        "private Image rightAbil1; // 0x60",
+        "private float abil1TimeSinceUsed; // 0x68",
+        "private float abil1Cooldown; // 0x6C",
+        "private Image rightAbil2; // 0x70",
+        "private float abil2TimeSinceUsed; // 0x78",
+        "private float abil2Cooldown; // 0x7C",
+        "private Image rightAbil3; // 0x80"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x418ED0"
+        },
+        {
+          "signature": "private void doRightPadClick(object sender, ClickedEventArgs e)",
+          "rva": "0x41A130"
+        },
+        {
+          "signature": "private void useAbility(int abilityId)",
+          "rva": "0x41A660"
+        },
+        {
+          "signature": "private void EnemyHit(GameObject enemy, int handNum)",
+          "rva": "0x418E10"
+        },
+        {
+          "signature": "private void showTaunt()",
+          "rva": "0x41A560"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x41A220"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x4196D0"
+        }
+      ]
+    },
+    {
+      "type_id": 9787,
+      "name": "Swordboard",
+      "namespace": "MagicalActual",
+      "declaration": "public class Swordboard : MonoBehaviour, IPlayerClass",
+      "dump_line": 406167,
+      "field_count": 138,
+      "method_count": 49,
+      "properties_count": 0,
+      "selected_fields": [
+        "private float velocityThreshold; // 0x18",
+        "private float velocityScaler; // 0x1C",
+        "private int numOfPrevPoints; // 0x20",
+        "public float HitBoxX; // 0x24",
+        "public float HitBoxY; // 0x28",
+        "public float HitBoxZ; // 0x2C",
+        "public string OrbusNetComponent; // 0x30",
+        "private NetEntity myEntity; // 0x38",
+        "private bool isLocallyControlled; // 0x40",
+        "private PlayerClass myPlayerClass; // 0x48",
+        "private PlayerAvatar myAvatar; // 0x50",
+        "private PlayerCharacter myPlayer; // 0x58",
+        "public GameObject shield; // 0x60",
+        "private BoxCollider shieldCollider; // 0x68",
+        "public GameObject sword; // 0x70",
+        "private GameObject thrownSword; // 0x78",
+        "private Transform playerHead; // 0x80",
+        "private float focusDistance; // 0x88"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void UpdateClassBar()",
+          "rva": "0x43BC10"
+        },
+        {
+          "signature": "public void UpdateShieldAvailable()",
+          "rva": "0x43C010"
+        },
+        {
+          "signature": "private int GetDirection(SwordHit targetHit)",
+          "rva": "0x4382C0"
+        },
+        {
+          "signature": "private void DrawHitbox(Vector3 curPos)",
+          "rva": "0x437350"
+        },
+        {
+          "signature": "private void getFocusTarget()",
+          "rva": "0x43FEF0"
+        },
+        {
+          "signature": "private void Update()",
+          "rva": "0x43C180"
+        },
+        {
+          "signature": "private int CheckChargePosition(Vector3 swordHandleVector, Vector3 swordPointVector)",
+          "rva": "0x436CC0"
+        },
+        {
+          "signature": "private void doDoubleTriggerClick()",
+          "rva": "0x43F660"
+        },
+        {
+          "signature": "private bool checkForDoubleTriggerClick()",
+          "rva": "0x43F510"
+        },
+        {
+          "signature": "private void doTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x43F910"
+        },
+        {
+          "signature": "private void doTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x43FC50"
+        },
+        {
+          "signature": "private void doSwordTriggerClick()",
+          "rva": "0x43F770"
+        },
+        {
+          "signature": "private void doSwordTriggerUnClick()",
+          "rva": "0x43F790"
+        },
+        {
+          "signature": "private void showTaunt()",
+          "rva": "0x440560"
+        },
+        {
+          "signature": "public bool TriggerTaunt()",
+          "rva": "0x439B80"
+        },
+        {
+          "signature": "private void UpdateRushIcons()",
+          "rva": "0x43BDA0"
+        },
+        {
+          "signature": "private void setSwordTrailColor(byte lastSwordCombo)",
+          "rva": "0x4404B0"
+        },
+        {
+          "signature": "public void AvatarEquipmentChanged()",
+          "rva": "0x436730"
+        },
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void ClassEnabled()",
+          "rva": "0x437140"
+        },
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x3BDEF0"
+        },
+        {
+          "signature": "public GameObject GetWeaponSkin()",
+          "rva": "0x4389C0"
+        },
+        {
+          "signature": "public void orbusNetCleanup(NetEntity entity)",
+          "rva": "0x440030"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x440060"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x436A30"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x438EC0"
+        }
+      ]
+    },
+    {
+      "type_id": 9587,
+      "name": "Gambler",
+      "namespace": "MagicalActual",
+      "declaration": "public class Gambler : MonoBehaviour, IPlayerClass",
+      "dump_line": 397299,
+      "field_count": 69,
+      "method_count": 45,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string OrbusNetComponent; // 0x18",
+        "private NetEntity myEntity; // 0x20",
+        "private bool isLocallyControlled; // 0x28",
+        "private PlayerClass myPlayerClass; // 0x30",
+        "private PlayerAvatar myAvatar; // 0x38",
+        "private PlayerCharacter myPlayer; // 0x40",
+        "private GameObject primaryController; // 0x48",
+        "private GameObject secondaryController; // 0x50",
+        "private OrbusTrackedController primaryTrackedController; // 0x58",
+        "private Grabber secondaryGrabber; // 0x60",
+        "private int primaryWeaponHandIdx; // 0x68",
+        "private int secondaryWeaponHandIdx; // 0x6C",
+        "public GameObject gun; // 0x70",
+        "public GameObject bowFirePoint; // 0x78",
+        "private GameObject weaponAdjust; // 0x80",
+        "public GameObject superVfx; // 0x88",
+        "public GameObject bulletPrefab; // 0x90",
+        "public GameObject bulletTrail; // 0x98"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void AvatarEquipmentChanged()",
+          "rva": "0x3BCA90"
+        },
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x3BCDE0"
+        },
+        {
+          "signature": "public void ClassEnabled()",
+          "rva": "0x3BCED0"
+        },
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x3BDEF0"
+        },
+        {
+          "signature": "public GameObject GetWeaponSkin()",
+          "rva": "0x3BDF00"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x3BD820"
+        },
+        {
+          "signature": "private void doPrimaryTriggerUnClick()",
+          "rva": "0x3C0C20"
+        },
+        {
+          "signature": "private void FireArrow(Vector3 position, Vector3 direction, Vector3 crossVelocity, int bulletsCharged = 1, bool local = False)",
+          "rva": "0x3BD410"
+        },
+        {
+          "signature": "public void UpdateClassBar()",
+          "rva": "0x3BFAD0"
+        },
+        {
+          "signature": "private void doDoubleTriggerClick()",
+          "rva": "0x3C0970"
+        },
+        {
+          "signature": "private bool checkForDoubleTriggerClick()",
+          "rva": "0x3C07E0"
+        },
+        {
+          "signature": "private void doGripped(object sender, ClickedEventArgs e)",
+          "rva": "0x3C0A80"
+        },
+        {
+          "signature": "private void doSecondaryGripped()",
+          "rva": "0x3C11B0"
+        },
+        {
+          "signature": "public void ReleaseSecondaryGrabber()",
+          "rva": "0x3BE1F0"
+        },
+        {
+          "signature": "private void doTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x3C1240"
+        },
+        {
+          "signature": "private void doTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x3C1660"
+        },
+        {
+          "signature": "public void orbusNetCleanup(NetEntity entity)",
+          "rva": "0x3386F0"
+        },
+        {
+          "signature": "public void DSLDPFAADD(NetEntity target, Vector3 targetPosition, float curvePower, int bulletsCharged, bool wasFullBarrel)",
+          "rva": "0x3BD120"
+        },
+        {
+          "signature": "private void UpdatePendingCard()",
+          "rva": "0x3BFCC0"
+        },
+        {
+          "signature": "public void ShowArrowHit(Vector3 position)",
+          "rva": "0x3BE290"
+        },
+        {
+          "signature": "private void UpdatePendingEmpowerment()",
+          "rva": "0x3BFE30"
+        },
+        {
+          "signature": "private void UpdateReadyToDrawCard()",
+          "rva": "0x3BFFA0"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x3C18A0"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x3BCD40"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x3BE360"
+        },
+        {
+          "signature": "private void SwitchWeaponHand(byte handIdx)",
+          "rva": "0x3BE710"
+        }
+      ]
+    },
+    {
+      "type_id": 9577,
+      "name": "Fisher",
+      "namespace": "MagicalActual",
+      "declaration": "public class Fisher : MonoBehaviour",
+      "dump_line": 396790,
+      "field_count": 69,
+      "method_count": 47,
+      "properties_count": 2,
+      "selected_fields": [
+        "public Fisher.FishingPoleState currentState; // 0x18",
+        "public GameObject fishingPole; // 0x20",
+        "public GameObject fishingLurePrefab; // 0x28",
+        "private FisherReel myReel; // 0x30",
+        "private FishingRod myRod; // 0x38",
+        "private PlayerCharacter myPlayer; // 0x40",
+        "private PlayerAvatar myAvatar; // 0x48",
+        "private OrbusTrackedController handController; // 0x50",
+        "public GameObject vfxBobberSplash; // 0x58",
+        "public GameObject poleTip; // 0x60",
+        "public GameObject bobberPrefab; // 0x68",
+        "public Material lineRendererMaterial; // 0x70",
+        "public FishingLure myLure; // 0x78",
+        "private bool primaryActive; // 0x80",
+        "private bool secondaryActive; // 0x81",
+        "public GameObject currentBobber; // 0x88",
+        "public GameObject bobberHook; // 0x90",
+        "private SphereCollider currentBobberCollider; // 0x98"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void doPadClick(object sender, ClickedEventArgs e)",
+          "rva": "0x411890"
+        },
+        {
+          "signature": "private void doPadUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x411AE0"
+        },
+        {
+          "signature": "private void AvatarEquipmentChanged()",
+          "rva": "0x40E6F0"
+        },
+        {
+          "signature": "private IEnumerator WaitForEquimentUpdate()",
+          "rva": "0x411500"
+        },
+        {
+          "signature": "public void PhysicsInteractableGrip(Grabber sender)",
+          "rva": "0x4108B0"
+        },
+        {
+          "signature": "public void PhysicsInteractableUngrip(Grabber sender)",
+          "rva": "0x410A30"
+        },
+        {
+          "signature": "private void UpdateLureParts()",
+          "rva": "0x411300"
+        },
+        {
+          "signature": "private void ResetPole()",
+          "rva": "0x410AA0"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x40F160"
+        },
+        {
+          "signature": "private void ResetSelf()",
+          "rva": "0x410AD0"
+        },
+        {
+          "signature": "private void LateUpdate()",
+          "rva": "0x410210"
+        },
+        {
+          "signature": "private void updateFishingLineOtherPlayer()",
+          "rva": "0x413060"
+        },
+        {
+          "signature": "private void UpdateLineRenderer()",
+          "rva": "0x411260"
+        },
+        {
+          "signature": "private void updateFishingLine()",
+          "rva": "0x413200"
+        },
+        {
+          "signature": "private void chooseNewJerkPosition()",
+          "rva": "0x4116A0"
+        },
+        {
+          "signature": "private void setAlertText(string newText)",
+          "rva": "0x412440"
+        },
+        {
+          "signature": "private void showCatchReward(ushort rewardType, float rewardWeight, bool didCatchFish)",
+          "rva": "0x412600"
+        },
+        {
+          "signature": "public void reelGripChanged(bool newValue)",
+          "rva": "0x412370"
+        },
+        {
+          "signature": "public void orbusNetCleanup(NetEntity entity)",
+          "rva": "0x411FD0"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x412000"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x40E7B0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x410C90"
+        },
+        {
+          "signature": "private void FindPole()",
+          "rva": "0x40EF00"
+        },
+        {
+          "signature": "private void OnDisable()",
+          "rva": "0x4107B0"
+        },
+        {
+          "signature": "private void GenerateBobber()",
+          "rva": "0x40FE40"
+        },
+        {
+          "signature": "private void DestroyBobber()",
+          "rva": "0x40EAE0"
+        }
+      ]
+    },
+    {
+      "type_id": 9583,
+      "name": "FishingRod",
+      "namespace": "MagicalActual",
+      "declaration": "public class FishingRod : MonoBehaviour",
+      "dump_line": 397137,
+      "field_count": 10,
+      "method_count": 10,
+      "properties_count": 1,
+      "selected_fields": [
+        "public Fisher myFisher; // 0x18",
+        "private FisherReel <myReel>k__BackingField; // 0x20",
+        "private PlayerTool myTool; // 0x28",
+        "private GameObject hipRod; // 0x30",
+        "private GameObject heldRod; // 0x38",
+        "private Transform poleStatus; // 0x40",
+        "public bool isHeld; // 0x48",
+        "public bool isAlreadyHidden; // 0x49",
+        "public bool isInit; // 0x4A",
+        "private DynamicPlayerMap myMap; // 0x50"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public PlayerTool getTool()",
+          "rva": "0x35BD90"
+        },
+        {
+          "signature": "public void PhysicsInteractableGrip(Grabber sender)",
+          "rva": "0x3B8490"
+        },
+        {
+          "signature": "public void PhysicsInteractableUngrip(Grabber sender)",
+          "rva": "0x3B8580"
+        },
+        {
+          "signature": "public void HideFishingRod()",
+          "rva": "0x3B8350"
+        },
+        {
+          "signature": "public void ShowFishingRod()",
+          "rva": "0x3B8670"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x3B8300"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x3B87B0"
+        }
+      ]
+    },
+    {
+      "type_id": 9466,
+      "name": "FishingLure",
+      "namespace": "MagicalActual",
+      "declaration": "public class FishingLure : MonoBehaviour",
+      "dump_line": 392947,
+      "field_count": 2,
+      "method_count": 4,
+      "properties_count": 0,
+      "selected_fields": [
+        "public GameObject[] slots; // 0x18",
+        "private MeshFilter[] slotFilters; // 0x20"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void UpdateLure(string[] partItemIds)",
+          "rva": "0x3B7F70"
+        },
+        {
+          "signature": "public void UpdateLure(int[] partItemIds)",
+          "rva": "0x3B8120"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x3B7DF0"
+        }
+      ]
+    },
+    {
+      "type_id": 9862,
+      "name": "Monster",
+      "namespace": "MagicalActual",
+      "declaration": "public class Monster : MonoBehaviour, IPooling",
+      "dump_line": 408959,
+      "field_count": 51,
+      "method_count": 40,
+      "properties_count": 4,
+      "selected_fields": [
+        "public OrbusHealthBar healthBar; // 0x18",
+        "public Animator animator; // 0x20",
+        "public string OrbusNetComponent; // 0x28",
+        "private NetEntity <myEntity>k__BackingField; // 0x30",
+        "public int hitPointsReadOnly; // 0x38",
+        "public bool isDead; // 0x3C",
+        "public bool isMyPlayer; // 0x3D",
+        "public List<string> sfxNames; // 0x40",
+        "public AudioClip[] sfxFiles; // 0x48",
+        "private AudioSource _myAudioSource; // 0x50",
+        "public List<string> vfxNames; // 0x58",
+        "public GameObject[] vfxObjs; // 0x60",
+        "public List<Vector4> elementalResistances; // 0x68",
+        "public Dictionary<float, StatusEffect> statusEffects; // 0x70",
+        "public NetEntity currentTrackingTargetEntity; // 0x78",
+        "public Transform currentTrackingTargetAvatarTransform; // 0x80",
+        "public HealthChangedEvent onHealthChanged; // 0x88",
+        "private GameObject attackTelegraph; // 0x90"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void PoolingReset()",
+          "rva": "0x5B48E0"
+        },
+        {
+          "signature": "public void SetWarriorCollider(WarriorCollisionBox newCollider)",
+          "rva": "0x34FD70"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x5B3EA0"
+        },
+        {
+          "signature": "private void UpdateHealthBar()",
+          "rva": "0x5B54B0"
+        },
+        {
+          "signature": "private void UpdateEffectIcons()",
+          "rva": "0x5B4AF0"
+        },
+        {
+          "signature": "private void UpdatePhasedOut()",
+          "rva": "0x5B5580"
+        },
+        {
+          "signature": "public void showTelegraph(Vector3 center, Vector3 size, float timeToShow, Quaternion thisrotation)",
+          "rva": "0x5B6CE0"
+        },
+        {
+          "signature": "public void showSphereTelegraph(Vector3 center, float radius, float timeToShow)",
+          "rva": "0x5B6B30"
+        },
+        {
+          "signature": "private void WillDespawn()",
+          "rva": "0x5B59C0"
+        },
+        {
+          "signature": "private void RemoveFromGame()",
+          "rva": "0x5B4930"
+        },
+        {
+          "signature": "private void trackingTargetChanged()",
+          "rva": "0x5B6E20"
+        },
+        {
+          "signature": "public void triggerSfxNamed(string animationTriggerName)",
+          "rva": "0x5B6F30"
+        },
+        {
+          "signature": "private void ForceOrbusBarUpdate()",
+          "rva": "0x5B4430"
+        },
+        {
+          "signature": "private void UpdateStatusEffect(float statusId, int statusType, float durationRemaining, float originalDuration)",
+          "rva": "0x5B5780"
+        },
+        {
+          "signature": "private void CancelCast()",
+          "rva": "0x5B3C90"
+        },
+        {
+          "signature": "public void Fmod(string eventName)",
+          "rva": "0x5B4330"
+        },
+        {
+          "signature": "public void Hit()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x5B6080"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x5B35A0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x5B4A00"
+        },
+        {
+          "signature": "public void ClearWarriorCollider()",
+          "rva": "0x5B3DA0"
+        },
+        {
+          "signature": "public bool HasWarriorCollider()",
+          "rva": "0x5B4660"
+        },
+        {
+          "signature": "private void OnDisable()",
+          "rva": "0x5B47C0"
+        },
+        {
+          "signature": "private void OnEnable()",
+          "rva": "0x5B4850"
+        },
+        {
+          "signature": "private void OnDestroy()",
+          "rva": "0x5B46C0"
+        },
+        {
+          "signature": "public bool HasStatusEffect(int statusType)",
+          "rva": "0x5B44B0"
+        }
+      ]
+    },
+    {
+      "type_id": 10013,
+      "name": "OrbusHealthBar",
+      "namespace": "MagicalActual",
+      "declaration": "public class OrbusHealthBar : MonoBehaviour",
+      "dump_line": 413162,
+      "field_count": 43,
+      "method_count": 48,
+      "properties_count": 15,
+      "selected_fields": [
+        "private float screenXLimit; // 0x18",
+        "private float screenXPos; // 0x1C",
+        "private float screenYPos; // 0x20",
+        "private float effectiveDistance; // 0x24",
+        "private float focusTime; // 0x28",
+        "private float focusDistance; // 0x2C",
+        "private ProgressBarPro pbar; // 0x30",
+        "private Camera myCamera; // 0x38",
+        "private Vector3 <localOrigin>k__BackingField; // 0x40",
+        "private Transform <myParentTransform>k__BackingField; // 0x50",
+        "private Transform myTransform; // 0x58",
+        "private Monster myMonster; // 0x60",
+        "private PlayerAvatar myAvatar; // 0x68",
+        "private int _maxValue; // 0x70",
+        "private int _currentValue; // 0x74",
+        "private string _name; // 0x78",
+        "private string _subname; // 0x80",
+        "private string _surname; // 0x88"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void UpdatedMonsterType()",
+          "rva": "0x305630"
+        },
+        {
+          "signature": "public void showBar()",
+          "rva": "0x3065D0"
+        },
+        {
+          "signature": "public void hideBar()",
+          "rva": "0x3063B0"
+        },
+        {
+          "signature": "public void ForceUpdate()",
+          "rva": "0x305630"
+        },
+        {
+          "signature": "private void UpdateView()",
+          "rva": "0x305630"
+        },
+        {
+          "signature": "private void DoViewUpdate()",
+          "rva": "0x3039B0"
+        },
+        {
+          "signature": "private string GetTargetSymbol(byte type)",
+          "rva": "0x3057D0"
+        },
+        {
+          "signature": "private string GetKillMissionIndicator()",
+          "rva": "0x305640"
+        },
+        {
+          "signature": "private string RelativeRatingForCurrentPlayer()",
+          "rva": "0x305820"
+        },
+        {
+          "signature": "public string GetPlayerTitle(bool styled = True)",
+          "rva": "0x305710"
+        },
+        {
+          "signature": "public string CompleteName(bool removeQTag = False)",
+          "rva": "0x303850"
+        },
+        {
+          "signature": "public void SetFocus(float time)",
+          "rva": "0x305DA0"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x304B10"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x302F40"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x305EE0"
+        },
+        {
+          "signature": "private bool CheckKillMissionMonster()",
+          "rva": "0x303660"
+        },
+        {
+          "signature": "private string BlankName()",
+          "rva": "0x303600"
+        },
+        {
+          "signature": "public void StopFocus()",
+          "rva": "0x306070"
+        }
+      ]
+    },
+    {
+      "type_id": 9484,
+      "name": "DamageParams",
+      "namespace": "MagicalActual",
+      "declaration": "public class DamageParams",
+      "dump_line": 393544,
+      "field_count": 2,
+      "method_count": 1,
+      "properties_count": 0,
+      "selected_fields": [
+        "public int damageAmount; // 0x10",
+        "public DamageAffinity affinity; // 0x14"
+      ],
+      "selected_methods": []
+    },
+    {
+      "type_id": 9482,
+      "name": "StatusEffectParams",
+      "namespace": "MagicalActual",
+      "declaration": "public class StatusEffectParams",
+      "dump_line": 393514,
+      "field_count": 4,
+      "method_count": 1,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string effectName; // 0x10",
+        "public float effectDuration; // 0x18",
+        "public float effectParam1; // 0x1C",
+        "public float effectParam2; // 0x20"
+      ],
+      "selected_methods": []
+    },
+    {
+      "type_id": 10184,
+      "name": "Potion",
+      "namespace": "MagicalActual",
+      "declaration": "public class Potion : MonoBehaviour",
+      "dump_line": 419608,
+      "field_count": 8,
+      "method_count": 7,
+      "properties_count": 0,
+      "selected_fields": [
+        "private PlayerTool myTool; // 0x18",
+        "private ObFlt potionCooldown; // 0x20",
+        "private ObFlt timeSincePotionUsed; // 0x40",
+        "private bool usedThisGrip; // 0x60",
+        "private AudioSource myAudioSource; // 0x68",
+        "private Transform potionChildType; // 0x70",
+        "private Transform potionStopper; // 0x78",
+        "public ParticleSystem stream; // 0x80"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void PhysicsInteractableGrip(Grabber sender)",
+          "rva": "0x3AD320"
+        },
+        {
+          "signature": "private void PhysicsInteractableUngrip(Grabber sender)",
+          "rva": "0x3AD3B0"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x3ACD90"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x3ACAE0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x3AD440"
+        },
+        {
+          "signature": "private void Drink()",
+          "rva": "0x3ACB20"
+        }
+      ]
+    },
+    {
+      "type_id": 10081,
+      "name": "PotionAgingStation",
+      "namespace": "MagicalActual",
+      "declaration": "public class PotionAgingStation : MonoBehaviour",
+      "dump_line": 416129,
+      "field_count": 6,
+      "method_count": 7,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string OrbusNetComponent; // 0x18",
+        "private NetEntity myEntity; // 0x20",
+        "public GameObject[] ingredientSlots; // 0x28",
+        "public GenericChest myChest; // 0x30",
+        "private InventoryItemInstance[] currentIngredients; // 0x38",
+        "private ItemContainer myItemContainer; // 0x40"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void ItemContainerInventoryChanged(ItemContainer container)",
+          "rva": "0x3AC310"
+        },
+        {
+          "signature": "private void UpdateTableDisplay()",
+          "rva": "0x3AC320"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x2FA740"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x3AC2A0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "private void DetachedFromInterface()",
+          "rva": "0x339790"
+        }
+      ]
+    },
+    {
+      "type_id": 9843,
+      "name": "InventoryManager",
+      "namespace": "MagicalActual",
+      "declaration": "internal class InventoryManager : MonoBehaviour",
+      "dump_line": 408204,
+      "field_count": 5,
+      "method_count": 5,
+      "properties_count": 0,
+      "selected_fields": [
+        "private PlayerCharacter myPlayer; // 0x18",
+        "private bool isOpen; // 0x20",
+        "public GameObject inventoryPrefab; // 0x28",
+        "private GameObject currentInventory; // 0x30",
+        "private Animator currentAnimator; // 0x38"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void handleMenuClick(object sender, ClickedEventArgs e)",
+          "rva": "0x3CD3F0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x3CD300"
+        },
+        {
+          "signature": "public void Open()",
+          "rva": "0x3CD0C0"
+        },
+        {
+          "signature": "public void Close()",
+          "rva": "0x3CD050"
+        }
+      ]
+    },
+    {
+      "type_id": 10035,
+      "name": "PlayerEntity",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerEntity : NetEntity",
+      "dump_line": 414552,
+      "field_count": 3,
+      "method_count": 2,
+      "properties_count": 0,
+      "selected_fields": [
+        "private PlayerCharacter basePlayer; // 0xD0",
+        "private PlayerAvatar baseAvatar; // 0xD8",
+        "private string emptyString; // 0xE0"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public override void UpdateObjectPosition(float frameDelta)",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    {
+      "type_id": 10034,
+      "name": "OtherPlayerEntity",
+      "namespace": "MagicalActual",
+      "declaration": "public class OtherPlayerEntity : NetEntity",
+      "dump_line": 414513,
+      "field_count": 10,
+      "method_count": 5,
+      "properties_count": 1,
+      "selected_fields": [
+        "private PlayerAvatar <baseAvatar>k__BackingField; // 0xD0",
+        "private Vector3 leftControllerPositionLastFrame; // 0xD8",
+        "private Vector3 leftControllerPositionThisFrame; // 0xE4",
+        "private Quaternion leftControllerRotationLastFrame; // 0xF0",
+        "private Quaternion leftControllerRotationThisFrame; // 0x100",
+        "private Vector3 rightControllerPositionLastFrame; // 0x110",
+        "private Vector3 rightControllerPositionThisFrame; // 0x11C",
+        "private Quaternion rightControllerRotationLastFrame; // 0x128",
+        "private Quaternion rightControllerRotationThisFrame; // 0x138",
+        "private string emptyString; // 0x148"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public override void UpdateObjectPosition(float frameDelta)",
+          "rva": "0x32FDA0"
+        },
+        {
+          "signature": "public void OtherPlayerEntityUpdateFromRemote(BinaryReader reader)",
+          "rva": "0x32F7D0"
+        }
+      ]
+    },
+    {
+      "type_id": 10029,
+      "name": "NetEntity",
+      "namespace": "MagicalActual",
+      "declaration": "public class NetEntity",
+      "dump_line": 414376,
+      "field_count": 22,
+      "method_count": 14,
+      "properties_count": 0,
+      "selected_fields": [
+        "public ushort guid; // 0x10",
+        "public GameObject baseObject; // 0x18",
+        "public Monster baseMonster; // 0x20",
+        "public bool updateBaseObjPosition; // 0x28",
+        "public bool updateUnclamped; // 0x29",
+        "protected Vector3 positionLastFrame; // 0x2C",
+        "protected Vector3 positionThisFrame; // 0x38",
+        "private Vector3 actualPositionLastFrame; // 0x44",
+        "private Vector3 catchupVelocity; // 0x50",
+        "protected Quaternion rotationLastFrame; // 0x5C",
+        "protected Quaternion rotationThisFrame; // 0x6C",
+        "protected float timeBetweenFrames; // 0x7C",
+        "private float maxDriftTime; // 0x80",
+        "private bool gotSecondFrame; // 0x84",
+        "protected float packetTimer; // 0x88",
+        "private Dictionary<string, List<ComponentListener>> componentListeners; // 0x90",
+        "private Dictionary<string, List<NetSyncListener>> netSyncListeners; // 0x98",
+        "public OrbusNetManager netManager; // 0xA0"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void broadcastSetup()",
+          "rva": "0x2F4EB0"
+        },
+        {
+          "signature": "public void ResetPosition()",
+          "rva": "0x2F3280"
+        },
+        {
+          "signature": "public virtual void UpdateObjectPosition(float frameDelta)",
+          "rva": "0x2F41D0"
+        },
+        {
+          "signature": "public void UpdatePositionFromRemote(float newposx, float newposy, float newposz, float newrotx, float newroty, float newrotz, float newrotw)",
+          "rva": "0x2F4540"
+        },
+        {
+          "signature": "public bool TriggerListenerForMethod(string componentName, byte methodId, BinaryReader reader)",
+          "rva": "0x2F3360"
+        },
+        {
+          "signature": "private bool UpdateNetSyncVariable(string componentName, int varidx, BinaryReader reader)",
+          "rva": "0x2F3C70"
+        },
+        {
+          "signature": "private void DespawnPooled()",
+          "rva": "0x2F2BB0"
+        },
+        {
+          "signature": "public void Despawn(bool despawnImmediate)",
+          "rva": "0x2F2C70"
+        },
+        {
+          "signature": "public void ClearAllListeners(string componentName)",
+          "rva": "0x2F2AF0"
+        }
+      ]
+    },
+    {
+      "type_id": 10018,
+      "name": "OrbusNetManager",
+      "namespace": "MagicalActual",
+      "declaration": "public class OrbusNetManager : MonoBehaviour",
+      "dump_line": 413445,
+      "field_count": 156,
+      "method_count": 125,
+      "properties_count": 11,
+      "selected_fields": [
+        "private WebSocket primaryConnectionAlt; // 0x18",
+        "private bool useEnet; // 0x20",
+        "private connectionProtocol currentProtocol; // 0x24",
+        "private Thread enetThread; // 0x28",
+        "private Thread enetSenderThread; // 0x30",
+        "private bool _enetThreadRunning; // 0x38",
+        "private bool _enetSenderThreadRunning; // 0x39",
+        "private Host enetHost; // 0x40",
+        "private Peer enetPeer; // 0x48",
+        "private bool netcodeConnected; // 0x50",
+        "public PlayerCharacter currentPlayer; // 0x58",
+        "private PlayerEntity <myPlayerEntity>k__BackingField; // 0x60",
+        "private BoxCuller <myBoxCuller>k__BackingField; // 0x68",
+        "private GameObject playerBase; // 0x70",
+        "private GameObject playerHead; // 0x78",
+        "private GameObject playerLeftController; // 0x80",
+        "private GameObject playerRightController; // 0x88",
+        "private ushort playerId; // 0x90"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void App1_UnhandledException(object sender, UnhandledExceptionEventArgs e)",
+          "rva": "0x306950"
+        },
+        {
+          "signature": "private IEnumerator FinishLoadingPool(float timeDelay = 0.25)",
+          "rva": "0x3097B0"
+        },
+        {
+          "signature": "private void showConnectionError(string errorMsg)",
+          "rva": "0x31FD80"
+        },
+        {
+          "signature": "public void ForceStopPlayerMovement()",
+          "rva": "0x309B90"
+        },
+        {
+          "signature": "public IEnumerator AndroidLoadLevel(string zoneFile, string actualZoneFile)",
+          "rva": "0x3068D0"
+        },
+        {
+          "signature": "private void PreloadForScene(string zoneFile)",
+          "rva": "0x30B480"
+        },
+        {
+          "signature": "private void LoadLevel(string zoneFile)",
+          "rva": "0x30B080"
+        },
+        {
+          "signature": "private void sendToken()",
+          "rva": "0x31F9A0"
+        },
+        {
+          "signature": "private void sendConnectionAttempt()",
+          "rva": "0x31F720"
+        },
+        {
+          "signature": "private void sendPing()",
+          "rva": "0x31F790"
+        },
+        {
+          "signature": "public string GetCurrentZone()",
+          "rva": "0x309BE0"
+        },
+        {
+          "signature": "public OrbusNetManager.FogInfo GetRealFogSettings()",
+          "rva": "0x309EC0"
+        },
+        {
+          "signature": "public void SetSunsActive(bool isActive)",
+          "rva": "0x30D640"
+        },
+        {
+          "signature": "private void SetCloudDensity(float newDensity, bool doRain, bool doLightning)",
+          "rva": "0x30D1A0"
+        },
+        {
+          "signature": "private void EnetSender()",
+          "rva": "0x3091B0"
+        },
+        {
+          "signature": "private void EnetClient()",
+          "rva": "0x308C10"
+        },
+        {
+          "signature": "private void Send(string message)",
+          "rva": "0x30CF90"
+        },
+        {
+          "signature": "public void SendBinary(byte[] bytes, long payloadSize, bool reliable = True, byte channelOverride = 0)",
+          "rva": "0x30C330"
+        },
+        {
+          "signature": "public void SetUIFadeLevel(float level)",
+          "rva": "0x30D720"
+        },
+        {
+          "signature": "public void SetFocusFadeLevel(float level)",
+          "rva": "0x30D610"
+        },
+        {
+          "signature": "public void ShowLoadingScreen(string levelName)",
+          "rva": "0x30D750"
+        },
+        {
+          "signature": "public void HideLoadingScreen(string levelName)",
+          "rva": "0x30AC10"
+        },
+        {
+          "signature": "public void NotifyServerOfLoadIn()",
+          "rva": "0x30B320"
+        },
+        {
+          "signature": "private void SendInitialPosition(Vector3 position)",
+          "rva": "0x30C3B0"
+        },
+        {
+          "signature": "private void initializePlayerRig(ushort playerId, Vector3 position, Quaternion rotation)",
+          "rva": "0x31EF50"
+        },
+        {
+          "signature": "private void UpdateEntityPositions(float frameDelta)",
+          "rva": "0x30E350"
+        }
+      ]
+    },
+    {
+      "type_id": 9414,
+      "name": "OrbusNetComponents",
+      "namespace": "MagicalActual",
+      "declaration": "internal class OrbusNetComponents : MonoBehaviour",
+      "dump_line": 391350,
+      "field_count": 1,
+      "method_count": 1,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string[] NetComponents; // 0x18"
+      ],
+      "selected_methods": []
+    },
+    {
+      "type_id": 10041,
+      "name": "OrbusNetSelfSpawn",
+      "namespace": "MagicalActual",
+      "declaration": "public class OrbusNetSelfSpawn : MonoBehaviour",
+      "dump_line": 414693,
+      "field_count": 3,
+      "method_count": 4,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string OrbusNetComponent; // 0x18",
+        "public ushort selfAssignedGuid; // 0x20",
+        "private OrbusNetManager netManager; // 0x28"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void Awake()",
+          "rva": "0x32E850"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x32E8E0"
+        },
+        {
+          "signature": "private void OnDestroy()",
+          "rva": "0x32E8B0"
+        }
+      ]
+    },
+    {
+      "type_id": 9796,
+      "name": "Teleporter",
+      "namespace": "MagicalActual",
+      "declaration": "public class Teleporter : MonoBehaviour",
+      "dump_line": 406617,
+      "field_count": 31,
+      "method_count": 28,
+      "properties_count": 6,
+      "selected_fields": [
+        "private OrbusTrackedController myController; // 0x18",
+        "private LaserPointer laserPointer; // 0x20",
+        "private Vector3 lastGoodTeleportPosition; // 0x28",
+        "private GameObject lastGoodJumpTarget; // 0x38",
+        "public PlayerCharacter myPlayer; // 0x40",
+        "public Slider chargeBar; // 0x48",
+        "public GameObject teleportPointPrefab; // 0x50",
+        "private GameObject teleportPoint; // 0x58",
+        "private Vector3[] teleportPoints; // 0x60",
+        "private LineRenderer teleportLr; // 0x68",
+        "private GameObject teleportLineHolder; // 0x70",
+        "private bool padIsBeingTouched; // 0x78",
+        "private float <padXAxis>k__BackingField; // 0x7C",
+        "private float <padYAxis>k__BackingField; // 0x80",
+        "private float padTouchSlideDelay; // 0x84",
+        "private float timeSincePadTouched; // 0x88",
+        "public bool autoRunEngaged; // 0x8C",
+        "private Vector3 noValidJumpPoint; // 0x90"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void LateUpdate()",
+          "rva": "0x444AA0"
+        },
+        {
+          "signature": "private void doPadClick(object sender, ClickedEventArgs e)",
+          "rva": "0x4464F0"
+        },
+        {
+          "signature": "private void doGripped(object sender, ClickedEventArgs e)",
+          "rva": "0x446380"
+        },
+        {
+          "signature": "private void doUnGripped(object sender, ClickedEventArgs e)",
+          "rva": "0x446D60"
+        },
+        {
+          "signature": "private void doPadDoubleClick(object sender, ClickedEventArgs e)",
+          "rva": "0x4466E0"
+        },
+        {
+          "signature": "private void doPadTouchMoved(object sender, ClickedEventArgs e)",
+          "rva": "0x446710"
+        },
+        {
+          "signature": "private void doPadTouched(object sender, ClickedEventArgs e)",
+          "rva": "0x446820"
+        },
+        {
+          "signature": "private void doPadUnTouched(object sender, ClickedEventArgs e)",
+          "rva": "0x446D00"
+        },
+        {
+          "signature": "private void doPadUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x446940"
+        },
+        {
+          "signature": "private void ClearTeleportLine()",
+          "rva": "0x444970"
+        },
+        {
+          "signature": "public void CancelTeleport()",
+          "rva": "0x444890"
+        },
+        {
+          "signature": "public void SetAllowTeleport(bool newvalue)",
+          "rva": "0x445DC0"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x444750"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x445DD0"
+        },
+        {
+          "signature": "private Vector3 SampleParabola(Vector3 start, Vector3 end, float height, float t)",
+          "rva": "0x445A50"
+        }
+      ]
+    },
+    {
+      "type_id": 10076,
+      "name": "Portal",
+      "namespace": "MagicalActual",
+      "declaration": "public class Portal : MonoBehaviour",
+      "dump_line": 415906,
+      "field_count": 8,
+      "method_count": 6,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string OrbusNetComponent; // 0x18",
+        "private NetEntity myEntity; // 0x20",
+        "public ParticleSystem glowEffect; // 0x28",
+        "public GameObject sphere; // 0x30",
+        "private float timeByGlobe; // 0x38",
+        "private float teleportAfter; // 0x3C",
+        "private AudioSource myAudioSource; // 0x40",
+        "private PhysicsInteractable myInteractable; // 0x48"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void RequestTeleport()",
+          "rva": "0x3ABF10"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x2FA740"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x3ABB40"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x3ABAF0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x3AC020"
+        }
+      ]
+    },
+    {
+      "type_id": 10166,
+      "name": "DungeonShard",
+      "namespace": "MagicalActual",
+      "declaration": "public class DungeonShard : MonoBehaviour",
+      "dump_line": 418996,
+      "field_count": 6,
+      "method_count": 6,
+      "properties_count": 0,
+      "selected_fields": [
+        "private PlayerTool myTool; // 0x18",
+        "private bool usedThisGrip; // 0x20",
+        "private Transform potionChildType; // 0x28",
+        "private Collider[] latestCols; // 0x30",
+        "private string shardHotspot; // 0x38",
+        "public GameObject activateVfx; // 0x40"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void SignalReceived(byte signalid)",
+          "rva": "0x402A10"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x402800"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x4027C0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x402B50"
+        },
+        {
+          "signature": "private void UseShard()",
+          "rva": "0x402CC0"
+        }
+      ]
+    },
+    {
+      "type_id": 9798,
+      "name": "TimedDungeonManager",
+      "namespace": "MagicalActual",
+      "declaration": "public class TimedDungeonManager : MonoBehaviour",
+      "dump_line": 406778,
+      "field_count": 5,
+      "method_count": 2,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string[] spawnGroups; // 0x18",
+        "public string[] relativeSpawnTimings; // 0x20",
+        "public Vector3[] randomSpawnLocations; // 0x28",
+        "public Vector3 bossSpawnLocation; // 0x30",
+        "public string OrbusNetComponent; // 0x40"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void Start()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    {
+      "type_id": 9803,
+      "name": "WeaponAdjuster",
+      "namespace": "MagicalActual",
+      "declaration": "public class WeaponAdjuster : MonoBehaviour",
+      "dump_line": 406894,
+      "field_count": 4,
+      "method_count": 6,
+      "properties_count": 0,
+      "selected_fields": [
+        "private PhysicsInteractable pi; // 0x18",
+        "private ToolController toolController; // 0x20",
+        "private float timeUntilDeath; // 0x28",
+        "private bool isGripped; // 0x2C"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void Update()",
+          "rva": "0x4AB6B0"
+        },
+        {
+          "signature": "private void WeaponGripped()",
+          "rva": "0x4AB750"
+        },
+        {
+          "signature": "private void WeaponUngripped()",
+          "rva": "0x4AB760"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x4A9AC0"
+        },
+        {
+          "signature": "private void SubmitAdjust()",
+          "rva": "0x4A9DA0"
+        }
+      ]
+    },
+    {
+      "type_id": 10191,
+      "name": "ToolController",
+      "namespace": "MagicalActual",
+      "declaration": "public class ToolController : MonoBehaviour",
+      "dump_line": 419926,
+      "field_count": 26,
+      "method_count": 14,
+      "properties_count": 1,
+      "selected_fields": [
+        "public UnityEvent MainTriggerClickEvent; // 0x18",
+        "public UnityEvent MainTriggerUnclickEvent; // 0x20",
+        "public UnityEvent MainGripClickEvent; // 0x28",
+        "public UnityEvent MainGripUnclickEvent; // 0x30",
+        "public UnityEvent OffhandTriggerClickEvent; // 0x38",
+        "public UnityEvent OffhandTriggerUnclickEvent; // 0x40",
+        "public UnityEvent OffhandGripClickEvent; // 0x48",
+        "public UnityEvent OffhandGripUnclickEvent; // 0x50",
+        "private OrbusTrackedController mainController; // 0x58",
+        "private OrbusTrackedController offhandController; // 0x60",
+        "private Transform mainTransform; // 0x68",
+        "private Transform offhandTransform; // 0x70",
+        "private ClickedEventHandler HandleMainTriggerClicked; // 0x78",
+        "private ClickedEventHandler HandleMainTriggerUnClicked; // 0x80",
+        "private ClickedEventHandler HandleMainGripClicked; // 0x88",
+        "private ClickedEventHandler HandleMainGripUnClicked; // 0x90",
+        "private ClickedEventHandler HandleOffhandTriggerClicked; // 0x98",
+        "private ClickedEventHandler HandleOffhandTriggerUnClicked; // 0xA0"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void doMainTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x44A550"
+        },
+        {
+          "signature": "private void doMainTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x44A580"
+        },
+        {
+          "signature": "private void doMainGripClick(object sender, ClickedEventArgs e)",
+          "rva": "0x44A4F0"
+        },
+        {
+          "signature": "private void doMainGripUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x44A520"
+        },
+        {
+          "signature": "private void doOffhandTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x44A610"
+        },
+        {
+          "signature": "private void doOffhandTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x44A640"
+        },
+        {
+          "signature": "private void doOffhandGripClick(object sender, ClickedEventArgs e)",
+          "rva": "0x44A5B0"
+        },
+        {
+          "signature": "private void doOffhandGripUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x44A5E0"
+        },
+        {
+          "signature": "private void Update()",
+          "rva": "0x44A000"
+        },
+        {
+          "signature": "public void InstantiateUnityEvents()",
+          "rva": "0x449D00"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x449E20"
+        }
+      ]
+    },
+    {
+      "type_id": 10090,
+      "name": "QuestInfo",
+      "namespace": "MagicalActual",
+      "declaration": "public class QuestInfo : MonoBehaviour",
+      "dump_line": 416407,
+      "field_count": 5,
+      "method_count": 7,
+      "properties_count": 0,
+      "selected_fields": [
+        "public Text Description; // 0x18",
+        "private GameObject CheckMark; // 0x20",
+        "private GameObject beaconObject; // 0x28",
+        "public int id; // 0x30",
+        "private GameObject myBeacon; // 0x38"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void SetQuestComplete()",
+          "rva": "0x3AEB60"
+        },
+        {
+          "signature": "public void ShowBeacon(bool showBeacon, Vector3 postion)",
+          "rva": "0x3AEB90"
+        },
+        {
+          "signature": "public void HideBeacon()",
+          "rva": "0x3AE990"
+        },
+        {
+          "signature": "private void OnSceneLoaded(Scene scene, LoadSceneMode mode)",
+          "rva": "0x3AEAC0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x3AEC70"
+        },
+        {
+          "signature": "private void OnDestroy()",
+          "rva": "0x3AEA30"
+        }
+      ]
+    },
+    {
+      "type_id": 10091,
+      "name": "QuestMarker",
+      "namespace": "MagicalActual",
+      "declaration": "public class QuestMarker : MonoBehaviour",
+      "dump_line": 416445,
+      "field_count": 2,
+      "method_count": 3,
+      "properties_count": 0,
+      "selected_fields": [
+        "public int currentStep; // 0x18",
+        "public List<Vector3> stepPositons; // 0x20"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void OnTriggerEnter(Collider other)",
+          "rva": "0x3AED00"
+        },
+        {
+          "signature": "public void updatePostion()",
+          "rva": "0x3AEEB0"
+        }
+      ]
+    },
+    {
+      "type_id": 10117,
+      "name": "SpawnManager",
+      "namespace": "MagicalActual",
+      "declaration": "public class SpawnManager : MonoBehaviour",
+      "dump_line": 417456,
+      "field_count": 8,
+      "method_count": 1,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string[] groupings; // 0x18",
+        "public float respawnAfterSeconds; // 0x20",
+        "public float maxGroups; // 0x24",
+        "public string zoneVariables; // 0x28",
+        "public string OrbusNetComponent; // 0x30",
+        "public string lootTable; // 0x38",
+        "public string requiredPlayerQuestFlag; // 0x40",
+        "public bool autoSpawning; // 0x48"
+      ],
+      "selected_methods": []
+    },
+    {
+      "type_id": 10113,
+      "name": "ScenePreloader",
+      "namespace": "MagicalActual",
+      "declaration": "public class ScenePreloader : MonoBehaviour",
+      "dump_line": 417318,
+      "field_count": 2,
+      "method_count": 2,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string sceneName; // 0x18",
+        "public List<string> prefabsToConsider; // 0x20"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void Start()",
+          "rva": "0x47F540"
+        }
+      ]
+    },
+    {
+      "type_id": 9467,
+      "name": "PlayerHouseFurniture",
+      "namespace": "MagicalActual",
+      "declaration": "public class PlayerHouseFurniture : MonoBehaviour",
+      "dump_line": 392969,
+      "field_count": 11,
+      "method_count": 10,
+      "properties_count": 1,
+      "selected_fields": [
+        "private GameObject <furnitureModel>k__BackingField; // 0x18",
+        "private Rigidbody myRigidBody; // 0x20",
+        "private bool isGrabbed; // 0x28",
+        "private PhysicsInteractable myPhysicsInteractable; // 0x30",
+        "private BoxCollider myBoxCollider; // 0x38",
+        "public InventoryItemInstance myItem; // 0x40",
+        "private Vector3 savedPosition; // 0x48",
+        "private Vector3 offsetOfTarget; // 0x54",
+        "private Transform originalParent; // 0x60",
+        "private FurnitureChest myChest; // 0x68",
+        "private int slotNumber; // 0x70"
+      ],
+      "selected_methods": [
+        {
+          "signature": "public void Setup(FurnitureChest chest, int n)",
+          "rva": "0x3A0690"
+        },
+        {
+          "signature": "public void SetIngredient(InventoryItemInstance anitem)",
+          "rva": "0x3A0430"
+        },
+        {
+          "signature": "private void PhysicsInteractableGrip(Grabber sender)",
+          "rva": "0x3A01C0"
+        },
+        {
+          "signature": "private void PhysicsInteractableUngrip(Grabber sender)",
+          "rva": "0x3A01D0"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x3A0150"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x3A06A0"
+        },
+        {
+          "signature": "public void SaveObjectData()",
+          "rva": "0x3A0370"
+        }
+      ]
+    },
+    {
+      "type_id": 9998,
+      "name": "Npc",
+      "namespace": "MagicalActual",
+      "declaration": "public class Npc : MonoBehaviour",
+      "dump_line": 412649,
+      "field_count": 18,
+      "method_count": 30,
+      "properties_count": 0,
+      "selected_fields": [
+        "public string OrbusNetComponent; // 0x18",
+        "private NetEntity myEntity; // 0x20",
+        "private bool isSpeaking; // 0x28",
+        "private GameObject dialogueBox; // 0x30",
+        "private GameObject shoutBox; // 0x38",
+        "private WorldMenu menuObj; // 0x40",
+        "private PlayerCharacter myPlayerCharacter; // 0x48",
+        "private FaceController myFaceController; // 0x50",
+        "private Vector3 lastLookAtPosition; // 0x58",
+        "private Action<int> currentCallback; // 0x68",
+        "public SuperTextMesh dialogIndicator; // 0x70",
+        "private byte hasAvailableDialog; // 0x78",
+        "private float timestampSinceLastInteraction; // 0x7C",
+        "private string latestChoiceOne; // 0x80",
+        "private string latestChoiceTwo; // 0x88",
+        "private string latestChoiceThree; // 0x90",
+        "private string latestChoiceFour; // 0x98",
+        "private DialogueBox latestDialogueBox; // 0xA0"
+      ],
+      "selected_methods": [
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x2F7620"
+        },
+        {
+          "signature": "private void PositionDialogue()",
+          "rva": "0x2F7BC0"
+        },
+        {
+          "signature": "private void SpeakSetupBox(DialogueBox myDialogueBox, string text)",
+          "rva": "0x2F8C60"
+        },
+        {
+          "signature": "private void SpeakSetupChoiceOne(string choiceOne)",
+          "rva": "0x2F8D00"
+        },
+        {
+          "signature": "private void UpdateDialogBox()",
+          "rva": "0x2F9B60"
+        },
+        {
+          "signature": "public void PlayerInteraction()",
+          "rva": "0x2F79D0"
+        },
+        {
+          "signature": "private void UpdateDialogIndicator()",
+          "rva": "0x2F9D50"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x2FA060"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x2F7000"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x2F9390"
+        },
+        {
+          "signature": "private void OnDestroy()",
+          "rva": "0x2F79C0"
+        },
+        {
+          "signature": "private void ClearDialogue()",
+          "rva": "0x2F7060"
+        },
+        {
+          "signature": "private void SpeakClearShoutbox()",
+          "rva": "0x2F8380"
+        },
+        {
+          "signature": "private void SpeakInitShoutbox()",
+          "rva": "0x2F8B60"
+        },
+        {
+          "signature": "private void SpeakHandleEmotion(string emotion)",
+          "rva": "0x2F8420"
+        },
+        {
+          "signature": "private void FinishSpeak()",
+          "rva": "0x2F71A0"
+        },
+        {
+          "signature": "public void PromptClickChoice(string choiceIdx)",
+          "rva": "0x2F7FF0"
+        },
+        {
+          "signature": "private void Shout(string text)",
+          "rva": "0x2F80B0"
+        }
+      ]
+    }
+  ]
+}
