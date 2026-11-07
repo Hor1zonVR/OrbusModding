@@ -22,3 +22,14 @@ Each finding should state the client build, evidence, confidence, limitations, a
 
 ## Scope
 This is an independent community project, not official OrbusVR documentation. Respect the rules of servers you join and the rights of third-party software authors.
+
+## Reverse-engineering reference (first snapshot)
+
+- [Searchable Orbus namespace type index](references/magicalactual-types.tsv) — 540 `MagicalActual` types from one unverified-build IL2CPP dump.
+- [Core symbols for coding assistants](references/core-symbols.json) — selected fields/methods/RVAs from 48 classes.
+- [Human-readable game systems map](docs/game-systems.md) — starting points for player, combat, networking, inventory and movement research.
+- [Research snapshot and caveats](research/il2cpp-snapshot.md)
+- [Ghidra and IL2CPP workflow](docs/research-workflow.md)
+- [Regenerate indexes locally](tools/index_il2cpp.py) — no original game dump needs to be committed.
+
+The index is **metadata only**, not proof of functionality, runtime compatibility, or permission to use a network method on third-party servers.
