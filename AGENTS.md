@@ -20,3 +20,7 @@ Never present a planned ModCore API as already implemented. Prefer minimal, reve
 
 ## Deliverables for a new mod
 Explain installation, dependencies, build commands, expected behavior, compatibility, limitations, and a short manual test checklist. Do not assume a plugin is safe on third-party servers; respect server rules and permissions.
+
+## Indexed reverse-engineering references
+
+For a symbol lookup, search [the namespace type index](references/magicalactual-types.tsv), then [core-symbols.json](references/core-symbols.json) for selected signatures, fields and snapshot RVAs. Use [docs/game-systems.md](docs/game-systems.md) as a human overview and [docs/research-workflow.md](docs/research-workflow.md) for validation. Never claim the namespace index is complete across all assemblies. Source snapshot build is currently unverified.
