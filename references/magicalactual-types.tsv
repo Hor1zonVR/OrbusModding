@@ -1,28 +1,15 @@
 type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
+9396	class	BezierSpline	MonoBehaviour	5	18	3	390650
 9397	class	BezierSplineVelocity	MonoBehaviour	2	6	0	390726
 9398	class	BezierSplineWalker	MonoBehaviour	3	7	0	390755
-9399	class	BezierSplineWalker.<Walk>d__5	IEnumerator<object>, IEnumerator, IDisposable	5	6	2	390790
-9400	class	BezierSplineWalker.<WalkWithVelocity>d__7	IEnumerator<object>, IEnumerator, IDisposable	5	6	2	390831
 9401	class	DangerWave	MonoBehaviour	17	4	0	390871
-9402	class	DangerWave.<>c		2	3	0	390920
 9403	class	BirdController	CreatureController	0	5	0	390939
-9404	class	BirdController.<MoveCreature>d__0	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	390964
-9405	class	BirdController.<MoveForwardUntilReachedPoint>d__1	IEnumerator<object>, IEnumerator, IDisposable	5	6	2	391003
-9406	class	BirdController.<RotateTowardsPoint>d__2	IEnumerator<object>, IEnumerator, IDisposable	6	6	2	391044
 9407	class	CreatureController	MonoBehaviour	6	5	0	391085
-9408	class	CreatureController.<ShowCreature>d__8	IEnumerator<object>, IEnumerator, IDisposable	6	6	2	391119
 9409	class	CritterController	CreatureController	3	7	0	391160
-9410	class	CritterController.<MoveCreature>d__5	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	391196
-9411	class	CritterController.<RandomizeFacingDirection>d__6	IEnumerator<object>, IEnumerator, IDisposable	8	6	2	391235
-9412	class	CritterController.<MoveForward>d__8	IEnumerator<object>, IEnumerator, IDisposable	6	6	2	391279
 9413	class	NetController	MonoBehaviour	9	4	0	391320
 9414	class	OrbusNetComponents	MonoBehaviour	1	1	0	391350
 9415	class	ActionOpenWardrobe	MonoBehaviour	10	10	0	391362
-9416	class	ActionOpenWardrobe.<InvokeWardrobeOpened>d__15	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	391413
-9417	class	ActionOpenWardrobe.<InvokeWardrobeClosed>d__16	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	391453
 9418	class	AlchemyStation	MonoBehaviour	25	14	0	391492
-9419	class	AlchemyStation.<>c__DisplayClass31_0		1	2	0	391571
-9420	class	AlchemyStation.<>c		2	3	0	391588
 9421	class	AlchemyStationEmptyBottle	MonoBehaviour	4	6	0	391607
 9422	class	AOECircleIndicator	MonoBehaviour	12	7	0	391637
 9423	class	AoeStatusEffect	MonoBehaviour	10	2	0	391679
@@ -33,21 +20,15 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9428	class	ArtificingStation	MonoBehaviour	17	13	0	391832
 9429	class	ArtificingTile	MonoBehaviour	1	4	0	391899
 9430	class	Barbarian	MonoBehaviour	31	13	0	391920
-9431	enum	Barbarian.axeAbilityIdx		1	0	0	392004
-9432	class	Barbarian.<>c__DisplayClass35_0		1	2	0	392015
-9433	class	Barbarian.<>c__DisplayClass36_0		2	2	0	392031
-9434	class	Barbarian.<>c__DisplayClass38_0		3	2	0	392048
 9435	class	BarbarianTarget		4	5	0	392065
 9436	class	BarbarianAxe	MonoBehaviour	1	1	0	392092
 9437	class	BarbarianBeat	MonoBehaviour	12	7	0	392104
-9438	class	BarbarianBeat.<>c__DisplayClass17_0		2	2	0	392146
 9439	class	BarbarianHitMarker		8	1	0	392162
 9440	class	BlueprintIcon	MonoBehaviour, IPointerEnterHandler, IEventSystemHandler, IPointerExitHandler, IPhysicsButton	10	11	0	392181
 9441	class	BookInteractable	MonoBehaviour	5	5	0	392235
 9442	class	BossChest	MonoBehaviour	11	13	0	392263
 9443	class	BoxCuller	MonoBehaviour	5	6	0	392328
 9444	class	BrotherhoodAltar	MonoBehaviour	5	6	0	392359
-9445	class	BrotherhoodAltar.<>c__DisplayClass8_0		1	2	0	392391
 9446	class	ButtonPresser	MonoBehaviour, IPointerDownHandler, IEventSystemHandler, IPointerUpHandler, IPointerExitHandler	1	5	0	392406
 9447	class	Catenary		0	4	0	392430
 9448	class	ChaosTentacle	MonoBehaviour	2	2	0	392448
@@ -56,12 +37,9 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9451	class	CinematicManager	MonoBehaviour	5	6	0	392495
 9452	class	ClassInfoGuide	MonoBehaviour	2	4	0	392526
 9453	class	ClimableWall	MonoBehaviour	11	8	0	392549
-9454	class	ClimableWall.<TransitionToDestination>d__17	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	392599
 9455	class	ClimableWallGetDownButton	FurnitureToolTip	3	4	0	392637
-9456	class	ClimableWallGetDownButton.<TransitionToDestination>d__5	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	392664
 9457	class	ClimableWallGetDownTrigger	MonoBehaviour	2	3	0	392702
 9458	class	ClimableWallPeak	MonoBehaviour	3	4	0	392723
-9459	class	ClimableWallPeak.<TransitionToPeak>d__5	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	392750
 9460	class	CollectAcornEvent	PortalEventNetComponent	0	3	0	392789
 9461	class	CompassIcon	MonoBehaviour	1	2	0	392804
 9462	class	Constructable	MonoBehaviour	3	3	0	392819
@@ -72,18 +50,13 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9467	class	PlayerHouseFurniture	MonoBehaviour	11	10	1	392969
 9468	class	CritterCaptureEvent	DynamicEvent	3	6	0	393024
 9469	class	Crossbow	MonoBehaviour	13	15	0	393056
-9470	class	Crossbow.<>c		3	4	0	393138
-9471	class	Crossbow.<>c__DisplayClass20_0		1	2	0	393162
 9472	class	CrossbowBolt	MonoBehaviour	7	4	0	393177
 9473	class	CrossbowInteractable	MonoBehaviour	15	11	0	393204
-9474	class	CrossbowInteractable.<doInterpolateRotation>d__18	IEnumerator<object>, IEnumerator, IDisposable	7	6	2	393267
 9475	class	CustomItemContainer	ItemContainer	3	7	0	393309
 9476	class	DangerPool	MonoBehaviour	3	5	0	393344
 9477	class	DefendCrystalGateEvent	DefendGateEvent	1	6	0	393371
-9478	class	DefendCrystalGateEvent.<>c__DisplayClass1_0		2	2	0	393403
 9479	class	DefendGateEvent	DynamicEvent	5	6	0	393419
 9480	class	DefendZoneEvent	DynamicEvent	5	9	0	393451
-9481	class	DefendZoneEvent.<>c__DisplayClass12_0		2	3	0	393495
 9482	class	StatusEffectParams		4	1	0	393514
 9483	enum	DamageAffinity		1	0	0	393529
 9484	class	DamageParams		2	1	0	393544
@@ -92,7 +65,6 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9487	class	DialogueBox	MonoBehaviour	18	2	0	393641
 9488	class	DummyWeaponsManager	MonoBehaviour	4	3	0	393673
 9489	class	DungeonBarrier	MonoBehaviour	4	5	0	393694
-9490	class	DungeonBarrier.<>c__DisplayClass7_0		2	2	0	393722
 9491	class	DynamicEventBeacon	MonoBehaviour	9	7	0	393738
 9492	class	EventReward	MonoBehaviour	1	4	0	393780
 9493	class	EventUIController	MonoBehaviour	8	12	0	393802
@@ -103,28 +75,9 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9498	class	AppearanceOption	MonoBehaviour	9	6	0	393979
 9499	class	AppearanceOptionClicker	MonoBehaviour, IPhysicsButton	1	2	0	394014
 9500	class	Archer	MonoBehaviour, IPlayerClass	127	71	0	394029
-9501	enum	Archer.useAxis		1	0	0	394396
-9502	enum	Archer.orbusNetMethodIdx		1	0	0	394406
-9503	enum	Archer.orbusIncomingMethodIdx		1	0	0	394423
-9504	enum	Archer.arrowAbilities		1	0	0	394439
-9505	class	Archer.<>c__DisplayClass159_0		3	2	0	394459
-9506	class	Archer.<>c__DisplayClass161_0		4	2	0	394477
-9507	class	Archer.<>c__DisplayClass163_0		5	2	0	394496
-9508	class	Archer.<>c		5	6	0	394517
-9509	class	Archer.<>c__DisplayClass168_0		1	2	0	394549
-9510	class	Archer.<>c__DisplayClass181_0		1	2	0	394565
 9511	class	AutoSnapBack	MonoBehaviour	6	4	0	394580
 9512	class	BackBug	MonoBehaviour	2	3	0	394607
 9513	class	Bard	MonoBehaviour, IPlayerClass	106	48	0	394626
-9514	enum	Bard.orbusNetMethodIdx		1	0	0	394894
-9515	enum	Bard.arrowSpellIdx		1	0	0	394908
-9516	class	Bard.<>c__DisplayClass112_0		1	2	0	394925
-9517	class	Bard.<>c		4	5	0	394942
-9518	class	Bard.<>c__DisplayClass135_0		1	2	0	394970
-9519	class	Bard.<>c__DisplayClass138_0		1	2	0	394986
-9520	class	Bard.<>c__DisplayClass138_1		1	2	0	395002
-9521	class	Bard.<>c__DisplayClass139_0		2	2	0	395018
-9522	class	Bard.<>c__DisplayClass142_0		2	2	0	395035
 9523	class	BardAvailableInstrument		5	1	0	395051
 9524	class	BardUpcomingNote		6	1	0	395067
 9525	class	BardDrumstick	MonoBehaviour	9	9	1	395084
@@ -173,30 +126,15 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9568	class	CreationGrabPoint	MonoBehaviour	11	8	0	396316
 9569	class	CTGiant	MonoBehaviour	5	5	0	396360
 9570	class	DragonPilot	MonoBehaviour	52	41	0	396390
-9571	class	DragonPilot.<>c		5	6	0	396591
-9572	class	DragonPilot.<DoLoseAnimation>d__65	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	396623
-9573	class	DragonPilot.<DoCountDown>d__66	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	396663
 9574	class	DungeonTroll	MonoBehaviour	7	6	0	396703
 9575	class	EnemySephotap	MonoBehaviour	3	5	0	396739
 9576	class	FakePlayer	MonoBehaviour	2	4	0	396767
 9577	class	Fisher	MonoBehaviour	69	47	2	396790
-9578	enum	Fisher.FishingPoleState		1	0	0	397027
-9579	class	Fisher.<WaitForEquimentUpdate>d__83	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	397042
-9580	class	Fisher.<>c__DisplayClass93_0		1	2	0	397081
-9581	class	Fisher.<>c		3	4	0	397098
-9582	class	Fisher.<>c__DisplayClass106_0		1	2	0	397122
 9583	class	FishingRod	MonoBehaviour	10	10	1	397137
 9584	class	FloatingMine	MonoBehaviour	2	2	0	397195
 9585	class	FriendlyFollow	MonoBehaviour	4	4	0	397211
 9586	class	FurnitureRelocationGrabPoint	MonoBehaviour	15	13	0	397236
 9587	class	Gambler	MonoBehaviour, IPlayerClass	69	45	0	397299
-9588	enum	Gambler.orbusNetMethodIdx		1	0	0	397520
-9589	enum	Gambler.orbusIncomingMethodIdx		1	0	0	397532
-9590	class	Gambler.<>c__DisplayClass86_0		3	2	0	397543
-9591	class	Gambler.<>c		4	5	0	397562
-9592	class	Gambler.<>c__DisplayClass100_0		2	2	0	397590
-9593	class	Gambler.<>c__DisplayClass101_0		5	2	0	397607
-9594	class	Gambler.<>c__DisplayClass106_0		1	2	0	397627
 9595	class	GamblerCardSlot	MonoBehaviour	0	2	0	397642
 9596	class	GamblerDeck	MonoBehaviour	1	5	1	397654
 9597	class	GamblerDrawnCard	MonoBehaviour	11	12	2	397684
@@ -205,141 +143,32 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9600	class	GeminiHalf	MonoBehaviour	2	4	0	397798
 9601	class	GoldenEgg	MonoBehaviour	22	11	0	397820
 9602	class	InteractableEntity	MonoBehaviour	14	15	2	397894
-9603	class	InteractableEntity.<>c		2	3	0	397977
 9604	class	JitterMissile	MonoBehaviour	5	2	0	397996
 9605	class	LichKing	MonoBehaviour	15	9	0	398016
 9606	class	LizardBoss	MonoBehaviour	6	8	0	398070
 9607	class	LizardMinion	MonoBehaviour	2	6	0	398110
 9608	class	MedusaBoss	MonoBehaviour	7	7	0	398138
-9609	class	MedusaBoss.<ScaleChargeEffect>d__9	IEnumerator<object>, IEnumerator, IDisposable	7	6	2	398182
 9610	class	MimicMonster	MonoBehaviour	3	3	0	398225
 9611	class	MiniZoneEntrance	MonoBehaviour	3	1	0	398245
 9612	class	Orbhealer	MonoBehaviour, IPlayerClass	78	55	1	398262
-9613	enum	Orbhealer.orbusNetMethodIdx		1	0	0	398533
-9614	enum	Orbhealer.orbusIncomingMethodIdx		1	0	0	398547
-9615	enum	Orbhealer.arrowSpellIdx		1	0	0	398557
-9616	class	Orbhealer.<>c		8	9	0	398576
-9617	class	Orbhealer.<>c__DisplayClass99_0		3	3	0	398620
-9618	class	Orbhealer.<>c__DisplayClass107_0		4	2	0	398641
-9619	class	Orbhealer.<>c__DisplayClass109_0		2	2	0	398660
 9620	class	OrbusAudioParticleController	MonoBehaviour	2	3	0	398676
 9621	class	Paladin	MonoBehaviour, IPlayerClass	109	50	1	398697
-9622	class	Paladin.<>c		9	10	0	398992
-9623	class	Paladin.<>c__DisplayClass136_0		1	2	0	399040
-9624	class	Paladin.<>c__DisplayClass137_0		2	3	0	399056
-9625	class	Paladin.<>c__DisplayClass137_1		2	2	0	399076
-9626	class	Paladin.<>c__DisplayClass137_2		1	2	0	399093
-9627	class	Paladin.<>c__DisplayClass137_3		1	2	0	399109
-9628	class	Paladin.<>c__DisplayClass140_0		1	3	0	399125
-9629	class	Paladin.<>c__DisplayClass140_1		2	2	0	399144
-9630	class	Paladin.<>c__DisplayClass141_0		1	3	0	399161
-9631	class	Paladin.<>c__DisplayClass141_1		2	2	0	399180
-9632	class	Paladin.<>c__DisplayClass144_0		1	2	0	399197
 9633	class	PaladinLibram	MonoBehaviour	6	5	0	399212
 9634	class	PeaShooter	MonoBehaviour	3	3	0	399242
 9635	class	PhysicsObject	MonoBehaviour	16	16	1	399262
-9636	class	PhysicsObject.<>c__DisplayClass20_0		1	1	0	399352
-9637	class	PhysicsObject.<>c__DisplayClass20_1		2	2	0	399365
-9638	class	PhysicsObject.<>c		2	3	0	399383
 9639	class	SyncedObject		8	6	0	399403
 9640	class	BoolEvent	UnityEvent<bool>	0	1	0	399444
 9641	class	PlantEater	MonoBehaviour	5	6	0	399454
 9642	class	PlayAudioAfterDelay	MonoBehaviour	1	2	0	399486
 9643	class	PlayerAvatar	MonoBehaviour, IPooling	239	262	79	399501
-9644	enum	PlayerAvatar.orbusNetMethodIdx		1	0	0	400874
-9645	enum	PlayerAvatar.orbusNetIncomingIdx		1	0	0	400886
-9646	enum	PlayerAvatar.fxTexturesTypes		1	0	0	400915
-9647	class	PlayerAvatar.<>c__DisplayClass525_0		3	2	0	400925
-9648	class	PlayerAvatar.<>c__DisplayClass557_0		10	92	0	400943
-9649	class	PlayerAvatar.<>c__DisplayClass557_1		1	2	0	401238
-9650	class	PlayerAvatar.<>c__DisplayClass557_2		2	2	0	401254
-9651	class	PlayerAvatar.<>c__DisplayClass557_3		2	2	0	401271
-9652	class	PlayerAvatar.<>c		15	16	0	401289
-9653	class	PlayerAvatar.<>c__DisplayClass569_0		1	2	0	401361
 9654	class	AvatarAppearance		18	1	0	401377
 9655	class	MissionMonster		2	1	0	401406
 9656	class	PlayerCharacter	MonoBehaviour	199	272	12	401420
-9657	enum	PlayerCharacter.orbusNetMethodIdx		1	0	0	402564
-9658	enum	PlayerCharacter.headsetType		1	0	0	402651
-9659	class	PlayerCharacter.<>c__DisplayClass236_0		3	2	0	402661
-9660	class	PlayerCharacter.<>c		34	35	0	402680
-9661	class	PlayerCharacter.<>c__DisplayClass259_0		2	2	0	402828
-9662	class	PlayerCharacter.<>c__DisplayClass260_0		1	2	0	402845
-9663	class	PlayerCharacter.<>c__DisplayClass268_0		2	2	0	402861
-9664	class	PlayerCharacter.<>c__DisplayClass295_0		1	2	0	402878
-9665	class	PlayerCharacter.<>c__DisplayClass297_0		5	2	0	402894
-9666	class	PlayerCharacter.<>c__DisplayClass298_0		2	2	0	402914
-9667	class	PlayerCharacter.<>c__DisplayClass299_0		1	2	0	402931
-9668	class	PlayerCharacter.<>c__DisplayClass300_0		2	2	0	402947
-9669	class	PlayerCharacter.<>c__DisplayClass301_0		1	2	0	402964
-9670	class	PlayerCharacter.<>c__DisplayClass302_0		4	2	0	402980
-9671	class	PlayerCharacter.<>c__DisplayClass303_0		1	2	0	402999
-9672	class	PlayerCharacter.<>c__DisplayClass304_0		1	2	0	403015
-9673	class	PlayerCharacter.<>c__DisplayClass305_0		2	2	0	403031
-9674	class	PlayerCharacter.<>c__DisplayClass315_0		1	1	0	403048
-9675	class	PlayerCharacter.<>c__DisplayClass315_1		2	2	0	403061
-9676	class	PlayerCharacter.<>c__DisplayClass317_0		1	1	0	403078
-9677	class	PlayerCharacter.<>c__DisplayClass317_1		2	2	0	403091
-9678	class	PlayerCharacter.<>c__DisplayClass319_0		1	2	0	403108
-9679	class	PlayerCharacter.<>c__DisplayClass333_0		2	2	0	403124
-9680	class	PlayerCharacter.<>c__DisplayClass334_0		1	2	0	403141
-9681	class	PlayerCharacter.<>c__DisplayClass335_0		1	2	0	403157
-9682	class	PlayerCharacter.<>c__DisplayClass336_0		1	2	0	403173
-9683	class	PlayerCharacter.<>c__DisplayClass337_0		1	2	0	403189
-9684	class	PlayerCharacter.<>c__DisplayClass339_0		1	2	0	403205
-9685	class	PlayerCharacter.<>c__DisplayClass340_0		1	2	0	403221
-9686	class	PlayerCharacter.<>c__DisplayClass342_0		1	2	0	403237
-9687	class	PlayerCharacter.<>c__DisplayClass343_0		1	2	0	403253
-9688	class	PlayerCharacter.<>c__DisplayClass344_0		1	2	0	403269
-9689	class	PlayerCharacter.<>c__DisplayClass345_0		1	2	0	403285
-9690	class	PlayerCharacter.<>c__DisplayClass346_0		1	2	0	403301
-9691	class	PlayerCharacter.<>c__DisplayClass347_0		1	2	0	403317
-9692	class	PlayerCharacter.<>c__DisplayClass349_0		1	2	0	403333
-9693	class	PlayerCharacter.<>c__DisplayClass350_0		1	2	0	403349
-9694	class	PlayerCharacter.<SendingBugReport>d__353	IEnumerator<object>, IEnumerator, IDisposable	5	6	2	403365
-9695	class	PlayerCharacter.<>c__DisplayClass354_0		2	2	0	403406
-9696	class	PlayerCharacter.<>c__DisplayClass355_0		1	2	0	403423
-9697	class	PlayerCharacter.<>c__DisplayClass356_0		3	2	0	403439
-9698	class	PlayerCharacter.<>c__DisplayClass358_0		1	2	0	403457
-9699	class	PlayerCharacter.<>c__DisplayClass362_0		1	2	0	403473
-9700	class	PlayerCharacter.<>c__DisplayClass362_1		1	2	0	403489
-9701	class	PlayerCharacter.<>c__DisplayClass374_0		2	2	0	403505
-9702	class	PlayerCharacter.<>c__DisplayClass382_0		1	2	0	403522
-9703	class	PlayerCharacter.<>c__DisplayClass385_0		2	2	0	403538
-9704	class	PlayerCharacter.<>c__DisplayClass385_1		2	2	0	403555
-9705	class	PlayerCharacter.<>c__DisplayClass385_2		2	2	0	403572
-9706	class	PlayerCharacter.<>c__DisplayClass390_0		2	2	0	403589
-9707	class	PlayerCharacter.<>c__DisplayClass394_0		2	2	0	403606
-9708	class	PlayerCharacter.<>c__DisplayClass395_0		2	2	0	403623
-9709	class	PlayerCharacter.<>c__DisplayClass396_0		2	2	0	403640
-9710	class	PlayerCharacter.<>c__DisplayClass397_0		2	2	0	403657
-9711	class	PlayerCharacter.<>c__DisplayClass400_0		2	2	0	403674
-9712	class	PlayerCharacter.<>c__DisplayClass401_0		1	2	0	403691
-9713	class	PlayerCharacter.<>c__DisplayClass408_0		1	2	0	403707
-9714	class	PlayerCharacter.<>c__DisplayClass409_0		1	2	0	403723
-9715	class	PlayerCharacter.<>c__DisplayClass410_0		2	2	0	403739
-9716	class	PlayerCharacter.<DisplayTutorialImageTime>d__418	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	403756
-9717	class	PlayerCharacter.<>c__DisplayClass424_0		1	2	0	403795
-9718	class	PlayerCharacter.<>c__DisplayClass427_0		1	2	0	403811
-9719	class	PlayerCharacter.<>c__DisplayClass428_0		2	2	0	403827
-9720	class	PlayerCharacter.<>c__DisplayClass429_0		1	2	0	403844
-9721	class	PlayerCharacter.<>c__DisplayClass430_0		1	2	0	403860
-9722	class	PlayerCharacter.<>c__DisplayClass433_0		1	2	0	403876
-9723	class	PlayerCharacter.<>c__DisplayClass437_0		1	2	0	403892
-9724	class	PlayerCharacter.<>c__DisplayClass438_0		1	2	0	403908
-9725	class	PlayerCharacter.<>c__DisplayClass439_0		1	2	0	403924
-9726	class	PlayerCharacter.<>c__DisplayClass444_0		1	2	0	403940
-9727	class	PlayerCharacter.<>c__DisplayClass445_0		3	2	0	403956
-9728	class	PlayerCharacter.<delayedAction>d__452	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	403974
-9729	class	PlayerCharacter.<>c__DisplayClass454_0		2	2	0	404014
 9730	class	PlayerNotification		2	1	0	404030
 9731	class	WorldMenu		4	1	0	404043
 9732	class	PlayerClass	MonoBehaviour	7	9	0	404058
 9733	class	PlayerGhost	MonoBehaviour, IPlayerClass	10	20	0	404100
 9734	class	PlayerPet	MonoBehaviour	34	32	2	404181
-9735	enum	PlayerPet.PetType		1	0	0	404344
-9736	class	PlayerPet.<>c__DisplayClass47_0		1	2	0	404355
-9737	class	PlayerPet.<>c		2	3	0	404372
 9738	class	PotBoss	MonoBehaviour	4	7	0	404391
 9739	class	PotMinion	MonoBehaviour	2	6	0	404425
 9740	class	RacingObject	MonoBehaviour	2	2	0	404453
@@ -353,36 +182,15 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9748	class	RockGolemBoss	MonoBehaviour	5	5	0	404725
 9749	class	RockGolemBossStal	MonoBehaviour	7	5	0	404755
 9750	class	Runemage	MonoBehaviour, IPlayerClass	62	62	2	404786
-9751	enum	Runemage.wandState		1	0	0	405065
-9752	enum	Runemage.orbusNetMethodIdx		1	0	0	405079
-9753	enum	Runemage.orbusIncomingMethodIdx		1	0	0	405096
-9754	enum	Runemage.spellIdx		1	0	0	405108
-9755	class	Runemage.<>c__DisplayClass74_0		3	2	0	405145
-9756	class	Runemage.<>c__DisplayClass88_0		1	2	0	405163
-9757	class	Runemage.<>c__DisplayClass89_0		2	2	0	405179
-9758	class	Runemage.<>c		5	6	0	405197
-9759	class	Runemage.<>c__DisplayClass102_0		1	1	0	405229
-9760	class	Runemage.<>c__DisplayClass102_1		2	2	0	405242
-9761	class	Runemage.<>c__DisplayClass117_0		1	2	0	405259
 9762	class	ScavBrute	MonoBehaviour	3	3	0	405275
 9763	class	ScavCaster	MonoBehaviour	3	4	0	405296
 9764	class	ScavMage	MonoBehaviour	3	3	0	405320
 9765	class	SeekerBoss	MonoBehaviour	4	4	0	405340
 9766	class	SelfieBot	MonoBehaviour	9	8	1	405366
 9767	class	Shaman	MonoBehaviour, IPlayerClass	41	38	0	405413
-9768	enum	Shaman.arrowSpellIdx		1	0	0	405583
-9769	class	Shaman.<>c		7	8	0	405600
-9770	class	Shaman.<>c__DisplayClass62_0		1	2	0	405640
-9771	class	Shaman.<>c__DisplayClass71_0		2	2	0	405656
 9772	class	ShamanMissile	MonoBehaviour	9	8	0	405672
 9773	class	ShamanScavBoss	MonoBehaviour	4	4	0	405719
 9774	class	ShamanSpawnedTotem	MonoBehaviour	26	31	3	405744
-9775	class	ShamanSpawnedTotem.SetThrowDelegate	MulticastDelegate	0	4	0	405894
-9776	class	ShamanSpawnedTotem.<>c__DisplayClass41_0		3	2	0	405913
-9777	class	ShamanSpawnedTotem.<>c		3	4	0	405932
-9778	class	ShamanSpawnedTotem.<>c__DisplayClass43_0		1	2	0	405956
-9779	class	ShamanSpawnedTotem.<>c__DisplayClass44_0		1	2	0	405972
-9780	class	ShamanSpawnedTotem.<>c__DisplayClass50_0		3	2	0	405988
 9781	class	ShamanTotem	MonoBehaviour	6	4	0	406005
 9782	class	ShamanWolf	MonoBehaviour	4	5	0	406034
 9783	class	SHGiant	MonoBehaviour	5	5	0	406062
@@ -390,16 +198,9 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9785	class	SpiderBossLeg	MonoBehaviour	3	4	0	406123
 9786	class	SpiderBossRock	MonoBehaviour	2	3	0	406148
 9787	class	Swordboard	MonoBehaviour, IPlayerClass	138	49	0	406167
-9788	class	Swordboard.<>c__DisplayClass151_0		2	1	0	406480
-9789	class	Swordboard.<>c__DisplayClass151_1		2	1	0	406494
-9790	class	Swordboard.<>c__DisplayClass151_2		2	2	0	406508
-9791	class	Swordboard.<>c__DisplayClass151_3		2	2	0	406525
-9792	class	Swordboard.<>c		5	6	0	406543
-9793	class	Swordboard.<>c__DisplayClass159_0		1	2	0	406575
 9794	class	SwordHit		3	1	0	406590
 9795	class	ShieldHit		2	1	0	406604
 9796	class	Teleporter	MonoBehaviour	31	28	6	406617
-9797	enum	Teleporter.TeleporterState		1	0	0	406768
 9798	class	TimedDungeonManager	MonoBehaviour	5	2	0	406778
 9799	class	TraduBoss1	MonoBehaviour	5	5	0	406798
 9800	class	TraduButton	MonoBehaviour	8	5	0	406828
@@ -422,7 +223,6 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9817	class	GamblerBullet	MonoBehaviour	15	3	0	407322
 9818	class	GateBlocker	MonoBehaviour	2	2	0	407354
 9819	class	GearBomb	MonoBehaviour	5	3	0	407370
-9820	class	GearBomb.<>c__DisplayClass5_0		2	2	0	407393
 9821	class	GearLeech	MonoBehaviour	2	2	0	407409
 9822	class	GearPortal	MonoBehaviour	5	5	0	407425
 9823	class	GenericChest	MonoBehaviour	1	6	0	407456
@@ -430,8 +230,6 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9825	class	Graveyard	MonoBehaviour	2	1	0	407703
 9826	class	GroundHeal	MonoBehaviour	3	5	0	407716
 9827	class	HandleController	MonoBehaviour	19	14	0	407743
-9828	enum	HandleController.CooldownType		1	0	0	407817
-9829	class	HandleController.<>c		2	3	0	407828
 9830	class	HandleMovedEvent	UnityEvent<float>	0	1	0	407848
 9831	class	Harvestable	MonoBehaviour	4	6	1	407857
 9832	class	HarvestableChild	MonoBehaviour	3	3	0	407895
@@ -441,13 +239,11 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9836	class	HoverOverGround	MonoBehaviour	6	3	0	408007
 9837	class	HUDMover	MonoBehaviour	2	3	0	408031
 9838	class	InCombatMusicFader	MonoBehaviour	4	4	0	408050
-9839	class	InCombatMusicFader.<FadeMusic>d__6	IEnumerator<object>, IEnumerator, IDisposable	8	6	2	408076
 9840	class	InsideBoxCuller	MonoBehaviour	4	4	0	408119
 9841	class	InstancePortal	MonoBehaviour	7	1	0	408143
 9842	class	InventoryIcon	MonoBehaviour, IPointerEnterHandler, IEventSystemHandler, IPointerExitHandler, IPhysicsButton	10	8	0	408161
 9843	class	InventoryManager	MonoBehaviour	5	5	0	408204
 9844	class	ItemContainer	MonoBehaviour	10	20	3	408232
-9845	class	ItemContainer.<>c		2	3	0	408328
 9846	class	JournalButton	MonoBehaviour, IPhysicsButton	1	5	1	408348
 9847	class	JournalCaptureSystem	MonoBehaviour	4	5	1	408375
 9848	struct	PointerEventArgs		4	0	0	408405
@@ -455,20 +251,14 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9850	class	LaserPointer	MonoBehaviour	18	11	0	408433
 9851	class	Leaderboard	MonoBehaviour	4	6	0	408500
 9852	class	LevelLoadCollider	MonoBehaviour	17	5	0	408533
-9853	class	LevelLoadCollider.<LoadMyLevel>d__19	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	408576
-9854	class	LevelLoadCollider.<UnLoadMyLevel>d__20	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	408615
 9855	class	LongDistanceTeleporter	MonoBehaviour	5	3	0	408653
 9856	class	Loot	MonoBehaviour, IPooling	18	19	0	408676
 9857	class	LureCraftingStation	MonoBehaviour	17	15	0	408767
-9858	class	LureCraftingStation.<WaitForLureToGenerate>d__25	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	408842
 9859	class	MagicalMinion	MonoBehaviour	3	4	0	408880
 9860	class	MenuLookAt	MonoBehaviour	2	3	0	408904
 9861	class	MomentaryDanger	MonoBehaviour	6	7	0	408923
 9862	class	Monster	MonoBehaviour, IPooling	51	40	4	408959
-9863	class	Monster.<Shrink>d__92	IEnumerator<object>, IEnumerator, IDisposable	8	6	2	409168
-9864	class	Monster.<>c__DisplayClass93_0		2	24	0	409212
 9865	class	StatusEffect		12	3	0	409294
-9866	class	StatusEffect.<>c		2	3	0	409325
 9867	class	HealthChangedEvent	UnityEvent<int, int, int>	0	1	0	409344
 9868	class	MonsterAnimationStub	MonoBehaviour	0	5	0	409353
 9869	class	DecursablePool	MonoBehaviour	2	2	0	409375
@@ -476,7 +266,6 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9871	class	M_DeepChillFire	MonoBehaviour	1	2	0	409408
 9872	class	M_DeepChillZone	MonoBehaviour	1	2	0	409423
 9873	class	M_EliteGoat	MonoBehaviour	12	8	0	409439
-9874	class	M_EliteGoat.<>c__DisplayClass16_0		2	2	0	409486
 9875	class	M_EnemyProjectile	MonoBehaviour, IPooling	6	6	0	409502
 9876	class	M_ExplodingTrap	MonoBehaviour	4	5	0	409537
 9877	class	M_GrowingShroom	MonoBehaviour	5	3	0	409566
@@ -493,41 +282,30 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9888	class	M_Practicedummy	MonoBehaviour	4	6	0	409868
 9889	class	M_RangedAttacker	MonoBehaviour	2	2	0	409898
 9890	class	M_Seedpod	MonoBehaviour	6	3	0	409914
-9891	class	M_Seedpod.<>c__DisplayClass6_0		2	2	0	409938
 9892	class	M_WildsChest	MonoBehaviour	1	2	0	409954
 9893	class	M_BigPiggie	MonoBehaviour	4	4	0	409970
 9894	class	M_BishopRomaFight	MonoBehaviour	4	4	0	409995
 9895	class	M_Boar	MonoBehaviour	5	4	0	410020
-9896	class	M_Boar.<>c__DisplayClass7_0		2	2	0	410046
 9897	class	M_CaveCrawler	MonoBehaviour	5	5	0	410063
 9898	class	M_Cobra	MonoBehaviour	4	4	0	410092
 9899	class	M_Crab	MonoBehaviour	3	3	0	410117
 9900	class	M_CrabBoss	MonoBehaviour	5	5	0	410138
 9901	class	M_DeerGuardian	MonoBehaviour	7	6	0	410167
-9902	class	M_DeerGuardian.<>c__DisplayClass9_0		2	2	0	410201
 9903	class	M_DinoBoss	MonoBehaviour	7	4	0	410218
 9904	class	M_DinoBossEgg	MonoBehaviour	5	5	0	410245
 9905	class	M_DinoMinion	MonoBehaviour	3	3	0	410275
 9906	class	M_DragonBoss	MonoBehaviour	5	5	0	410296
 9907	class	M_Dragonbug	MonoBehaviour	6	5	0	410325
-9908	enum	M_Dragonbug.orbusNetMethodIdx		1	0	0	410354
 9909	class	M_EliteCactus	MonoBehaviour	5	7	0	410362
-9910	class	M_EliteCactus.<>c__DisplayClass7_0		1	2	0	410399
 9911	class	M_EliteCrab	MonoBehaviour	3	3	0	410415
 9912	class	M_EliteStick	MonoBehaviour	3	3	0	410436
-9913	class	M_EliteStick.<>c__DisplayClass4_0		1	2	0	410457
 9914	class	M_EliteTentacle	MonoBehaviour	3	3	0	410473
 9915	class	M_EliteVulture	MonoBehaviour	5	5	0	410494
 9916	class	M_Elongata	MonoBehaviour	6	9	0	410524
 9917	class	M_FassithFight	MonoBehaviour	3	3	0	410568
 9918	class	M_ForestGolem	MonoBehaviour	6	6	0	410589
-9919	enum	M_ForestGolem.orbusNetMethodIdx		1	0	0	410622
-9920	class	M_ForestGolem.<>c__DisplayClass8_0		1	2	0	410631
 9921	class	M_FrogMage	MonoBehaviour	8	6	0	410647
-9922	enum	M_FrogMage.orbusNetMethodIdx		1	0	0	410682
-9923	class	M_FrogMage.<>c__DisplayClass10_0		1	2	0	410691
 9924	class	M_Ghost	MonoBehaviour	6	9	0	410707
-9925	enum	M_Ghost.orbusNetMethodIdx		1	0	0	410750
 9926	class	M_GiantWorm	MonoBehaviour	7	10	0	410759
 9927	class	M_GolemBoss	MonoBehaviour	7	7	0	410807
 9928	class	M_GolemBossStal	MonoBehaviour	6	4	0	410845
@@ -542,7 +320,6 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9937	class	M_MagicCougar	MonoBehaviour	2	2	0	411051
 9938	class	M_MagicDeer	MonoBehaviour	2	2	0	411067
 9939	class	M_MagicElk	MonoBehaviour	6	6	0	411083
-9940	class	M_MagicElk.<>c__DisplayClass9_0		1	2	0	411117
 9941	class	M_MagicFox	MonoBehaviour	2	2	0	411132
 9942	class	M_MagicWolf	MonoBehaviour	7	5	0	411148
 9943	class	M_Manticore	MonoBehaviour	4	6	0	411180
@@ -598,13 +375,7 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 9993	class	NavigationJump	MonoBehaviour	3	3	0	412500
 9994	class	NavigationTaxi	MonoBehaviour	3	3	0	412520
 9995	class	NetGunGameNode	MonoBehaviour	9	10	0	412541
-9996	class	NetGunGameNode.<SpawnCreatures>d__11	IEnumerator<object>, IEnumerator, IDisposable	5	6	2	412593
-9997	class	NetGunGameNode.<>c__DisplayClass12_0		1	2	0	412634
 9998	class	Npc	MonoBehaviour	18	30	0	412649
-9999	enum	Npc.orbusIncomingMethodIdx		1	0	0	412774
-10000	class	Npc.<>c__DisplayClass28_0		2	3	0	412788
-10001	class	Npc.<>c__DisplayClass28_1		2	2	0	412808
-10002	class	Npc.<>c__DisplayClass38_0		2	2	0	412825
 10003	class	NpcFollowPath	MonoBehaviour	7	8	1	412841
 10004	class	NpcPath	MonoBehaviour	1	2	0	412885
 10005	class	ObjectHighlighter	MonoBehaviour	8	8	1	412900
@@ -613,7 +384,6 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 10008	class	OrbhealerRotatingorb	MonoBehaviour	4	4	0	413003
 10009	class	OrbhealerThrownTurret	MonoBehaviour	12	9	0	413028
 10010	class	OrbhealerTurret	MonoBehaviour	7	8	0	413075
-10011	class	OrbhealerTurret.<>c__DisplayClass10_0		1	2	0	413117
 10012	class	OrbusBillboard	MonoBehaviour	4	6	0	413132
 10013	class	OrbusHealthBar	MonoBehaviour	43	48	15	413162
 10014	class	OrbusLipSync	MonoBehaviour	3	2	0	413383
@@ -621,21 +391,7 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 10016	class	OrbusNetKeepInZone	MonoBehaviour	1	2	0	413420
 10017	enum	connectionProtocol		1	0	0	413435
 10018	class	OrbusNetManager	MonoBehaviour	156	125	11	413445
-10019	struct	OrbusNetManager.FogInfo		3	1	0	414047
-10020	class	OrbusNetManager.<FinishLoadingPool>d__189	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	414062
-10021	class	OrbusNetManager.<AndroidLoadLevel>d__199	IEnumerator<object>, IEnumerator, IDisposable	6	6	2	414102
-10022	class	OrbusNetManager.<AsyncWarmupScene>d__204	IEnumerator<object>, IEnumerator, IDisposable	6	6	2	414144
-10023	class	OrbusNetManager.<>c		5	6	0	414187
-10024	class	OrbusNetManager.<sharpConnectionError>d__207	IEnumerator<object>, IEnumerator, IDisposable	5	6	2	414219
-10025	class	OrbusNetManager.<handleTextMessage>d__208	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	414260
-10026	class	OrbusNetManager.<handleBinaryMessage>d__209	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	414300
-10027	class	OrbusNetManager.<>c__DisplayClass222_0		3	3	0	414340
-10028	class	OrbusNetManager.<>c__DisplayClass254_0		1	2	0	414361
 10029	class	NetEntity		22	14	0	414376
-10030	class	NetEntity.<>c__DisplayClass29_0		2	1	0	414449
-10031	class	NetEntity.<>c__DisplayClass29_1		2	2	0	414463
-10032	class	NetEntity.<>c__DisplayClass33_0		3	2	0	414480
-10033	class	NetEntity.<>c__DisplayClass35_0		1	2	0	414498
 10034	class	OtherPlayerEntity	NetEntity	10	5	1	414513
 10035	class	PlayerEntity	NetEntity	3	2	0	414552
 10036	class	DebugBox		10	3	0	414569
@@ -645,7 +401,6 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 10040	class	ComponentListener		3	2	0	414676
 10041	class	OrbusNetSelfSpawn	MonoBehaviour	3	4	0	414693
 10042	class	OrbusSoundManager	MonoBehaviour	32	17	2	414716
-10043	class	OrbusSoundManager.<>c__DisplayClass45_0		2	2	0	414819
 10044	class	OrbusUtils		0	1	0	414835
 10045	class	PegPuzzleDoor	MonoBehaviour	3	3	0	414844
 10046	class	PegPuzzleGear	MonoBehaviour	1	2	0	414864
@@ -653,10 +408,7 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 10048	class	PermanentDangerPool	MonoBehaviour	4	2	0	414909
 10049	class	PetBreedingStation	MonoBehaviour	11	10	0	414927
 10050	class	PetExplorerStation	MonoBehaviour	8	8	1	414980
-10051	class	PetExplorerStation.<ResetTreatPosition>d__13	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	415029
-10052	class	PetExplorerStation.<>c		3	4	0	415069
 10053	class	PetExplorerTreat	MonoBehaviour	1	4	0	415092
-10054	class	PetExplorerTreat.<>c		2	3	0	415116
 10055	class	PlayerCompass	MonoBehaviour	31	18	0	415135
 10056	class	PlayerJournal	MonoBehaviour	11	12	1	415228
 10057	class	JournalPage		4	1	0	415291
@@ -669,19 +421,9 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 10064	class	PlayerTool	MonoBehaviour	20	13	1	415474
 10065	class	PlayerTorso	MonoBehaviour	2	3	0	415550
 10066	class	PlayerWand	MonoBehaviour	36	31	0	415569
-10067	enum	PlayerWand.wandState		1	0	0	415711
-10068	class	PlayerWand.<>c__DisplayClass45_0		1	2	0	415731
-10069	class	PlayerWand.<>c__DisplayClass48_0		3	2	0	415747
-10070	class	PlayerWand.<>c__DisplayClass49_0		4	3	0	415765
-10071	class	PlayerWand.<actionAfterDelayCoroutine>d__51	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	415787
-10072	class	PlayerWand.<>c__DisplayClass53_0		5	2	0	415827
-10073	class	PlayerWand.<>c__DisplayClass53_1		6	3	0	415847
-10074	class	PlayerWand.<>c__DisplayClass54_0		2	2	0	415871
 10075	class	PointOfInterest	MonoBehaviour	4	2	0	415887
 10076	class	Portal	MonoBehaviour	8	6	0	415906
-10077	class	Portal.<>c		2	3	0	415942
 10078	class	PortalArrow	MonoBehaviour	20	18	0	415961
-10079	class	PortalArrow.<>c		4	5	0	416057
 10080	class	PortalEventNetComponent	DynamicEvent	5	9	0	416084
 10081	class	PotionAgingStation	MonoBehaviour	6	7	0	416129
 10082	class	PowerPool	MonoBehaviour	6	7	0	416164
@@ -690,23 +432,15 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 10085	class	PublicEventCrystal	PortalArrow	1	2	0	416261
 10086	class	PublicEventTriggerCollider	MonoBehaviour	4	4	0	416276
 10087	class	PublicEventTriggerObject	MonoBehaviour	9	12	0	416304
-10088	class	PublicEventTriggerObject.<>c		3	4	0	416362
 10089	class	QuestCollider	MonoBehaviour	7	2	0	416385
 10090	class	QuestInfo	MonoBehaviour	5	7	0	416407
 10091	class	QuestMarker	MonoBehaviour	2	3	0	416445
 10092	class	QuestObjectiveCollider	MonoBehaviour	6	2	0	416464
 10093	class	RatBossLever	MonoBehaviour	2	2	0	416484
-10094	class	RatBossLever.<>c		2	3	0	416502
 10095	class	ReactsToQuestFlag	MonoBehaviour	4	2	0	416521
 10096	class	ReadableBook	MonoBehaviour	30	36	2	416539
-10097	class	ReadableBook.<FlipToPageIdx>d__47	IEnumerator<object>, IEnumerator, IDisposable	7	6	2	416697
 10098	class	RigBasedAdjustment	MonoBehaviour	10	9	0	416739
 10099	class	RockBoss	MonoBehaviour	22	22	1	416787
-10100	enum	RockBoss.AI_STATE		1	0	0	416892
-10101	class	RockBoss.<finishSpawn>d__29	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	416904
-10102	class	RockBoss.<FinishGroundSlam>d__32	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	416944
-10103	class	RockBoss.<FinishRockThrow>d__35	IEnumerator<object>, IEnumerator, IDisposable	5	6	2	416984
-10104	class	RockBoss.<DropBoulders>d__40	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	417025
 10105	class	RockBoss_AnimationEventHandler	MonoBehaviour	1	5	0	417064
 10106	class	RockBoss_Boulder	MonoBehaviour	1	3	0	417088
 10107	class	RockWorldBoss	MonoBehaviour	6	11	0	417107
@@ -738,26 +472,18 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 10133	class	SummonMountRotate	MonoBehaviour	4	3	0	417838
 10134	class	SummonMountScale	MonoBehaviour	5	4	0	417860
 10135	class	AttackVfxController	MonoBehaviour	6	6	0	417887
-10136	class	AttackVfxController.<CheckLifeTime>d__9	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	417923
 10137	class	SwordboardShield	MonoBehaviour	4	3	0	417961
 10138	class	TauntHorn	MonoBehaviour	9	8	0	417982
-10139	class	TauntHorn.<SnapBack>d__10	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	418026
-10140	class	TauntHorn.<DoTaunt>d__13	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	418065
 10141	class	ThrownSword	MonoBehaviour	1	2	0	418103
 10142	class	TargetClone	MonoBehaviour	1	1	0	418118
 10143	class	Taxi	MonoBehaviour	5	7	1	418130
 10144	class	TaxiDock	MonoBehaviour	6	7	0	418171
 10145	class	TeleportPillar	MonoBehaviour	9	7	0	418207
-10146	class	TeleportPillar.<>c__DisplayClass10_0		3	2	0	418247
 10147	class	TerrainDistanceChanger	MonoBehaviour	3	1	0	418264
 10148	class	ThornGrabber	MonoBehaviour	5	5	0	418279
 10149	class	TinkerableObject	MonoBehaviour	13	4	0	418308
 10150	class	TinkerablePiece	MonoBehaviour	8	5	0	418348
 10151	class	TinkererStation	MonoBehaviour	40	25	0	418383
-10152	class	TinkererStation.<>c__DisplayClass45_0		1	2	0	418536
-10153	class	TinkererStation.<DoRequestUnlockedBlueprints>d__46	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	418552
-10154	class	TinkererStation.<>c__DisplayClass48_0		2	4	0	418592
-10155	class	TinkererStation.<ShowToolTip>d__53	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	418615
 10156	class	ActionBombDetonator	MonoBehaviour	7	6	0	418654
 10157	class	AmbientLightChange	MonoBehaviour	15	12	0	418690
 10158	class	BlessedHorn	MonoBehaviour	7	6	0	418753
@@ -770,7 +496,6 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 10165	class	ConfettiGun	MonoBehaviour	7	5	0	418966
 10166	class	DungeonShard	MonoBehaviour	6	6	0	418996
 10167	class	DynamicPlayerMap	MonoBehaviour	47	24	0	419028
-10168	enum	DynamicPlayerMap.ZoneID		1	0	0	419179
 10169	class	FlotationDevice	MonoBehaviour	1	4	0	419198
 10170	class	FogChange	MonoBehaviour	17	8	0	419219
 10171	class	GrindTool	MonoBehaviour	6	8	0	419268
@@ -789,7 +514,6 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 10184	class	Potion	MonoBehaviour	8	7	0	419608
 10185	class	Shrinker	MonoBehaviour	9	7	0	419645
 10186	class	SpecialPopup	MonoBehaviour	1	5	0	419687
-10187	class	SpecialPopup.<OpenCashShop>d__3	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	419714
 10188	class	SpecialPopupManager	MonoBehaviour	3	6	0	419752
 10189	class	Tagger	MonoBehaviour	35	13	1	419783
 10190	class	TeleportationDevice	MonoBehaviour	12	7	0	419884
@@ -799,24 +523,12 @@ type_id	kind	name	base_or_interfaces	fields	methods	properties	line_in_dump
 10194	class	XPBoostBomb	BoostBomb	0	2	0	420052
 10195	class	TopHud	MonoBehaviour	11	4	0	420064
 10196	class	TransmogStation	MonoBehaviour	51	43	1	420095
-10197	enum	TransmogStation.weaponTypes		1	0	0	420316
-10198	class	TransmogStation.<SetupTooltip>d__51	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	420329
-10199	class	TransmogStation.<UpdateDummyEquipment>d__52	IEnumerator<object>, IEnumerator, IDisposable	3	6	2	420368
-10200	class	TransmogStation.<>c__DisplayClass55_0		2	4	0	420407
-10201	class	TransmogStation.<DoUpdateInventoryList>d__55	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	420430
-10202	class	TransmogStation.<>c__DisplayClass56_0		2	4	0	420470
-10203	class	TransmogStation.<>c__DisplayClass57_0		1	2	0	420493
-10204	class	TransmogStation.<ShowTooltip>d__58	IEnumerator<object>, IEnumerator, IDisposable	4	6	2	420509
 10205	class	EquipmentSlotInfo		2	1	0	420549
 10206	class	PreviewIcons		2	1	0	420562
 10207	class	TransmogUI	MonoBehaviour, IPointerEnterHandler, IEventSystemHandler, IPointerExitHandler, IPointerClickHandler	0	4	0	420575
 10208	class	TutorialTriggerCollider	MonoBehaviour	1	2	0	420593
 10209	class	Unarmed	MonoBehaviour, IPlayerClass	2	11	0	420609
 10210	class	Vendor	MonoBehaviour	25	41	5	420652
-10211	enum	Vendor.ReputationType		1	0	0	420841
-10212	class	Vendor.<doOpenVendorInventory>d__47	IEnumerator<object>, IEnumerator, IDisposable	6	6	2	420858
-10213	class	Vendor.<doUpdateOpenVendorInventory>d__49	IEnumerator<object>, IEnumerator, IDisposable	5	6	2	420900
-10214	class	Vendor.<>c		4	5	0	420942
 10215	class	Missions		2	1	0	420970
 10216	class	Mission		15	3	2	420984
 10217	class	RewardTier		4	1	0	421021
