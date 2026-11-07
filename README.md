@@ -33,3 +33,4 @@ This is an independent community project, not official OrbusVR documentation. Re
 - [Regenerate indexes locally](tools/index_il2cpp.py) — no original game dump needs to be committed.
 
 The index is **metadata only**, not proof of functionality, runtime compatibility, or permission to use a network method on third-party servers.
+- [Native symbol cross-check (585 of 585 matched)](research/native-crosschecks.md) and [verification tool](tools/verify_il2cpp_signatures.py).
