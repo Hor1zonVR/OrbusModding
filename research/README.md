@@ -28,6 +28,16 @@ Offsets and addresses are version-dependent. Never reuse an offset from one buil
 
 Static interpretations are not runtime-verified APIs. Check method evidence and build fingerprint before using any address.
 
+## Deep networking and game-system research (Batch 02)
+
+- [Full Batch 02 deep-dive and system map](export-batch-02-deep-dive.md)
+- [Incoming message parser, spawning, entity update and despawn](batch-02-incoming-message-parser-and-spawns.md)
+- [Component network contracts, callback dispatch and remote movement](batch-02-component-dispatch-and-entity-lifecycle.md)
+- [ENet connection loops, scene load, prefab pools and player rig](batch-02-connections-zone-loading-and-prefab-pools.md)
+- [NPC interaction, dialogue, choices and UI](batch-02-npc-dialogue-interaction-and-ui.md)
+- [Orbhealer/Musketeer and health-bar mechanics](batch-02-orbhealer-healthbars-and-combat-ui.md)
+- [Machine-readable selected Batch 02 methods](../references/batch-02-curated-methods.json)
+
 ## Deep gameplay research (Batch 03)
 
 - [Camera, avatar LOD, scale and scene/prefab boundaries](batch-03-player-camera-and-world.md)
