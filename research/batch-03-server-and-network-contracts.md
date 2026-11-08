@@ -62,9 +62,9 @@ Other direct same-batch callers of `PlayerTool.SendToolSignal` include functions
 | `Shaman` | `0x488A80` | 1–5 | 1 |
 | `Fisher` | `0x412000` | 1 | 1–5 |
 | `BossChest` | `0x42C7B0` | 1, 2 | none in this init function |
-| `DynamicEvent` | `0x404340` | see init in private index | see init in private index |
-| `PortalEventNetComponent` | `0x3ABA30` | see init in private index | see init in private index |
-| `DungeonBarrier` | `0x4026E0` | see init in private index | see init in private index |
+| `DynamicEvent` | `0x404340` | **1–5** | none visible in this init function |
+| `PortalEventNetComponent` | `0x3ABA30` | **6** | none visible in this init function |
+| `DungeonBarrier` | `0x4026E0` | **1** | none visible in this init function |
 
 A registration declares interest in a slot/callback; it does **not** tell us the field's high-level meaning until the callback and state serializer are traced. A listener ID can be skipped/reserved (e.g., Monster's 13).
 
