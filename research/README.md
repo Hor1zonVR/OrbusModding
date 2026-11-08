@@ -38,3 +38,5 @@ Static interpretations are not runtime-verified APIs. Check method evidence and 
 - [Offline Ghidra metadata audit tool](../tools/ghidra_export_audit_README.md)
 
 **For AI assistants:** choose the subsystem guide, check its snapshot RVA and static/runtime confidence, then follow the documented caller/callee chain. Never treat a visible client-side request as a server-authorized or persistent mutation.
+
+[Batch 02: network request envelope and scene loading (first traces)](batch-02-network-and-scenes-first-traces.md) — connects the gameplay requests in Batch 03 to native serializer and preload methods. This is an initial subsystem analysis, not a complete deep review of Batch 02.
