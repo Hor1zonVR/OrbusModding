@@ -10,9 +10,9 @@ After passing the local time guard, this method checks a combination of NPC stat
 
 - repositions or reveals the NPC dialogue UI through `Npc.PositionDialogue()` **`0x2F7BC0`**;
 - calls a world-object/interaction helper on an active component; or
-- invokes a player method at **`PlayerCharacter + RVA 0x378710`** passing the NPC's **16-bit entity ID** from its `NetEntity + 0x10`.
+- invokes **`PlayerCharacter.DoDialog(ushort guid)` at RVA `0x378710`** passing the NPC's **16-bit entity ID** from its `NetEntity + 0x10`.
 
-The downstream player method `0x378710`, in Batch 03, creates a player-entity component request using method ID **`0x1B` (27)** after additional local checks.
+The downstream **`PlayerCharacter.DoDialog(ushort)`** method `0x378710`, in Batch 03, creates a player-entity component request using method ID **`0x1B` (27)** after additional local checks.
 
 **Implications:** clicking an NPC is not equivalent to a guaranteed dialogue event. There are local cooldown, UI and player-state gates, followed by a server-mediated interaction request in at least one branch.
 
