@@ -33,7 +33,7 @@ The player component request at the last stage uses local method **28** with a o
 
 | Method | RVA | Native behavior |
 |---|---|---|
-| `NetEntity.DespawnPooled` | `0x2F2BB0` | Checks the backing GameObject, forwards entity/object cleanup to `OrbusNetManager` helper **`0x30BF70`** with the GameObject and prefab identifier, then clears `NetEntity + 0x18` (game object reference). |
+| `NetEntity.DespawnPooled` | `0x2F2BB0` | Checks the backing GameObject, forwards entity/object cleanup to **`OrbusNetManager.ReturnToPool(GameObject,string)` `0x30BF70`** with the GameObject and prefab identifier, then clears `NetEntity + 0x18` (game object reference). |
 | `NetEntity.Despawn(bool)` | `0x2F2C70` | Handles multiple cases: object already gone, active object with manager data, and immediate/delayed cleanup. A branch passes **3.0 s** for one mode or **0.1 s** for the other, then clears both listener dictionaries; it may schedule cleanup rather than deleting immediately. |
 | `NetEntity.ResetPosition` | `0x2F3280` | Restores a backing Transform's position and rotation using cached position/quaternion fields (e.g. vectors near `+0x38` and quaternion near `+0x6C`). |
 
