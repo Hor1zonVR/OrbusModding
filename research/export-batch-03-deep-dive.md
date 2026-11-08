@@ -1,5 +1,16 @@
 # Ghidra Batch 03 — Orbus gameplay deep dive
 
+## Detailed subsystem research
+
+- [Player, external camera, avatar LOD and world](batch-03-player-camera-and-world.md)
+- [Component request envelopes, IDs and server boundaries](batch-03-server-and-network-contracts.md)
+- [Runemage, Bard, Shaman, combat and fishing](batch-03-combat-and-classes.md)
+- [Loot, events, UI and native weapon adjustments](batch-03-items-events-ui-and-weapon-adjustments.md)
+- [Related Batch 02 serializer and scene-preload traces](batch-02-network-and-scenes-first-traces.md)
+
+These are independently written static traces, not an exhaustive manual review of all 10,000 entries.
+
+
 **Research date:** 2026-11-08  
 **Coverage:** Exported function ordinals **20,001–30,000**, RVA approximately `0x323450`–`0x678C80` of `GameAssembly.dll`.  
 **Source:** User-generated Ghidra decompilation, linked to the existing [IL2CPP snapshot](il2cpp-snapshot.md) and the [curated symbol map](../references/core-symbols.json).  
