@@ -9,7 +9,7 @@ The full export contains **79,754 selected functions**, **79,745 successful deco
 | Batch | Exported ordinals | Initial priority | Current research status |
 |---|---|---|---|
 | 1 | 1–10,000 | Native/IL2CPP foundation | Indexed; first overview published. Deep subsystem review not complete. |
-| 2 | 10,001–20,000 | Networking, scene manager, NPCs | Index generated locally; deep review not yet published. |
+| 2 | 10,001–20,000 | Networking, scene manager, NPCs | Index generated locally; first network/scene traces published; deeper review incomplete. |
 | 3 | 20,001–30,000 | Player, combat, items, world events | Indexed; multiple focused native behavioral traces published; **not** exhaustively understood. |
 | 4 | 30,001–40,000 | Loot-menu and UI helpers | Index generated locally; deep review not yet published. |
 | 5 | 40,001–50,000 | Gameplay dependencies and libraries | Index generated locally; deep review not yet published. |
@@ -92,7 +92,7 @@ A function entry does **not** graduate from Mapped to Runtime-tested by being in
 
 ## Suggested remaining review order
 
-1. **Batch 02** — native network manager, scene loading, entity lifecycle and request dispatch; feeds Batch 03 explanations.
+1. **Batch 02** — continue from [initial network/scene traces](batch-02-network-and-scenes-first-traces.md) into entity lifecycle, receiving handlers and remote world interest handling.
 2. **Batch 04** — loot/presentation/PowerUI and inventories.
 3. **Batch 05** — trace dependencies called from named class/scene systems.
 4. **Batches 06–08 and 01** — tackle runtime/Unity internals selectively and document what they illuminate for actual Orbus gameplay.
