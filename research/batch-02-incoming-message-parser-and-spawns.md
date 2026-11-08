@@ -23,12 +23,12 @@ This page joins the parser to the networking and entity updates documented in [t
 | Dynamic entity-update range, numerically tied to **10,000+ type codes** | `OrbusNetManager.handleEntityUpdate(ushort entityType, ushort entityGuid, bool forceDestroy, BinaryReader)` | **`0x31D400`** | Derives a type code, reads a GUID and forwards force-destroy state. Actual factory lookup happens in downstream handler. |
 | Component-tagged range involving **30,000+ component IDs** | `NetEntity.TriggerListenerForMethod(string componentName,byte methodId,BinaryReader)` | **`0x2F3360`** | Reads entity GUID, resolves entity by GUID, resolves component name from manager mapping at `+0x398`, dispatches incoming component method/state. Outgoing `CallServerComponent` uses the same **30,000 offset scheme** in this snapshot. |
 | `0x0C` (12) | `OrbusNetManager.initializePlayerRig(...)` | **`0x31EF50`** | Reads local player identity, three position components and four quaternion components; initializes/updates local rig, then calls `sendPing`. |
-| `0x0D` (13) | `OrbusNetManager.handle...OtherPlayer...` (named mapping below) | **`0x31D7B0`** | The native path looks up or creates an `OtherPlayerEntity`, then calls `OtherPlayerEntityUpdateFromRemote(BinaryReader)` `0x32F7D0` (Batch 03). See separate section. |
+| `0x0D` (13) | `OrbusNetManager.handleOtherPlayerUpdate(ushort,bool,BinaryReader)` | **`0x31D7B0`** | The native path looks up or creates an `OtherPlayerEntity`, then calls `OtherPlayerEntityUpdateFromRemote(BinaryReader)` `0x32F7D0` (Batch 03). See separate section. |
 | `0x23` (35) / `0x24` (36) | `OrbusNetManager.handleEntityDespawn(...)` | **`0x31D330`** | Two branches invoke same helper with distinct boolean mode; the significance of each mode beyond the argument requires testing. |
 | `0x29` (41) | `OrbusNetManager.handlePing(BinaryReader)` | **`0x31DDC0`** | Distinct from the outgoing `sendPing` code that writes initial `0x28` (40). Underlying timing/latency response should be traced before claiming exact ping semantics. |
 | `0x32` (50) | `OrbusNetManager.handleWsTextMsg(string)` | **`0x31E6B0`** | Reads incoming text and passes it to a separate message processor; potential chat/control/state multiplexing requires inspecting that handler. |
 | `0x0B` (11) | `OrbusNetManager.UpdateDebugBox(ushort,BinaryReader)` | **`0x30E000`** | UI/debug updating path. |
-| `0x41` (65) | native manager helper `0x307B60` | `0x307B60` | Needs further name/meaning confirmation before assigning a packet semantic. |
+| `0x41` (65) | `OrbusNetManager.ClearAllEntities()` | `0x307B60` | Loops the active entity list and calls `handleEntityDespawn(..., true)` for each recorded GUID; the player-rig guard in the despawn handler still applies. |
 
 ### Why this changes earlier interpretations
 
@@ -47,7 +47,7 @@ This last call also resolves an ambiguity: Ghidra's standalone decompilation of 
 
 ### Distinct other-player entity path
 
-`OrbusNetManager.handle...` **`0x31D7B0`** (managed name below) handles a record specifically for another player:
+`OrbusNetManager.handleOtherPlayerUpdate(ushort,bool,BinaryReader)` **`0x31D7B0`** handles a record specifically for another player:
 
 - Finds an existing entity by GUID or despawns/removes it when a replacement flag is set.
 - Uses an `OtherPlayerEntity` factory/constructor at **`0x3301E0`**, and adds it to the same active list and GUID dictionary.
@@ -56,6 +56,10 @@ This last call also resolves an ambiguity: Ghidra's standalone decompilation of 
 The Batch 03 method decodes multiple remote-avatar Transform groups. The per-frame `OtherPlayerEntity.UpdateObjectPosition(float)` **`0x32FDA0`** then interpolates and applies them.
 
 **RebornCamera take-away:** the correct raw incoming data feed for a full-body remote replay is not `NetEntity` position alone. One packet path includes extra head/hand/body anchors. A party-synchronized replay design should record those, a stable session/instance identity and time alignment, while accounting for entity replacements.
+
+### Entire entity-list clearing
+
+`OrbusNetManager.ClearAllEntities()` **`0x307B60`** snapshots the active entity GUIDs and invokes `handleEntityDespawn(..., true)` for each, instead of simply dropping the dictionary. Its invocation from message case `0x41` (65) means this reader branch can trigger a wholesale client-side entity reset. **This is a potential replay discontinuity:** capture a scene/session boundary before clearing a cached remote-player object graph.
 
 ## Despawn protection for the local player
 
@@ -69,7 +73,7 @@ This proves that despawn handling is linked to the **same GUID collection and di
 
 ## Important unresolved items
 
-- The exact managed signature/name of `0x31D7B0` is awaiting a dump cross-check; its control flow and direct call to `OtherPlayerEntityUpdateFromRemote` are visible.
+- The name `OrbusNetManager.handleOtherPlayerUpdate` at `0x31D7B0` is now cross-checked against the managed dump; its direct call to `OtherPlayerEntityUpdateFromRemote` is visible.
 - The meaning of the special `0x42` prefix/flag.
 - Complete validation and framing of the component-coded ranges.
 - Server interest management: **why** the server sends or omits an entity to a particular player.
