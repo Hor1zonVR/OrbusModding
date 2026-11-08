@@ -11,7 +11,7 @@ The full export contains **79,754 selected functions**, **79,745 successful deco
 | 1 | 1–10,000 | Native/IL2CPP foundation | Indexed; first overview published. Deep subsystem review not complete. |
 | 2 | 10,001–20,000 | Networking, scene manager, NPCs | Indexed; receive parser, entity lifecycle, networking, scenes, NPC and class/HUD traces published; **not** exhaustively understood or runtime-tested. |
 | 3 | 20,001–30,000 | Player, combat, items, world events | Indexed; multiple focused native behavioral traces published; **not** exhaustively understood. |
-| 4 | 30,001–40,000 | Loot-menu and UI helpers | Index generated locally; deep review not yet published. |
+| 4 | 30,001–40,000 | Loot-menu and UI helpers | Indexed; auction, native UI, terrain/navmesh, item-model and rendering research published; **partial static review**. |
 | 5 | 40,001–50,000 | Gameplay dependencies and libraries | Index generated locally; deep review not yet published. |
 | 6 | 50,001–60,000 | Unity support, rendering/transforms | Address scan exists; deep review pending. |
 | 7 | 60,001–70,000 | Runtime and library code | Address scan exists; deep review pending. |
@@ -87,6 +87,14 @@ A function entry does **not** graduate from Mapped to Runtime-tested by being in
 - **Machine-readable curated signatures:** [`batch-02-curated-methods.json`](../references/batch-02-curated-methods.json).
 - Still unresolved: server-side permission validation, entity-interest radius, full protocol framing, one timed-out constructor and runtime verification.
 
+## Batch 04 audit trail (first deeper subsystem review)
+
+- 10,000 indexed Ghidra functions, **9,999** decompiled and 1 timeout at `0x696A60`.
+- **58,343** distinct syntactically visible direct call relationships, **6,855** with the callee inside the batch, across **6,040** distinct target addresses.
+- [Complete Batch 04 starting guide](export-batch-04-deep-dive.md) and five deep topic pages: [auction](batch-04-auction-market-contracts.md), [terrain/navigation](batch-04-terrain-grid-and-navigation.md), [PowerUI](batch-04-powerui-menus-notifications-and-keyboard.md), [item fields](batch-04-item-stat-and-loot-data-reference.md), [rendering/SDK boundaries](batch-04-rendering-impostors-avatars-and-pathfinding-libraries.md).
+- [Curated selected methods](../references/batch-04-curated-methods.json): 140 snapshot declarations across 20 selected classes, **not** all native methods.
+- Not yet established: game build hash, live use of bundled SDK classes, server marketplace validation, all item serialization, player interest area, or runtime behavior across versions.
+
 ## Batch 03 audit trail (initial deeper pass)
 
 - 10,000 functions; 9,996 decompiled; 4 failures.
@@ -102,7 +110,7 @@ A function entry does **not** graduate from Mapped to Runtime-tested by being in
 ## Suggested remaining review order
 
 1. **Batch 02** — follow [the new native parser/dispatch guide](batch-02-incoming-message-parser-and-spawns.md) to server interest management, receiver permissions and experimental validation; major client paths are now statically traced.
-2. **Batch 04** — loot/presentation/PowerUI and inventories.
+2. **Batch 04** — follow [completed first subsystem research](export-batch-04-deep-dive.md) into menu lifetime, server marketplace outcomes, item icon resolution and the one timed-out function.
 3. **Batch 05** — trace dependencies called from named class/scene systems.
 4. **Batches 06–08 and 01** — tackle runtime/Unity internals selectively and document what they illuminate for actual Orbus gameplay.
 
