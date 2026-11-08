@@ -9,7 +9,7 @@ The full export contains **79,754 selected functions**, **79,745 successful deco
 | Batch | Exported ordinals | Initial priority | Current research status |
 |---|---|---|---|
 | 1 | 1–10,000 | Native/IL2CPP foundation | Indexed; first overview published. Deep subsystem review not complete. |
-| 2 | 10,001–20,000 | Networking, scene manager, NPCs | Index generated locally; first network/scene traces published; deeper review incomplete. |
+| 2 | 10,001–20,000 | Networking, scene manager, NPCs | Indexed; receive parser, entity lifecycle, networking, scenes, NPC and class/HUD traces published; **not** exhaustively understood or runtime-tested. |
 | 3 | 20,001–30,000 | Player, combat, items, world events | Indexed; multiple focused native behavioral traces published; **not** exhaustively understood. |
 | 4 | 30,001–40,000 | Loot-menu and UI helpers | Index generated locally; deep review not yet published. |
 | 5 | 40,001–50,000 | Gameplay dependencies and libraries | Index generated locally; deep review not yet published. |
@@ -78,6 +78,15 @@ For each batch, add:
 
 A function entry does **not** graduate from Mapped to Runtime-tested by being indexed. Reports must never present guesses as implementation-ready APIs.
 
+## Batch 02 audit trail (first deep subsystem review)
+
+- 10,000 functions; **9,999** successful Ghidra decompilations and **1** timeout at `0x30F330` (`OrbusNetManager..ctor()`).
+- **29,432** distinct direct caller/callee relationships in the offline index, **22,034** within this batch.
+- **120** selected managed method signatures mapped to **98** distinct RVAs. Important shared stub: `0x2F1730` appears under 19 selected managed names.
+- [Deep review overview](export-batch-02-deep-dive.md), [incoming parser and entity factory](batch-02-incoming-message-parser-and-spawns.md), [component dispatch/despawn/remote movement](batch-02-component-dispatch-and-entity-lifecycle.md), [ENet/scene/prefab pools](batch-02-connections-zone-loading-and-prefab-pools.md), [NPC dialogue](batch-02-npc-dialogue-interaction-and-ui.md), and [Orbhealer/health bar](batch-02-orbhealer-healthbars-and-combat-ui.md).
+- **Machine-readable curated signatures:** [`batch-02-curated-methods.json`](../references/batch-02-curated-methods.json).
+- Still unresolved: server-side permission validation, entity-interest radius, full protocol framing, one timed-out constructor and runtime verification.
+
 ## Batch 03 audit trail (initial deeper pass)
 
 - 10,000 functions; 9,996 decompiled; 4 failures.
@@ -92,7 +101,7 @@ A function entry does **not** graduate from Mapped to Runtime-tested by being in
 
 ## Suggested remaining review order
 
-1. **Batch 02** — continue from [initial network/scene traces](batch-02-network-and-scenes-first-traces.md) into entity lifecycle, receiving handlers and remote world interest handling.
+1. **Batch 02** — follow [the new native parser/dispatch guide](batch-02-incoming-message-parser-and-spawns.md) to server interest management, receiver permissions and experimental validation; major client paths are now statically traced.
 2. **Batch 04** — loot/presentation/PowerUI and inventories.
 3. **Batch 05** — trace dependencies called from named class/scene systems.
 4. **Batches 06–08 and 01** — tackle runtime/Unity internals selectively and document what they illuminate for actual Orbus gameplay.
