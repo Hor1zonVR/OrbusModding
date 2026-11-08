@@ -34,3 +34,12 @@ This is an independent community project, not official OrbusVR documentation. Re
 
 The index is **metadata only**, not proof of functionality, runtime compatibility, or permission to use a network method on third-party servers.
 - [Native symbol cross-check (585 of 585 matched)](research/native-crosschecks.md) and [verification tool](tools/verify_il2cpp_signatures.py).
+
+## Ghidra export research (November 2026)
+
+- [Batch 1: native/IL2CPP infrastructure overview](research/export-batch-01-overview.md)
+- [Batch 3: gameplay, external-camera limit, player LOD and network requests](research/export-batch-03-deep-dive.md)
+- [Full-export research priority map](research/full-export-priorities.md)
+- [Curated cross-system Ghidra behavior map](research/ghidra-behavior-map-2026-11-08.md)
+
+These are evidence-labeled static findings from an **unverified-build** snapshot, not stable server APIs. Private decompiler exports and full pseudocode are not redistributed.
