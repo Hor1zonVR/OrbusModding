@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-08",
+  "source": "Community OrbusVR GameAssembly.dll Ghidra export, build fingerprint unverified",
+  "image_base": "0x180000000",
+  "selected_functions": 79754,
+  "decompiled_ok": 79745,
+  "failed": 9,
+  "scope_note": "This manifest distinguishes machine indexing from human/static behavioral review and runtime validation.",
+  "batches": [
+    {
+      "number": 1,
+      "start": 1,
+      "end": 10000,
+      "functions": 10000,
+      "failed": 0,
+      "index_status": "indexed",
+      "research_status": "overview_only",
+      "focus": [
+        "IL2CPP/runtime initialization"
+      ],
+      "pages": [
+        "research/export-batch-01-overview.md"
+      ]
+    },
+    {
+      "number": 2,
+      "start": 10001,
+      "end": 20000,
+      "functions": 10000,
+      "failed": 1,
+      "index_status": "indexed",
+      "research_status": "not_deep_reviewed",
+      "focus": [
+        "OrbusNetManager",
+        "NetEntity",
+        "NPC",
+        "scene loading"
+      ],
+      "pages": []
+    },
+    {
+      "number": 3,
+      "start": 20001,
+      "end": 30000,
+      "functions": 10000,
+      "failed": 4,
+      "index_status": "indexed",
+      "research_status": "multiple_system_traces_partial",
+      "focus": [
+        "player",
+        "external camera",
+        "avatar LOD",
+        "network requests",
+        "Bard",
+        "Runemage",
+        "Shaman",
+        "Fisher",
+        "Monster",
+        "loot",
+        "events",
+        "weapon calibration"
+      ],
+      "audited_outgoing_callers": 229,
+      "audited_outgoing_sites": 258,
+      "scanned_component_registrations": 64,
+      "pages": [
+        "research/export-batch-03-deep-dive.md",
+        "research/batch-03-player-camera-and-world.md",
+        "research/batch-03-server-and-network-contracts.md",
+        "research/batch-03-combat-and-classes.md",
+        "research/batch-03-items-events-ui-and-weapon-adjustments.md"
+      ]
+    },
+    {
+      "number": 4,
+      "start": 30001,
+      "end": 40000,
+      "functions": 10000,
+      "failed": 1,
+      "index_status": "indexed",
+      "research_status": "not_deep_reviewed",
+      "focus": [
+        "loot menus",
+        "UI",
+        "presentation"
+      ],
+      "pages": []
+    },
+    {
+      "number": 5,
+      "start": 40001,
+      "end": 50000,
+      "functions": 10000,
+      "failed": 2,
+      "index_status": "indexed",
+      "research_status": "not_deep_reviewed",
+      "focus": [
+        "supporting systems",
+        "call-graph dependencies"
+      ],
+      "pages": []
+    },
+    {
+      "number": 6,
+      "start": 50001,
+      "end": 60000,
+      "functions": 10000,
+      "failed": 1,
+      "index_status": "address_scanned",
+      "research_status": "not_deep_reviewed",
+      "focus": [
+        "Unity rendering",
+        "transforms"
+      ],
+      "pages": []
+    },
+    {
+      "number": 7,
+      "start": 60001,
+      "end": 70000,
+      "functions": 10000,
+      "failed": 0,
+      "index_status": "address_scanned",
+      "research_status": "not_deep_reviewed",
+      "focus": [
+        "runtime libraries",
+        "dependencies"
+      ],
+      "pages": []
+    },
+    {
+      "number": 8,
+      "start": 70001,
+      "end": 79754,
+      "functions": 9754,
+      "failed": 0,
+      "index_status": "address_scanned",
+      "research_status": "not_deep_reviewed",
+      "focus": [
+        "runtime libraries",
+        "dependencies"
+      ],
+      "pages": []
+    }
+  ]
+}
