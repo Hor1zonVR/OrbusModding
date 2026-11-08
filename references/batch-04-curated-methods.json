@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "date": "2026-11-08",
-  "source": "user supplied IL2CPP dump.cs TypeDef metadata cross-referenced with private Ghidra export",
-  "analyzed_build": "unverified",
+  "source": "user-provided IL2CPP dump.cs, independently cross-referenced selected Ghidra RVAs",
   "image_base": "0x180000000",
-  "export_batch": "04",
-  "ordinal_range": [
+  "binary_build": "unverified",
+  "export_batch": 4,
+  "function_ordinals": [
     30001,
     40000
   ],
@@ -13,10 +13,671 @@
     "0x678CB0",
     "0x979B00"
   ],
-  "scope_note": "This curated selection comes from declared method RVAs for selected class names in a portion of the IL2CPP metadata dump. It is not a full index of all 10000 native functions, and some methods share an RVA or are vendor code with unproven runtime use.",
-  "method_entry_count": 0,
-  "classes": {},
-  "study_guides": [
+  "curated_method_entries": 140,
+  "scope_note": "Manually curated selected methods; not complete, not necessarily unique native implementations. Some included Oculus/Unity vendor components may be present but not used by Orbus gameplay. Verify signatures per client build.",
+  "classes": {
+    "TerrainGrid": {
+      "method_count": 23,
+      "methods": [
+        {
+          "rva": "0x683560",
+          "signature": "set_gridWidth(int)"
+        },
+        {
+          "rva": "0x6D8B80",
+          "signature": "get_currentNavmeshPosition()"
+        },
+        {
+          "rva": "0x6D8CA0",
+          "signature": "set_currentNavmeshPosition(Vector3)"
+        },
+        {
+          "rva": "0x6D6590",
+          "signature": "Awake()"
+        },
+        {
+          "rva": "0x6D7CC0",
+          "signature": "Start()"
+        },
+        {
+          "rva": "0x6D8720",
+          "signature": "UpdateNavigationJumps()"
+        },
+        {
+          "rva": "0x6D7940",
+          "signature": "OnDisable()"
+        },
+        {
+          "rva": "0x6D7B90",
+          "signature": "OnEnable()"
+        },
+        {
+          "rva": "0x6D73A0",
+          "signature": "GridMoved(Vector3)"
+        },
+        {
+          "rva": "0x6D6600",
+          "signature": "BuildOutGridByPercentage(float)"
+        },
+        {
+          "rva": "0x6D67F0",
+          "signature": "CombineMeshes()"
+        },
+        {
+          "rva": "0x6D6AD0",
+          "signature": "CreateChild(int,int)"
+        },
+        {
+          "rva": "0x6D8890",
+          "signature": "UpdatePosition(Vector3)"
+        },
+        {
+          "rva": "0x6D8430",
+          "signature": "UpdateHeights()"
+        },
+        {
+          "rva": "0x6D8290",
+          "signature": "UpdateCells()"
+        },
+        {
+          "rva": "0x6D8CC0",
+          "signature": "validCellAtPosition(Vector3)"
+        },
+        {
+          "rva": "0x6D8A20",
+          "signature": "findGroundAtPosition(Vector3)"
+        },
+        {
+          "rva": "0x6D8BA0",
+          "signature": "isSpaceUnoccupied(Vector3,float)"
+        },
+        {
+          "rva": "0x6D6F60",
+          "signature": "CreateMesh()"
+        },
+        {
+          "rva": "0x6D84C0",
+          "signature": "UpdateMesh(Mesh,int,int)"
+        },
+        {
+          "rva": "0x6D6A80",
+          "signature": "CornerHeightAt(int,int)"
+        },
+        {
+          "rva": "0x6D7800",
+          "signature": "MeshVertex(int,int,int,int,float)"
+        },
+        {
+          "rva": "0x6D89A0",
+          "signature": ".ctor()"
+        }
+      ]
+    },
+    "TerrainCell": {
+      "method_count": 4,
+      "methods": [
+        {
+          "rva": "0x6D64F0",
+          "signature": "get_isValid()"
+        },
+        {
+          "rva": "0x6D6580",
+          "signature": "set_isValid(bool)"
+        },
+        {
+          "rva": "0x6D5C80",
+          "signature": "doCheck()"
+        },
+        {
+          "rva": "0x6D6570",
+          "signature": "setNeedsCheck()"
+        }
+      ]
+    },
+    "Auctioneer": {
+      "method_count": 12,
+      "methods": [
+        {
+          "rva": "0x77A7B0",
+          "signature": "PlayerInteraction()"
+        },
+        {
+          "rva": "0x77AC50",
+          "signature": "ResetMenu()"
+        },
+        {
+          "rva": "0x77A730",
+          "signature": "OnDestroy()"
+        },
+        {
+          "rva": "0x77B4E0",
+          "signature": "parseAuctionData(AuctionHouseItemList)"
+        },
+        {
+          "rva": "0x77B120",
+          "signature": "callServerItemSearch(string)"
+        },
+        {
+          "rva": "0x77B020",
+          "signature": "callServerCategorySearch(string)"
+        },
+        {
+          "rva": "0x77A650",
+          "signature": "Bid(string,string,int)"
+        },
+        {
+          "rva": "0x77B220",
+          "signature": "marketBuyout(string,string)"
+        },
+        {
+          "rva": "0x77ADE0",
+          "signature": "UpdateErrors()"
+        },
+        {
+          "rva": "0x77B2F0",
+          "signature": "orbusNetInit(NetEntity)"
+        },
+        {
+          "rva": "0x77AFD0",
+          "signature": ".ctor()"
+        },
+        {
+          "rva": "0x77AD70",
+          "signature": "<orbusNetInit>b__23_1(object)"
+        }
+      ]
+    },
+    "AuctionHouseMenu": {
+      "method_count": 27,
+      "methods": [
+        {
+          "rva": "0x774E40",
+          "signature": "init(Auctioneer,Document)"
+        },
+        {
+          "rva": "0x7745E0",
+          "signature": "capitalizeFirstLetter(string)"
+        },
+        {
+          "rva": "0x774740",
+          "signature": "getDataFromClasses(Element)"
+        },
+        {
+          "rva": "0x777790",
+          "signature": "parseHtmlId(string)"
+        },
+        {
+          "rva": "0x7746A0",
+          "signature": "getAuctionId(string)"
+        },
+        {
+          "rva": "0x774170",
+          "signature": "addItemSelections(Document,string)"
+        },
+        {
+          "rva": "0x7731C0",
+          "signature": "addAuctionListings(Dictionary<int,AuctionHouseItem>)"
+        },
+        {
+          "rva": "0x774640",
+          "signature": "determineTimeRemaining(int)"
+        },
+        {
+          "rva": "0x774080",
+          "signature": "addErrors(Document,string[])"
+        },
+        {
+          "rva": "0x772B90",
+          "signature": "Bid(UIEvent)"
+        },
+        {
+          "rva": "0x772D20",
+          "signature": "Buyout(UIEvent)"
+        },
+        {
+          "rva": "0x774950",
+          "signature": "handleCategoryClick(UIEvent)"
+        },
+        {
+          "rva": "0x774B90",
+          "signature": "handleItemClick(UIEvent)"
+        },
+        {
+          "rva": "0x777830",
+          "signature": "refreshAuctionListings()"
+        },
+        {
+          "rva": "0x774AE0",
+          "signature": "handleChoiceClick(UIEvent)"
+        },
+        {
+          "rva": "0x774C60",
+          "signature": "handleLeaveClick(UIEvent)"
+        },
+        {
+          "rva": "0x773FD0",
+          "signature": "addClass(Element,string)"
+        },
+        {
+          "rva": "0x777AF0",
+          "signature": "removeClass(Element,string)"
+        },
+        {
+          "rva": "0x777DC0",
+          "signature": "showKeyboard(UIEvent)"
+        },
+        {
+          "rva": "0x777B90",
+          "signature": "showBuyoutConfirmation(UIEvent)"
+        },
+        {
+          "rva": "0x774D30",
+          "signature": "hideBuyoutConfirmation(UIEvent)"
+        },
+        {
+          "rva": "0x777E90",
+          "signature": "sortItems()"
+        },
+        {
+          "rva": "0x778AF0",
+          "signature": "toggleSortMethod(UIEvent)"
+        },
+        {
+          "rva": "0x774F00",
+          "signature": "inventoryHover(UIEvent)"
+        },
+        {
+          "rva": "0x7774C0",
+          "signature": "inventoryStopHover(UIEvent)"
+        },
+        {
+          "rva": "0x773180",
+          "signature": ".ctor()"
+        },
+        {
+          "rva": "0x773030",
+          "signature": ".cctor()"
+        }
+      ]
+    },
+    "AuctionPostMenu": {
+      "method_count": 4,
+      "methods": [
+        {
+          "rva": "0x779060",
+          "signature": "init(AuctionChest)"
+        },
+        {
+          "rva": "0x778FB0",
+          "signature": "getItemPosition(string)"
+        },
+        {
+          "rva": "0x779510",
+          "signature": "updatePrices(Document)"
+        },
+        {
+          "rva": "0x7790C0",
+          "signature": "postItem(UIEvent)"
+        }
+      ]
+    },
+    "KeyboardMenu": {
+      "method_count": 16,
+      "methods": [
+        {
+          "rva": "0x7C9590",
+          "signature": "makeRow(string)"
+        },
+        {
+          "rva": "0x7C8F80",
+          "signature": "makeKeyboard(Document)"
+        },
+        {
+          "rva": "0x7C93D0",
+          "signature": "makeNumericKeyboard(Document)"
+        },
+        {
+          "rva": "0x7C8DD0",
+          "signature": "firstOpen(Document,bool)"
+        },
+        {
+          "rva": "0x7C8810",
+          "signature": "clickKey(UIEvent)"
+        },
+        {
+          "rva": "0x7C8D00",
+          "signature": "enterPressed()"
+        },
+        {
+          "rva": "0x7C83E0",
+          "signature": "SetText(string,Document)"
+        },
+        {
+          "rva": "0x7C99A0",
+          "signature": "toggleShift(UIEvent)"
+        },
+        {
+          "rva": "0x7C9910",
+          "signature": "toggleAlt(UIEvent)"
+        },
+        {
+          "rva": "0x7C96C0",
+          "signature": "releaseModifiers(Document)"
+        },
+        {
+          "rva": "0x7C8710",
+          "signature": "addCommonPhrase(UIEvent)"
+        },
+        {
+          "rva": "0x7C9860",
+          "signature": "showCommonPhrases(Document)"
+        },
+        {
+          "rva": "0x7C8F10",
+          "signature": "hideCommonPhrases(Document)"
+        },
+        {
+          "rva": "0x7C97B0",
+          "signature": "showCommonBugPhrases(Document)"
+        },
+        {
+          "rva": "0x7C8EA0",
+          "signature": "hideCommonBugPhrases(Document)"
+        },
+        {
+          "rva": "0x7C8490",
+          "signature": ".cctor()"
+        }
+      ]
+    },
+    "LootMenu": {
+      "method_count": 2,
+      "methods": [
+        {
+          "rva": "0x87F1A0",
+          "signature": "addItemToList(InventoryItemInstance,Document)"
+        },
+        {
+          "rva": "0x87F5B0",
+          "signature": "clearList(Document)"
+        }
+      ]
+    },
+    "NotificationMenu": {
+      "method_count": 1,
+      "methods": [
+        {
+          "rva": "0x6F9D60",
+          "signature": "ShowNotification(string,string,Document)"
+        }
+      ]
+    },
+    "ObjectOptionMenu": {
+      "method_count": 4,
+      "methods": [
+        {
+          "rva": "0x7C0900",
+          "signature": "getDataFromClasses(Element)"
+        },
+        {
+          "rva": "0x7C0150",
+          "signature": "AddChoice(string,bool,Document)"
+        },
+        {
+          "rva": "0x7C0B10",
+          "signature": "handleChoiceClick(UIEvent)"
+        },
+        {
+          "rva": "0x7C07A0",
+          "signature": "ClearChoices(Document)"
+        }
+      ]
+    },
+    "ImposterManager": {
+      "method_count": 15,
+      "methods": [
+        {
+          "rva": "0x7F3A70",
+          "signature": "Awake()"
+        },
+        {
+          "rva": "0x7F47F0",
+          "signature": "Start()"
+        },
+        {
+          "rva": "0x7F3ED0",
+          "signature": "ForceImposterUpdate()"
+        },
+        {
+          "rva": "0x7F3E50",
+          "signature": "ForceImposterUpdate(int)"
+        },
+        {
+          "rva": "0x7F4900",
+          "signature": "forceUpdate(int)"
+        },
+        {
+          "rva": "0x7F4390",
+          "signature": "SetupCachingCamera()"
+        },
+        {
+          "rva": "0x7F3F40",
+          "signature": "LateUpdate()"
+        },
+        {
+          "rva": "0x7F4E20",
+          "signature": "isVisible(Bounds)"
+        },
+        {
+          "rva": "0x7F4DF0",
+          "signature": "isVisibleInCache(Bounds)"
+        },
+        {
+          "rva": "0x7F4B70",
+          "signature": "getRenderTexture(ImposterProxy,int)"
+        },
+        {
+          "rva": "0x7F4D10",
+          "signature": "giveBackRenderTexture(ImposterTexture)"
+        },
+        {
+          "rva": "0x7F4970",
+          "signature": "garbageCollect()"
+        },
+        {
+          "rva": "0x7F4B50",
+          "signature": "getPreloadLock(Imposter)"
+        },
+        {
+          "rva": "0x7F3AE0",
+          "signature": "Clear()"
+        },
+        {
+          "rva": "0x7F4820",
+          "signature": ".ctor()"
+        }
+      ]
+    },
+    "ImposterProxy": {
+      "method_count": 4,
+      "methods": [
+        {
+          "rva": "0x7F4FF0",
+          "signature": "Awake()"
+        },
+        {
+          "rva": "0x7F5000",
+          "signature": "Init(List<Renderer>,bool)"
+        },
+        {
+          "rva": "0x7F5390",
+          "signature": "OnDestroy()"
+        },
+        {
+          "rva": "0x7F4E50",
+          "signature": "AdjustTextureSize(int)"
+        }
+      ]
+    },
+    "Imposter": {
+      "method_count": 4,
+      "methods": [
+        {
+          "rva": "0x7F77C0",
+          "signature": "Start()"
+        },
+        {
+          "rva": "0x7F73E0",
+          "signature": "ForceUpdate()"
+        },
+        {
+          "rva": "0x7F73F0",
+          "signature": "Init()"
+        },
+        {
+          "rva": "0x7F8A00",
+          "signature": "extractRenderer()"
+        }
+      ]
+    },
+    "OvrAvatarPacket": {
+      "method_count": 3,
+      "methods": [
+        {
+          "rva": "0x6B6160",
+          "signature": "get_Duration()"
+        },
+        {
+          "rva": "0x6B61C0",
+          "signature": "get_FinalFrame()"
+        },
+        {
+          "rva": "0x6B5FE0",
+          "signature": ".ctor()"
+        }
+      ]
+    },
+    "OvrAvatarRemoteDriver": {
+      "method_count": 3,
+      "methods": [
+        {
+          "rva": "0x6B6290",
+          "signature": "QueuePacket(int,OvrAvatarPacket)"
+        },
+        {
+          "rva": "0x6B6860",
+          "signature": "UpdateTransforms(IntPtr)"
+        },
+        {
+          "rva": "0x6B6310",
+          "signature": "UpdateFromSDKPacket(IntPtr)"
+        }
+      ]
+    },
+    "BinaryReaderExtensions": {
+      "method_count": 3,
+      "methods": [
+        {
+          "rva": "0x77BEC0",
+          "signature": "ReadPoseFrame(BinaryReader)"
+        },
+        {
+          "rva": "0x77C370",
+          "signature": "ReadVector2(BinaryReader)"
+        },
+        {
+          "rva": "0x77C3D0",
+          "signature": "ReadVector3(BinaryReader)"
+        }
+      ]
+    },
+    "BinaryWriterExtensions": {
+      "method_count": 3,
+      "methods": [
+        {
+          "rva": "0x77C500",
+          "signature": "Write(BinaryWriter,PoseFrame)"
+        },
+        {
+          "rva": "0x77C470",
+          "signature": "Write(BinaryWriter,Vector3)"
+        },
+        {
+          "rva": "0x77C990",
+          "signature": "Write(BinaryWriter,Vector2)"
+        }
+      ]
+    },
+    "UnityMainThreadDispatcher": {
+      "method_count": 4,
+      "methods": [
+        {
+          "rva": "0x67C720",
+          "signature": "Update()"
+        },
+        {
+          "rva": "0x67C360",
+          "signature": "Enqueue(IEnumerator)"
+        },
+        {
+          "rva": "0x67C2E0",
+          "signature": "Enqueue(Action)"
+        },
+        {
+          "rva": "0x67C1B0",
+          "signature": "ActionWrapper(Action)"
+        }
+      ]
+    },
+    "TeleportTargetHandlerNavMesh": {
+      "method_count": 3,
+      "methods": [
+        {
+          "rva": "0x6D49E0",
+          "signature": "Awake()"
+        },
+        {
+          "rva": "0x6D4CF0",
+          "signature": "ConsiderTeleport(Vector3,ref Vector3)"
+        },
+        {
+          "rva": "0x6D4A30",
+          "signature": "ConsiderDestination(Vector3)"
+        }
+      ]
+    },
+    "LocomotionTeleport": {
+      "method_count": 2,
+      "methods": [
+        {
+          "rva": "0x87DB80",
+          "signature": "EnableMovement(bool,bool,bool,bool)"
+        },
+        {
+          "rva": "0x87DBA0",
+          "signature": "EnableRotation(bool,bool,bool,bool)"
+        }
+      ]
+    },
+    "FmodGvrAudioRoom": {
+      "method_count": 3,
+      "methods": [
+        {
+          "rva": "0x686840",
+          "signature": "OnEnable()"
+        },
+        {
+          "rva": "0x6866D0",
+          "signature": "OnDisable()"
+        },
+        {
+          "rva": "0x6868A0",
+          "signature": "Update()"
+        }
+      ]
+    }
+  },
+  "studies": [
     "research/batch-04-auction-market-contracts.md",
     "research/batch-04-terrain-grid-and-navigation.md",
     "research/batch-04-powerui-menus-notifications-and-keyboard.md",
