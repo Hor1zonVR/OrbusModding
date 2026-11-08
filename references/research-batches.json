@@ -30,14 +30,16 @@
       "functions": 10000,
       "failed": 1,
       "index_status": "indexed",
-      "research_status": "not_deep_reviewed",
+      "research_status": "first_network_and_scene_traces_partial",
       "focus": [
         "OrbusNetManager",
         "NetEntity",
         "NPC",
         "scene loading"
       ],
-      "pages": []
+      "pages": [
+        "research/batch-02-network-and-scenes-first-traces.md"
+      ]
     },
     {
       "number": 3,
