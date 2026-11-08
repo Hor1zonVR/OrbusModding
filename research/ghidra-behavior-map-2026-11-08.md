@@ -118,3 +118,23 @@ The portal event also declares `baseProgressNeeded` (`0xA0`), `progressNeededPer
 ## Contribution checklist
 
 For subsequent findings, provide signature/TypeDef, snapshot/build, RVA, method behavior, corroborating callees, caller/authority context, test result, and what remains uncertain. Prefer compact explanatory writeups and safe examples over dumping third-party proprietary source code. Link to live open-source mod repositories when a feature has been implemented.
+
+## 7. First automated-export batch: scene preloading, shards, teleporting, loot
+
+**Evidence:** `Orbus_Ghidra_20261108_151341.txt`, produced by `OrbusDecompilerExport.java` on 2026-11-08. Four selected functions, four successful decompilations. These are static findings from the same still-unverified build.
+
+| Method | RVA | Static observation |
+| --- | --- | --- |
+| `ScenePreloader.Start()` | `0x47F540` | Iterates `prefabsToConsider` (`List<string>` at `ScenePreloader+0x20`), logs each name and calls `OrbusNetManager.WarmupPrefabPool(prefabName, 10, true)` (`0x30EBD0`). **This prewarms prefabs; it does not establish distant terrain loading or remote scene streaming.** |
+| `DungeonShard.UseShard()` | `0x402CC0` | Calls `PlayerTool.SendToolSignal(1)` (`0x3A60B0`), then conditionally releases the current grip/object via `Grabber.ReleaseAnyCurrentObject()` (`0x3C62C0`). Server handling of the signal is not shown. |
+| `PlayerCharacter.teleportPlayer(Vector3, Nullable<Quaternion>, bool, bool)` | `0x38F5A0` | Applies multiple local-state checks, computes destination/rotation and movement cost, updates the local root Transform and calls `NetEntity.CallServerComponent` with method ID **1** on the player's `OrbusNetComponent`. This is not evidence that a destination is accepted by the server; unsafe or out-of-bounds requests may be rejected. |
+| `PlayerCharacter.DoLoot(ushort guid)` | `0x378800` | Packs a target entity GUID into a generated closure and calls `NetEntity.CallServerComponent` on the local player component with method ID **12**. It also plays a GUI sound if the sound manager exists. This is a **loot request**, not proof of reward granting. |
+
+For `ScenePreloader` specifically, `prefabsToConsider` is `List<string>` and `sceneName` is a separate field at offset `0x18`; the analyzed `Start()` reads the list, not `sceneName`. Avoid claiming scene streaming from this class without inspecting additional loaders and runtime behavior.
+
+### Useful follow-ups
+
+- `OrbusNetManager.WarmupPrefabPool(string, int, bool)` — `0x30EBD0` — scope of preloading and lifetime.
+- `PlayerTool.SendToolSignal(ushort)` — `0x3A60B0` — serialization of shard/tool signals.
+- `PlayerCharacter.teleportPlayer(...)` references/callers — confirm where server-authorized teleports originate.
+- `PlayerCharacter.DoLoot(ushort)` request handler — requires **server-side** analysis for authority and rewards.
