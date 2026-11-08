@@ -47,8 +47,11 @@ These are evidence-labeled static findings from an **unverified-build** snapshot
 ## In-depth reverse-engineering guides
 
 - **[Research standard for all eight export batches](research/batch-research-standard.md)** — coverage criteria, confidence levels, next investigations.
+- [Batch 02 first traces](research/batch-02-network-and-scenes-first-traces.md) — component serialization, listener dictionaries and scene/preload boundaries.
 - **Batch 03:** [camera/player/world](research/batch-03-player-camera-and-world.md) · [network and server boundaries](research/batch-03-server-and-network-contracts.md) · [classes and combat](research/batch-03-combat-and-classes.md) · [inventory/events/UI/weapon adjustments](research/batch-03-items-events-ui-and-weapon-adjustments.md).
 - [Full Batch 03 starting overview](research/export-batch-03-deep-dive.md) and [all-batch priority map](research/full-export-priorities.md).
 - [Offline Ghidra metadata auditor](tools/ghidra_export_audit_README.md) — regenerate metadata from your own matching export without publishing its decompiled code.
+
+[Contribute a verified finding](research/CONTRIBUTING_FINDINGS.md) · [Machine-readable research progress](references/research-batches.json).
 
 **Research status:** batch 3 has detailed topic traces, but neither that batch nor the entire 79,754-function export is exhaustively understood or runtime-verified. All static findings are build-specific leads, not promises of supported mod APIs.
