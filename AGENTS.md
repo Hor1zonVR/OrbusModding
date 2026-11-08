@@ -24,3 +24,9 @@ Explain installation, dependencies, build commands, expected behavior, compatibi
 ## Indexed reverse-engineering references
 
 For a symbol lookup, search [the namespace type index](references/magicalactual-types.tsv), then [core-symbols.json](references/core-symbols.json) for selected signatures, fields and snapshot RVAs. Use [docs/game-systems.md](docs/game-systems.md) as a human overview and [docs/research-workflow.md](docs/research-workflow.md) for validation. Never claim the namespace index is complete across all assemblies. Source snapshot build is currently unverified.
+
+## Decompiled-behavior research navigation
+
+Start with [the eight-batch research standard](research/batch-research-standard.md). For discovered player/camera/world behavior read [this guide](research/batch-03-player-camera-and-world.md); for networking/authority consult [the component contract guide](research/batch-03-server-and-network-contracts.md); for classes and spell input use [combat/class research](research/batch-03-combat-and-classes.md); and for inventory/UI/gear calibration use [items/events/weapon adjustments](research/batch-03-items-events-ui-and-weapon-adjustments.md). The [offline metadata audit tool](tools/ghidra_export_audit_README.md) can recreate call indexes from a matching private export.
+
+**Do not conflate:** function index coverage, static behavior tracing, and runtime verification. Batch 03's analyzed traces are useful starting points, not an exhaustive understanding of 10,000 methods. Retain component scope for method IDs and verify server-side handlers before suggesting authoritative actions.
