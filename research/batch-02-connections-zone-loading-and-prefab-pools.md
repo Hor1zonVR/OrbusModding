@@ -38,7 +38,7 @@
 1. Builds/logs a zone-related message.
 2. Calls a Unity scene-loading function with the provided zone file (native helper `0x180EACB20`), under other transition/setup calls.
 3. Resets related display/player/map objects when present.
-4. Calls a downstream manager/helper **`0x31C6F0`** with the zone name.
+4. Calls **`OrbusNetManager.activatePrimaryScene(string)` `0x31C6F0`** with the zone name.
 5. Updates several manager flags near `+0x2D0`, `+0x2D4`, `+0x2D8` and `+0x2A8`.
 
 It is a **whole zone/scene transition path**. It is *not* evidence that a spectator camera can freely load arbitrary terrain independently of the local player's zone.
@@ -64,6 +64,8 @@ That means “call NotifyServerOfLoadIn to send a server packet” is **not demo
 Note that this is **managed prefab instance caching**, *not* streaming distant terrain. Scene mesh availability, terrain chunk boundaries, collider creation and server-controlled entity spawning remain distinct questions.
 
 A separate `ScenePreloader.Start()` at **`0x47F540`** (Batch 03) warms each configured prefab at count **10**, illustrating that warmup count depends on the caller.
+
+The same snapshot also has **`OrbusNetManager.GetPrefabFromPool(string)` `0x309BF0`** and **`ReturnToPool(GameObject,string)` `0x30BF70`**. The latter is invoked by `NetEntity.DespawnPooled()` **`0x2F2BB0`**, completing a direct object-pool lifecycle link from entity cleanup to the manager's prefab caches.
 
 ## 5. Player rig initialization and switching
 
