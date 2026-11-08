@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "description": "Selected named IL2CPP methods whose snapshot RVAs fall in the 10,001–20,000 ordinal Ghidra export; not an exhaustive mapping of the batch.",
+  "source": "references/core-symbols.json",
+  "analyzed_image_base": "0x180000000",
+  "game_build": "unverified",
+  "method_entries": 120,
+  "distinct_rvas": 98,
+  "shared_rva_warning": "Some methods share a native RVA (including 0x2F1730, a no-op stub). Do not treat every managed signature as a unique native implementation.",
+  "reference_guides": [
+    "research/batch-02-component-dispatch-and-entity-lifecycle.md",
+    "research/batch-02-connections-zone-loading-and-prefab-pools.md",
+    "research/batch-02-npc-dialogue-interaction-and-ui.md",
+    "research/batch-02-orbhealer-healthbars-and-combat-ui.md"
+  ],
+  "classes": {
+    "PlayerRig": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "private void Start()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    "PlayerWand": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "private void doRightPadUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "private void doGripped(object sender, ClickedEventArgs e)",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "private void doUnGripped(object sender, ClickedEventArgs e)",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    "PlayerPet": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public void Fmod(string eventName)",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void FootL()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void FootR()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    "PlayerTombstone": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "private void Start()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    "Bard": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x31D090"
+        },
+        {
+          "signature": "private void SyncedPlay()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    "Runemage": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x31D080"
+        }
+      ]
+    },
+    "Paladin": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x31D090"
+        }
+      ]
+    },
+    "Archer": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    "Orbhealer": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "private void resetLeftAbils()",
+          "rva": "0x302590"
+        },
+        {
+          "signature": "private void doDoubleTriggerClick()",
+          "rva": "0x301670"
+        },
+        {
+          "signature": "private bool checkForDoubleTriggerClick()",
+          "rva": "0x301520"
+        },
+        {
+          "signature": "private void doTriggerClick(object sender, ClickedEventArgs e)",
+          "rva": "0x301AD0"
+        },
+        {
+          "signature": "private void doTriggerUnClick(object sender, ClickedEventArgs e)",
+          "rva": "0x301E20"
+        },
+        {
+          "signature": "private void doPrimaryTriggerClick()",
+          "rva": "0x301790"
+        },
+        {
+          "signature": "private void doPrimaryTriggerUnClick()",
+          "rva": "0x3017D0"
+        },
+        {
+          "signature": "private void UpdateLifewellOrbRez()",
+          "rva": "0x300E80"
+        },
+        {
+          "signature": "private void UpdateLifewellOrb()",
+          "rva": "0x300F60"
+        },
+        {
+          "signature": "private void SpawnOrb(int slotNum, byte spellid)",
+          "rva": "0x2FECC0"
+        },
+        {
+          "signature": "private void LateUpdate()",
+          "rva": "0x2FE010"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x2FD620"
+        },
+        {
+          "signature": "private void updateArrowNotched()",
+          "rva": "0x302650"
+        },
+        {
+          "signature": "public void DLSPERSDFA(ushort targetGuid, Vector3 targetPosition, int arrowId)",
+          "rva": "0x2FC920"
+        },
+        {
+          "signature": "private void FireArrow(Vector3 position, Vector3 direction, byte side, byte spellid, int arrowId = 0)",
+          "rva": "0x2FD0C0"
+        },
+        {
+          "signature": "public void TurretFinishedSpawning(GameObject turret)",
+          "rva": "0x2FFB10"
+        },
+        {
+          "signature": "public void orbusNetCleanup(NetEntity entity)",
+          "rva": "0x301F90"
+        },
+        {
+          "signature": "public void AvatarEquipmentChanged()",
+          "rva": "0x2FC0E0"
+        },
+        {
+          "signature": "public void ShowHitEffect(Vector3 position)",
+          "rva": "0x2FEBF0"
+        },
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x2F1730"
+        },
+        {
+          "signature": "public void ClassEnabled()",
+          "rva": "0x2FC8C0"
+        },
+        {
+          "signature": "public GameObject GetWeaponObject()",
+          "rva": "0x2FDF00"
+        },
+        {
+          "signature": "public GameObject GetWeaponSkin()",
+          "rva": "0x2FDF10"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x3020A0"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x2FC2F0"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x2FF030"
+        }
+      ]
+    },
+    "Swordboard": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public void ClassDisabled()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    "Monster": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public void Hit()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    "OrbusHealthBar": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public void UpdatedMonsterType()",
+          "rva": "0x305630"
+        },
+        {
+          "signature": "public void showBar()",
+          "rva": "0x3065D0"
+        },
+        {
+          "signature": "public void hideBar()",
+          "rva": "0x3063B0"
+        },
+        {
+          "signature": "public void ForceUpdate()",
+          "rva": "0x305630"
+        },
+        {
+          "signature": "private void UpdateView()",
+          "rva": "0x305630"
+        },
+        {
+          "signature": "private void DoViewUpdate()",
+          "rva": "0x3039B0"
+        },
+        {
+          "signature": "private string GetTargetSymbol(byte type)",
+          "rva": "0x3057D0"
+        },
+        {
+          "signature": "private string GetKillMissionIndicator()",
+          "rva": "0x305640"
+        },
+        {
+          "signature": "private string RelativeRatingForCurrentPlayer()",
+          "rva": "0x305820"
+        },
+        {
+          "signature": "public string GetPlayerTitle(bool styled = True)",
+          "rva": "0x305710"
+        },
+        {
+          "signature": "public string CompleteName(bool removeQTag = False)",
+          "rva": "0x303850"
+        },
+        {
+          "signature": "public void SetFocus(float time)",
+          "rva": "0x305DA0"
+        },
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x304B10"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x302F40"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x305EE0"
+        },
+        {
+          "signature": "private bool CheckKillMissionMonster()",
+          "rva": "0x303660"
+        },
+        {
+          "signature": "private string BlankName()",
+          "rva": "0x303600"
+        },
+        {
+          "signature": "public void StopFocus()",
+          "rva": "0x306070"
+        }
+      ]
+    },
+    "PotionAgingStation": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x2FA740"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    "PlayerEntity": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public override void UpdateObjectPosition(float frameDelta)",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    "NetEntity": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public void broadcastSetup()",
+          "rva": "0x2F4EB0"
+        },
+        {
+          "signature": "public void ResetPosition()",
+          "rva": "0x2F3280"
+        },
+        {
+          "signature": "public virtual void UpdateObjectPosition(float frameDelta)",
+          "rva": "0x2F41D0"
+        },
+        {
+          "signature": "public void UpdatePositionFromRemote(float newposx, float newposy, float newposz, float newrotx, float newroty, float newrotz, float newrotw)",
+          "rva": "0x2F4540"
+        },
+        {
+          "signature": "public bool TriggerListenerForMethod(string componentName, byte methodId, BinaryReader reader)",
+          "rva": "0x2F3360"
+        },
+        {
+          "signature": "private bool UpdateNetSyncVariable(string componentName, int varidx, BinaryReader reader)",
+          "rva": "0x2F3C70"
+        },
+        {
+          "signature": "private void DespawnPooled()",
+          "rva": "0x2F2BB0"
+        },
+        {
+          "signature": "public void Despawn(bool despawnImmediate)",
+          "rva": "0x2F2C70"
+        },
+        {
+          "signature": "public void ClearAllListeners(string componentName)",
+          "rva": "0x2F2AF0"
+        }
+      ]
+    },
+    "OrbusNetManager": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "private void App1_UnhandledException(object sender, UnhandledExceptionEventArgs e)",
+          "rva": "0x306950"
+        },
+        {
+          "signature": "private IEnumerator FinishLoadingPool(float timeDelay = 0.25)",
+          "rva": "0x3097B0"
+        },
+        {
+          "signature": "private void showConnectionError(string errorMsg)",
+          "rva": "0x31FD80"
+        },
+        {
+          "signature": "public void ForceStopPlayerMovement()",
+          "rva": "0x309B90"
+        },
+        {
+          "signature": "public IEnumerator AndroidLoadLevel(string zoneFile, string actualZoneFile)",
+          "rva": "0x3068D0"
+        },
+        {
+          "signature": "private void PreloadForScene(string zoneFile)",
+          "rva": "0x30B480"
+        },
+        {
+          "signature": "private void LoadLevel(string zoneFile)",
+          "rva": "0x30B080"
+        },
+        {
+          "signature": "private void sendToken()",
+          "rva": "0x31F9A0"
+        },
+        {
+          "signature": "private void sendConnectionAttempt()",
+          "rva": "0x31F720"
+        },
+        {
+          "signature": "private void sendPing()",
+          "rva": "0x31F790"
+        },
+        {
+          "signature": "public string GetCurrentZone()",
+          "rva": "0x309BE0"
+        },
+        {
+          "signature": "public OrbusNetManager.FogInfo GetRealFogSettings()",
+          "rva": "0x309EC0"
+        },
+        {
+          "signature": "public void SetSunsActive(bool isActive)",
+          "rva": "0x30D640"
+        },
+        {
+          "signature": "private void SetCloudDensity(float newDensity, bool doRain, bool doLightning)",
+          "rva": "0x30D1A0"
+        },
+        {
+          "signature": "private void EnetSender()",
+          "rva": "0x3091B0"
+        },
+        {
+          "signature": "private void EnetClient()",
+          "rva": "0x308C10"
+        },
+        {
+          "signature": "private void Send(string message)",
+          "rva": "0x30CF90"
+        },
+        {
+          "signature": "public void SendBinary(byte[] bytes, long payloadSize, bool reliable = True, byte channelOverride = 0)",
+          "rva": "0x30C330"
+        },
+        {
+          "signature": "public void SetUIFadeLevel(float level)",
+          "rva": "0x30D720"
+        },
+        {
+          "signature": "public void SetFocusFadeLevel(float level)",
+          "rva": "0x30D610"
+        },
+        {
+          "signature": "public void ShowLoadingScreen(string levelName)",
+          "rva": "0x30D750"
+        },
+        {
+          "signature": "public void HideLoadingScreen(string levelName)",
+          "rva": "0x30AC10"
+        },
+        {
+          "signature": "public void NotifyServerOfLoadIn()",
+          "rva": "0x30B320"
+        },
+        {
+          "signature": "private void SendInitialPosition(Vector3 position)",
+          "rva": "0x30C3B0"
+        },
+        {
+          "signature": "private void initializePlayerRig(ushort playerId, Vector3 position, Quaternion rotation)",
+          "rva": "0x31EF50"
+        },
+        {
+          "signature": "private void UpdateEntityPositions(float frameDelta)",
+          "rva": "0x30E350"
+        }
+      ]
+    },
+    "Portal": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x2FA740"
+        }
+      ]
+    },
+    "TimedDungeonManager": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "private void Start()",
+          "rva": "0x2F1730"
+        }
+      ]
+    },
+    "Npc": {
+      "namespace": "MagicalActual",
+      "methods": [
+        {
+          "signature": "private void FixedUpdate()",
+          "rva": "0x2F7620"
+        },
+        {
+          "signature": "private void PositionDialogue()",
+          "rva": "0x2F7BC0"
+        },
+        {
+          "signature": "private void SpeakSetupBox(DialogueBox myDialogueBox, string text)",
+          "rva": "0x2F8C60"
+        },
+        {
+          "signature": "private void SpeakSetupChoiceOne(string choiceOne)",
+          "rva": "0x2F8D00"
+        },
+        {
+          "signature": "private void UpdateDialogBox()",
+          "rva": "0x2F9B60"
+        },
+        {
+          "signature": "public void PlayerInteraction()",
+          "rva": "0x2F79D0"
+        },
+        {
+          "signature": "private void UpdateDialogIndicator()",
+          "rva": "0x2F9D50"
+        },
+        {
+          "signature": "public void orbusNetInit(NetEntity entity)",
+          "rva": "0x2FA060"
+        },
+        {
+          "signature": "private void Awake()",
+          "rva": "0x2F7000"
+        },
+        {
+          "signature": "private void Start()",
+          "rva": "0x2F9390"
+        },
+        {
+          "signature": "private void OnDestroy()",
+          "rva": "0x2F79C0"
+        },
+        {
+          "signature": "private void ClearDialogue()",
+          "rva": "0x2F7060"
+        },
+        {
+          "signature": "private void SpeakClearShoutbox()",
+          "rva": "0x2F8380"
+        },
+        {
+          "signature": "private void SpeakInitShoutbox()",
+          "rva": "0x2F8B60"
+        },
+        {
+          "signature": "private void SpeakHandleEmotion(string emotion)",
+          "rva": "0x2F8420"
+        },
+        {
+          "signature": "private void FinishSpeak()",
+          "rva": "0x2F71A0"
+        },
+        {
+          "signature": "public void PromptClickChoice(string choiceIdx)",
+          "rva": "0x2F7FF0"
+        },
+        {
+          "signature": "private void Shout(string text)",
+          "rva": "0x2F80B0"
+        }
+      ]
+    }
+  },
+  "shared_rvas": {
+    "0x2F1730": [
+      "PlayerRig: private void Start()",
+      "PlayerWand: private void doRightPadUnClick(object sender, ClickedEventArgs e)",
+      "PlayerWand: private void doGripped(object sender, ClickedEventArgs e)",
+      "PlayerWand: private void doUnGripped(object sender, ClickedEventArgs e)",
+      "PlayerWand: private void Awake()",
+      "PlayerPet: public void Fmod(string eventName)",
+      "PlayerPet: public void FootL()",
+      "PlayerPet: public void FootR()",
+      "PlayerTombstone: private void Start()",
+      "Bard: public void ClassDisabled()",
+      "Bard: private void SyncedPlay()",
+      "Runemage: public void ClassDisabled()",
+      "Archer: public void ClassDisabled()",
+      "Orbhealer: public void ClassDisabled()",
+      "Swordboard: public void ClassDisabled()",
+      "Monster: public void Hit()",
+      "PotionAgingStation: private void Start()",
+      "PlayerEntity: public override void UpdateObjectPosition(float frameDelta)",
+      "TimedDungeonManager: private void Start()"
+    ],
+    "0x305630": [
+      "OrbusHealthBar: public void UpdatedMonsterType()",
+      "OrbusHealthBar: public void ForceUpdate()",
+      "OrbusHealthBar: private void UpdateView()"
+    ],
+    "0x31D090": [
+      "Bard: public GameObject GetWeaponObject()",
+      "Paladin: public GameObject GetWeaponObject()"
+    ],
+    "0x2FA740": [
+      "PotionAgingStation: public void orbusNetInit(NetEntity entity)",
+      "Portal: public void orbusNetInit(NetEntity entity)"
+    ]
+  }
+}
