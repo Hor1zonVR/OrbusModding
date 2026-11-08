@@ -95,13 +95,28 @@
       "functions": 10000,
       "failed": 1,
       "index_status": "indexed",
-      "research_status": "not_deep_reviewed",
+      "research_status": "multiple_system_traces_partial",
       "focus": [
-        "loot menus",
-        "UI",
-        "presentation"
+        "Auctioneer and auction menus",
+        "native PowerUI LootMenu and KeyboardMenu",
+        "TerrainGrid and TerrainCell navigation",
+        "ImposterManager render-texture caching",
+        "InventoryItemInstance field map",
+        "SDK/vendor library integration boundaries"
       ],
-      "pages": []
+      "pages": [
+        "research/export-batch-04-deep-dive.md",
+        "research/batch-04-auction-market-contracts.md",
+        "research/batch-04-terrain-grid-and-navigation.md",
+        "research/batch-04-powerui-menus-notifications-and-keyboard.md",
+        "research/batch-04-item-stat-and-loot-data-reference.md",
+        "research/batch-04-rendering-impostors-avatars-and-pathfinding-libraries.md",
+        "references/batch-04-curated-methods.json"
+      ],
+      "curated_method_entries": 140,
+      "failed_rvas": [
+        "0x696A60"
+      ]
     },
     {
       "number": 5,
