@@ -30,16 +30,30 @@
       "functions": 10000,
       "failed": 1,
       "index_status": "indexed",
-      "research_status": "first_network_and_scene_traces_partial",
+      "research_status": "multiple_core_systems_static_traced_partial",
       "focus": [
         "OrbusNetManager",
-        "NetEntity",
-        "NPC",
-        "scene loading"
+        "NetEntity and component callbacks",
+        "incoming packet parser and entity creation",
+        "ENet send/receive loops",
+        "scene/zone load and prefab pooling",
+        "other-player pose replication",
+        "NPC interactions/dialogue",
+        "Orbhealer/Musketeer",
+        "OrbusHealthBar"
       ],
       "pages": [
+        "research/export-batch-02-deep-dive.md",
+        "research/batch-02-incoming-message-parser-and-spawns.md",
+        "research/batch-02-component-dispatch-and-entity-lifecycle.md",
+        "research/batch-02-connections-zone-loading-and-prefab-pools.md",
+        "research/batch-02-npc-dialogue-interaction-and-ui.md",
+        "research/batch-02-orbhealer-healthbars-and-combat-ui.md",
+        "references/batch-02-curated-methods.json",
         "research/batch-02-network-and-scenes-first-traces.md"
-      ]
+      ],
+      "selected_curated_method_entries": 120,
+      "selected_distinct_native_rvas": 98
     },
     {
       "number": 3,
