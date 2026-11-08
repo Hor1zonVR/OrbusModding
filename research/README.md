@@ -18,3 +18,12 @@ Do not upload raw proprietary game binaries, complete asset bundles, private ser
 - **Related public mod**:
 
 Offsets and addresses are version-dependent. Never reuse an offset from one build without checking it against the target build.
+
+## Current research reports
+
+- [Cross-system Ghidra behavior map](ghidra-behavior-map-2026-11-08.md)
+- [Batch 1: functions 1–10,000](export-batch-01-overview.md)
+- [Batch 3: functions 20,001–30,000](export-batch-03-deep-dive.md)
+- [Priority map for the complete export](full-export-priorities.md)
+
+Static interpretations are not runtime-verified APIs. Check method evidence and build fingerprint before using any address.
