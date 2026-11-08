@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-08",
+  "source": "user supplied IL2CPP dump.cs TypeDef metadata cross-referenced with private Ghidra export",
+  "analyzed_build": "unverified",
+  "image_base": "0x180000000",
+  "export_batch": "04",
+  "ordinal_range": [
+    30001,
+    40000
+  ],
+  "rva_range": [
+    "0x678CB0",
+    "0x979B00"
+  ],
+  "scope_note": "This curated selection comes from declared method RVAs for selected class names in a portion of the IL2CPP metadata dump. It is not a full index of all 10000 native functions, and some methods share an RVA or are vendor code with unproven runtime use.",
+  "method_entry_count": 0,
+  "classes": {},
+  "study_guides": [
+    "research/batch-04-auction-market-contracts.md",
+    "research/batch-04-terrain-grid-and-navigation.md",
+    "research/batch-04-powerui-menus-notifications-and-keyboard.md",
+    "research/batch-04-rendering-impostors-avatars-and-pathfinding-libraries.md"
+  ]
+}
