@@ -28,6 +28,16 @@ Offsets and addresses are version-dependent. Never reuse an offset from one buil
 
 Static interpretations are not runtime-verified APIs. Check method evidence and build fingerprint before using any address.
 
+## Deep research: menus, auctions and navigation (Batch 04)
+
+- [Batch 04 overview and findings](export-batch-04-deep-dive.md)
+- [Auction-house outgoing requests and incoming listing updates](batch-04-auction-market-contracts.md)
+- [TerrainGrid, NavMesh and collision tests](batch-04-terrain-grid-and-navigation.md)
+- [PowerUI loot lists, keyboard, notifications and object choices](batch-04-powerui-menus-notifications-and-keyboard.md)
+- [Item stats, enhancement and durability fields](batch-04-item-stat-and-loot-data-reference.md)
+- [Impostor rendering, Avatar SDK and pathfinding boundary notes](batch-04-rendering-impostors-avatars-and-pathfinding-libraries.md)
+- [Batch 04 selected AI-readable method reference](../references/batch-04-curated-methods.json)
+
 ## Deep networking and game-system research (Batch 02)
 
 - [Full Batch 02 deep-dive and system map](export-batch-02-deep-dive.md)
