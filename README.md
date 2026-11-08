@@ -43,3 +43,12 @@ The index is **metadata only**, not proof of functionality, runtime compatibilit
 - [Curated cross-system Ghidra behavior map](research/ghidra-behavior-map-2026-11-08.md)
 
 These are evidence-labeled static findings from an **unverified-build** snapshot, not stable server APIs. Private decompiler exports and full pseudocode are not redistributed.
+
+## In-depth reverse-engineering guides
+
+- **[Research standard for all eight export batches](research/batch-research-standard.md)** — coverage criteria, confidence levels, next investigations.
+- **Batch 03:** [camera/player/world](research/batch-03-player-camera-and-world.md) · [network and server boundaries](research/batch-03-server-and-network-contracts.md) · [classes and combat](research/batch-03-combat-and-classes.md) · [inventory/events/UI/weapon adjustments](research/batch-03-items-events-ui-and-weapon-adjustments.md).
+- [Full Batch 03 starting overview](research/export-batch-03-deep-dive.md) and [all-batch priority map](research/full-export-priorities.md).
+- [Offline Ghidra metadata auditor](tools/ghidra_export_audit_README.md) — regenerate metadata from your own matching export without publishing its decompiled code.
+
+**Research status:** batch 3 has detailed topic traces, but neither that batch nor the entire 79,754-function export is exhaustively understood or runtime-verified. All static findings are build-specific leads, not promises of supported mod APIs.
