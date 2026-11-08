@@ -26,6 +26,8 @@ Ghidra shows `Monster.orbusNetInit(NetEntity)` (RVA `0x5B6080`) registering **13
 
 | Method | RVA | Observed static behavior |
 | --- | --- | --- |
+| `Monster.<orbusNetInit>b__14(ArrayList)` | `0x5B7F10` | Receives a byte-marked danger-zone message. Subtype 1 instantiates the `attackTelegraph` prefab (`Monster+0x90`) using transmitted position/rotation/scale data and destroys it after a transmitted duration multiplied by a small constant; subtype 2 calls `Monster.showSphereTelegraph(center, radius, duration)`. A separate received flag can trigger Animator/SFX and updates `pendingDangerZoneIdx` (`0x108`). Exact protocol labels and units need checking. |
+| `Monster.<orbusNetInit>b__15(ArrayList)` | `0x5B8740` | Receives source entity GUID (16-bit), signed integer amount, and a byte flag. Updates local combat feedback, including damage/heal number presentation via a helper (`0x6683D0`), player-related notifications, and logging a combat-related message. Branches depend on signed amount and whether the source resolves to the local player. This is **presentation and notification logic**, not proof that the client computes authoritative damage. |
 | `Monster.<orbusNetInit>b__13(ArrayList)` | `0x5B7C60` | Receives a string signal, includes a death-related branch setting `isDead` at offset `0x3C`, cancels a danger zone, updates Animator, emits a message/sound. Other signals trigger Animator and named SFX; exact signal text remains unidentified. |
 | `Monster.<orbusNetInit>b__16(ArrayList)` | `0x5B8EF0` | Changes cast animation/UI; accesses `castingBarChild` (`0xC0`), `castingBarProgress` (`0xA0`), `castingBarText` (`0xA8`), `castingBarBreakBar` (`0xB0`), `castingBarDuration` (`0xC8`), `castingBarActive` (`0xD0`). Uses `ProgressBarPro.SetValue(float)`. |
 | `Monster.<orbusNetInit>b__17(ArrayList)` | `0x5B9260` | Calls `Monster.CancelCast()` and an Animator trigger. |
@@ -107,8 +109,8 @@ The portal event also declares `baseProgressNeeded` (`0xA0`), `progressNeededPer
 | World/scene loading | `ScenePreloader.Start()` | `0x47F540` | Discover what the preloader actually loads; may only preload assets |
 | Dungeon mechanics | `DungeonShard.UseShard()` | `0x402CC0` | Inspect shard activation flow |
 | Player movement | `PlayerCharacter.teleportPlayer(...)` | `0x38F5A0` | Determine local action vs network request |
-| Monster combat | `Monster.<orbusNetInit>b__14(ArrayList)` | `0x5B7F10` | Map more incoming actions |
-| Monster combat | `Monster.<orbusNetInit>b__15(ArrayList)` | `0x5B8740` | Map more incoming actions |
+| Combat telegraphs | `Monster.showTelegraph(Vector3, Vector3, float, Quaternion)` | `0x5B6CE0` | Inspect danger-area rendering |
+| Combat damage UI | feedback helper called by `b__15` | `0x6683D0` | Identify damage/healing numbers and visibility |
 | Player scaling | `Monster.Shrink()` | `0x5B4990` | Find references/callers, without assuming server sync |
 | Items/progression | `PlayerCharacter.DoLoot(ushort)` | `0x378800` | Identify request serialization / UI |
 | World events | `DynamicEvent.OnEventActivated()` | `0x403A60` | Inspect event lifecycle hooks |
