@@ -62,3 +62,7 @@ These are evidence-labeled static findings from an **unverified-build** snapshot
 ## Capture mission definitions and weighted progress
 
 [Server-derived capture mission research](research/mission-capture-weights-and-reward-tiers.md) explains why checklist `timesToKill` is not the next reward target, documents rare critter values (1 versus 3 points), and links the 16-definition [QuestHelper objective atlas](https://github.com/Hor1zonVR/OrbusQuestHelper/blob/feat/capture-mission-definitions-20261109/references/capture-objectives-2026-11-09.json). Descriptions and type identify records when the server definition has no explicit mission ID. Exact ID correspondence and runtime tier-reset semantics remain unverified.
+
+## Monster, Fishing, Jester and Event mission research
+
+[170 source-derived mission definitions](research/missions-monster-fishing-jester-event.md) cover 58 Monster, 41 Fishing, 31 Jester and 40 Event quests, including multi-target enemy lists, fish weight vs fish count, potion brewing vs consumption, and Gold-standard event completion. See [the derived machine-readable objective atlas](https://github.com/Hor1zonVR/OrbusQuestHelper/blob/feat/priority-mission-definitions-20261109/references/priority-missions-objectives.json) and [QuestHelper PR #4](https://github.com/Hor1zonVR/OrbusQuestHelper/pull/4). These are source-backed static facts; per-player mission progress and live request handling still need runtime verification.
