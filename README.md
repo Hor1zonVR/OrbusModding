@@ -58,3 +58,7 @@ These are evidence-labeled static findings from an **unverified-build** snapshot
 [Contribute a verified finding](research/CONTRIBUTING_FINDINGS.md) · [Machine-readable research progress](references/research-batches.json).
 
 **Research status:** batches 2, 3 and 4 have detailed, selected subsystem traces, but neither batch nor the entire 79,754-function export is exhaustively understood or runtime-verified. All static findings are build-specific leads, not promises of supported mod APIs.
+
+## Capture mission definitions and weighted progress
+
+[Server-derived capture mission research](research/mission-capture-weights-and-reward-tiers.md) explains why checklist `timesToKill` is not the next reward target, documents rare critter values (1 versus 3 points), and links the 16-definition [QuestHelper objective atlas](https://github.com/Hor1zonVR/OrbusQuestHelper/blob/feat/capture-mission-definitions-20261109/references/capture-objectives-2026-11-09.json). Descriptions and type identify records when the server definition has no explicit mission ID. Exact ID correspondence and runtime tier-reset semantics remain unverified.
