@@ -66,3 +66,15 @@ These are evidence-labeled static findings from an **unverified-build** snapshot
 ## Monster, Fishing, Jester and Event mission research
 
 [170 source-derived mission definitions](research/missions-monster-fishing-jester-event.md) cover 58 Monster, 41 Fishing, 31 Jester and 40 Event quests, including multi-target enemy lists, fish weight vs fish count, potion brewing vs consumption, and Gold-standard event completion. See [the derived machine-readable objective atlas](https://github.com/Hor1zonVR/OrbusQuestHelper/blob/feat/priority-mission-definitions-20261109/references/priority-missions-objectives.json) and [QuestHelper PR #4](https://github.com/Hor1zonVR/OrbusQuestHelper/pull/4). These are source-backed static facts; per-player mission progress and live request handling still need runtime verification.
+
+---
+
+## AI-assisted development
+
+I'm a community member who wanted useful tools for OrbusVR to exist, so I used AI assistance to help design, write, debug and document this project. I'm not claiming to have manually written every line, and I don't want to mislead anyone about how it was made.
+
+You're completely free to dislike AI-assisted projects or criticise the code. Constructive bug reports, security reviews and improvements are welcome. Please judge releases by whether they work, respect players and their data, and are safe to use; AI-generated code can have mistakes and needs testing.
+
+If someone creates a solid, well-maintained alternative without AI, I'd be genuinely happy to recommend it and consider retiring or archiving this project with a clear migration path. My goal is to make useful tools available, not to compete over who wrote them.
+
+This is an unofficial community project and is not affiliated with or endorsed by the OrbusVR developers. This note does not change the repository's licence or grant rights to third-party game assets.
